@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_east_west",
+    "textures": {
+        "1": "cobblefurnies:block/table/red"
+    }
+}

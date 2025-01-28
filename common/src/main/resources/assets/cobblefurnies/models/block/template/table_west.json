@@ -1,0 +1,93 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"render_type": "minecraft:cutout",
+	"texture_size": [128, 64],
+	"textures": {
+		"1": "#1",
+		"particle": "#1"
+	},
+	"elements": [
+		{
+			"name": "leg",
+			"from": [14, 0, 14],
+			"to": [16, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 6.5, 15]},
+			"faces": {
+				"north": {"uv": [0.75, 4, 1, 7.25], "texture": "#1"},
+				"east": {"uv": [0, 4, 0.25, 7.25], "texture": "#1"},
+				"south": {"uv": [0.5, 4, 0.75, 7.25], "texture": "#1"},
+				"west": {"uv": [0.25, 4, 0.5, 7.25], "texture": "#1"},
+				"down": {"uv": [1.25, 4, 1, 4.5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "leg",
+			"from": [14, 0, 0],
+			"to": [16, 13, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 6.5, 1]},
+			"faces": {
+				"north": {"uv": [0.75, 4, 1, 7.25], "texture": "#1"},
+				"east": {"uv": [0, 4, 0.25, 7.25], "texture": "#1"},
+				"south": {"uv": [0.5, 4, 0.75, 7.25], "texture": "#1"},
+				"west": {"uv": [0.25, 4, 0.5, 7.25], "texture": "#1"},
+				"down": {"uv": [1.25, 4, 1, 4.5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "top",
+			"from": [0, 13, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 14.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 7.25, 2, 8], "texture": "#1"},
+				"east": {"uv": [0, 7.25, 2, 8], "texture": "#1"},
+				"south": {"uv": [0, 7.25, 2, 8], "texture": "#1"},
+				"up": {"uv": [10, 8, 8, 4], "texture": "#1"},
+				"down": {"uv": [2, 0, 0, 4], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 6.25, 0]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "table_west",
+			"origin": [8, 14.5, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_east",
+    "textures": {
+        "1": "cobblefurnies:block/table/white"
+    }
+}

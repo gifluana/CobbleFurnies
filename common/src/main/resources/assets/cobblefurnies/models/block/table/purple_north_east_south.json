@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_north_east_south",
+    "textures": {
+        "1": "cobblefurnies:block/table/purple"
+    }
+}

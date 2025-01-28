@@ -1,9 +1,6 @@
 package com.lunazstudios.cobblefurnies.registry;
 
-import com.lunazstudios.cobblefurnies.block.ChairBlock;
-import com.lunazstudios.cobblefurnies.block.SinkBlock;
-import com.lunazstudios.cobblefurnies.block.StoveBlock;
-import com.lunazstudios.cobblefurnies.block.TableBlock;
+import com.lunazstudios.cobblefurnies.block.*;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,7 +24,6 @@ public class CFBlocks {
         public static BlockBehaviour.Properties MARBLE = Block.Properties.of().strength(1.5F, 6.0F).sound(SoundType.CALCITE).ignitedByLava().mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
         public static BlockBehaviour.Properties LAMP = WOOD.lightLevel((blockState) -> blockState.hasProperty(BlockStateProperties.LIT) && blockState.getValue(BlockStateProperties.LIT) ? (blockState.getValue(CFBlockStateProperties.LEVEL_1_3) * 5) : 0);
     }
-
     public static final Supplier<Block> RED_CHAIR = registerBlock("red_chair", () -> new ChairBlock(Properties.WOOD));
     public static final Supplier<Block> ORANGE_CHAIR = registerBlock("orange_chair", () -> new ChairBlock(Properties.WOOD));
     public static final Supplier<Block> YELLOW_CHAIR = registerBlock("yellow_chair", () -> new ChairBlock(Properties.WOOD));
