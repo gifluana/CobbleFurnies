@@ -1,32 +1,52 @@
 package com.lunazstudios.cobblefurnies.block;
 
+import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import com.lunazstudios.cobblefurnies.registry.CFBlockTags;
 import com.lunazstudios.cobblefurnies.util.block.ShapeUtil;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Container;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.monster.piglin.PiglinAi;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class StoveBlock extends Block implements SimpleWaterloggedBlock {
+public class StoveBlock extends BaseEntityBlock {
+    public static final MapCodec<StoveBlock> CODEC = simpleCodec(StoveBlock::new);
+    public MapCodec<StoveBlock> codec() {
+        return CODEC;
+    }
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty CONNECTED_LEFT = CFBlockStateProperties.CONNECTED_LEFT;
     public static final BooleanProperty CONNECTED_RIGHT = CFBlockStateProperties.CONNECTED_RIGHT;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     protected static final VoxelShape TOP_SHAPE_NORTH = Shapes.or(
             Block.box(0, 11, 0, 16, 16, 16),
@@ -61,7 +81,41 @@ public class StoveBlock extends Block implements SimpleWaterloggedBlock {
                 .setValue(FACING, Direction.NORTH)
                 .setValue(CONNECTED_LEFT, false)
                 .setValue(CONNECTED_RIGHT, false)
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(OPEN, false));
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (level.isClientSide) return InteractionResult.SUCCESS;
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof StoveBlockEntity stoveBE) {
+            player.openMenu(stoveBE);
+            PiglinAi.angerNearbyPiglins(player, true);
+        }
+        return InteractionResult.CONSUME;
+    }
+
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (state.is(newState.getBlock())) return;
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof Container) {
+            Containers.dropContents(level, pos, (Container)blockEntity);
+            level.updateNeighbourForOutputSignal(pos, this);
+        }
+        super.onRemove(state, level, pos, newState, isMoving);
+    }
+
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof StoveBlockEntity stoveBE) stoveBE.recheckOpen();
+    }
+
+    @Nullable
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new StoveBlockEntity(pos, state);
     }
 
     @Override
@@ -145,7 +199,13 @@ public class StoveBlock extends Block implements SimpleWaterloggedBlock {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         boolean waterlogged = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
         Direction facing = context.getHorizontalDirection().getOpposite();
-        return getConnections(this.defaultBlockState().setValue(FACING, facing).setValue(WATERLOGGED, waterlogged), context.getLevel(), context.getClickedPos());
+
+        boolean isOpen = false;
+
+        return getConnections(this.defaultBlockState()
+                .setValue(FACING, facing)
+                .setValue(WATERLOGGED, waterlogged)
+                .setValue(OPEN, isOpen), context.getLevel(), context.getClickedPos());
     }
 
     @Override
@@ -158,7 +218,7 @@ public class StoveBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED);
+        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, OPEN);
     }
 
     private BlockState getConnections(BlockState state, LevelAccessor level, BlockPos pos) {
@@ -175,5 +235,9 @@ public class StoveBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 }

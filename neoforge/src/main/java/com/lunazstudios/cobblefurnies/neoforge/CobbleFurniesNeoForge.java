@@ -15,6 +15,7 @@ public final class CobbleFurniesNeoForge {
         CFRegistryImpl.BLOCKS.register(bus);
         CFRegistryImpl.ITEMS.register(bus);
         CFRegistryImpl.ENTITY_TYPES.register(bus);
+        CFRegistryImpl.BLOCK_ENTITY_TYPES.register(bus);
         CFTabsImpl.register(bus);
     }
 }

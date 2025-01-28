@@ -69,5 +69,9 @@
     "block.cobblefurnies.light_gray_stove": "Light Gray Stove",
     "block.cobblefurnies.gray_stove": "Gray Stove",
     "block.cobblefurnies.black_stove": "Black Stove",
-    "block.cobblefurnies.brown_stove": "Brown Stove"
+    "block.cobblefurnies.brown_stove": "Brown Stove",
+
+    "container.cobblefurnies.stove": "Stove",
+    "container.cobblefurnies.freezer": "Freezer",
+    "container.cobblefurnies.fridge": "Fridge"
 }

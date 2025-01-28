@@ -8,7 +8,8 @@
     "LunazStudios"
   ],
   "contact": {
-    "homepage": "lunazstudios.com"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/cobblefurnies",
+    "issues": "https://github.com/gifluana/CobbleFurnies/issues"
   },
   "license": "MIT",
   "icon": "icon.png",

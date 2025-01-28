@@ -11,6 +11,7 @@ public final class CobbleFurnies {
         CFBlockTags.init();
         CFEntityTypes.init();
         CFEntityTypeTags.init();
+        CFBlockEntityTypes.init();
     }
 
     public static ResourceLocation id(String name) {
