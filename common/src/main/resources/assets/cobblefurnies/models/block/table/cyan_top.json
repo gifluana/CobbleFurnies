@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_top",
+    "textures": {
+        "1": "cobblefurnies:block/table/cyan"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/sink_full",
+    "textures": {
+        "1": "cobblefurnies:block/sink/magenta"
+    }
+}

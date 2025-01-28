@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:red_stove", "required": false},
+		{"id": "cobblefurnies:orange_stove", "required": false},
+		{"id": "cobblefurnies:yellow_stove", "required": false},
+		{"id": "cobblefurnies:brown_stove", "required": false},
+		{"id": "cobblefurnies:lime_stove", "required": false},
+		{"id": "cobblefurnies:green_stove", "required": false},
+		{"id": "cobblefurnies:cyan_stove", "required": false},
+		{"id": "cobblefurnies:light_blue_stove", "required": false},
+		{"id": "cobblefurnies:blue_stove", "required": false},
+		{"id": "cobblefurnies:magenta_stove", "required": false},
+		{"id": "cobblefurnies:purple_stove", "required": false},
+		{"id": "cobblefurnies:pink_stove", "required": false},
+		{"id": "cobblefurnies:white_stove", "required": false},
+		{"id": "cobblefurnies:light_gray_stove", "required": false},
+		{"id": "cobblefurnies:gray_stove", "required": false},
+		{"id": "cobblefurnies:black_stove", "required": false}
+	]
+}

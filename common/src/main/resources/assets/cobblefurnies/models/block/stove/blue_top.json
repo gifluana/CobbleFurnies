@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/stove_top",
+    "textures": {
+        "0": "cobblefurnies:block/stove/blue"
+    }
+}

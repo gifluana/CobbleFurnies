@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/chair",
+    "textures": {
+        "1": "cobblefurnies:block/chair/magenta"
+    }
+}

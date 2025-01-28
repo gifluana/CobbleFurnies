@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_full",
+    "textures": {
+        "0": "cobblefurnies:block/table/orange"
+    }
+}

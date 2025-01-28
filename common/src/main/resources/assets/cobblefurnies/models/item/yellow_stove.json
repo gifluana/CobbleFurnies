@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/stove_full",
+    "textures": {
+        "0": "cobblefurnies:block/stove/yellow"
+    }
+}

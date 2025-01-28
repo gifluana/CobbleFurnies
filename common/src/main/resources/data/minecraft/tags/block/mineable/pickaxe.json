@@ -1,0 +1,6 @@
+{
+    "values": [
+        {"id": "#cobblefurnies:sinks", "required": false},
+        {"id": "#cobblefurnies:stoves", "required": false}
+    ]
+}

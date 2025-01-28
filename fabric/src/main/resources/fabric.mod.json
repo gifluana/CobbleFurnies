@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblefurnies",
+  "version": "${version}",
+  "name": "CobbleFurnies",
+  "description": "Whether you're building a professor's lab, a bustling Pokécenter, or just a cozy cabin in the woods, CobbleFurnies is here to make your world feel more alive!",
+  "authors": [
+    "LunazStudios"
+  ],
+  "contact": {
+    "homepage": "lunazstudios.com"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.lunazstudios.cobblefurnies.fabric.CobbleFurniesFabric"
+    ],
+    "client": [
+      "com.lunazstudios.cobblefurnies.fabric.client.CobbleFurniesFabricClient"
+    ]
+  },
+  "mixins": [
+    "cobblefurnies.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

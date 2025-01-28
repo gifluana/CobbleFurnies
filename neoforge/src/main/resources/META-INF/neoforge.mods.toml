@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "cobblefurnies"
+version = "${version}"
+displayName = "CobbleFurnies"
+authors = "LunazStudios"
+description = '''
+Whether you're building a professor's lab, a bustling Pokécenter, or just a cozy cabin in the woods, CobbleFurnies is here to make your world feel more alive!
+'''
+logoFile = "icon.png"
+
+[[dependencies.cobblefurnies]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobblefurnies]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobblefurnies]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "cobblefurnies.mixins.json"

@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:red_chair", "required": false},
+		{"id": "cobblefurnies:orange_chair", "required": false},
+		{"id": "cobblefurnies:yellow_chair", "required": false},
+		{"id": "cobblefurnies:brown_chair", "required": false},
+		{"id": "cobblefurnies:lime_chair", "required": false},
+		{"id": "cobblefurnies:green_chair", "required": false},
+		{"id": "cobblefurnies:cyan_chair", "required": false},
+		{"id": "cobblefurnies:light_blue_chair", "required": false},
+		{"id": "cobblefurnies:blue_chair", "required": false},
+		{"id": "cobblefurnies:magenta_chair", "required": false},
+		{"id": "cobblefurnies:purple_chair", "required": false},
+		{"id": "cobblefurnies:pink_chair", "required": false},
+		{"id": "cobblefurnies:white_chair", "required": false},
+		{"id": "cobblefurnies:light_gray_chair", "required": false},
+		{"id": "cobblefurnies:gray_chair", "required": false},
+		{"id": "cobblefurnies:black_chair", "required": false}
+	]
+}

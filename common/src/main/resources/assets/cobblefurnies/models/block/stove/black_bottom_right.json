@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/stove_bottom_right",
+    "textures": {
+        "0": "cobblefurnies:block/stove/black"
+    }
+}

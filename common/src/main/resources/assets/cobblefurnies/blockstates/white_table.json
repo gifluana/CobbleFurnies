@@ -1,0 +1,78 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "facing": "north"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/white_top"
+            }
+        },
+        {
+            "when": {
+                "facing": "east"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/white_top",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/white_top",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/white_top",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "leg_1": "true"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/leg",
+                "uvlock": false
+            }
+        },
+        {
+            "when": {
+                "leg_2": "true"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/leg",
+                "y": 90,
+                "uvlock": false
+            }
+        },
+        {
+            "when": {
+                "leg_3": "true"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/leg",
+                "y": 180,
+                "uvlock": false
+            }
+        },
+        {
+            "when": {
+                "leg_4": "true"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/table/leg",
+                "y": 270,
+                "uvlock": false
+            }
+        }
+    ]
+}
