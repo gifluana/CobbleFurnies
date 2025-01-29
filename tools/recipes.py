@@ -26,11 +26,58 @@ def get_chair_recipe(color):
         }
     }
 
+def get_sofa_recipe(color):
+    return {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "sofa",
+        "key": {
+            "#": {
+                "item": f"minecraft:{color}_wool"
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "pattern": [
+            "#  ",
+            "###",
+            "/ /"
+        ],
+        "result": {
+            "count": 3,
+            "id": f"cobblefurnies:{color}_sofa"
+        }
+    }
+
+def get_stool_recipe(color):
+    return {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "stools",
+        "key": {
+            "#": {
+                "item": f"minecraft:{color}_wool"
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "pattern": [
+            "##",
+            "//"
+        ],
+        "result": {
+            "count": 3,
+            "id": f"cobblefurnies:{color}_stool"
+        }
+    }
+
 def get_table_recipe(color):
     return {
         "type": "minecraft:crafting_shaped",
         "category": "building",
-        "group": "chairs",
+        "group": "tables",
         "key": {
             "#": {
                 "item": f"minecraft:{color}_wool"
@@ -57,7 +104,7 @@ def get_sink_recipe(color):
     return {
         "type": "minecraft:crafting_shaped",
         "category": "building",
-        "group": "chairs",
+        "group": "sinks",
         "key": {
             "C": {
                 "item": f"minecraft:{color}_concrete"
@@ -84,7 +131,7 @@ def get_stove_recipe(color):
     return {
         "type": "minecraft:crafting_shaped",
         "category": "building",
-        "group": "chairs",
+        "group": "stoves",
         "key": {
             "C": {
                 "item": f"minecraft:{color}_concrete"
@@ -111,7 +158,7 @@ def get_cabinetry_recipe(color):
     return {
         "type": "minecraft:crafting_shaped",
         "category": "building",
-        "group": "chairs",
+        "group": "cabinetry",
         "key": {
             "C": {
                 "item": f"minecraft:{color}_concrete"
@@ -151,24 +198,32 @@ def generate_recipes():
     # Generate recipes for each color and block
     for color in colors:
         # Chair recipe
-        chair_path = os.path.join(base_dir, f"{color}_chair.json")
-        save_json_file(chair_path, get_chair_recipe(color))
+        # chair_path = os.path.join(base_dir, f"{color}_chair.json")
+        # save_json_file(chair_path, get_chair_recipe(color))
+
+        # Stool recipe
+        # stool_path = os.path.join(base_dir, f"{color}_stool.json")
+        # save_json_file(stool_path, get_stool_recipe(color))
+
+        # Sofa recipe
+        sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
+        save_json_file(sofa_path, get_sofa_recipe(color))
 
         # Table recipe
-        table_path = os.path.join(base_dir, f"{color}_table.json")
-        save_json_file(table_path, get_table_recipe(color))
+        # table_path = os.path.join(base_dir, f"{color}_table.json")
+        # save_json_file(table_path, get_table_recipe(color))
 
         # Sink recipe
-        sink_path = os.path.join(base_dir, f"{color}_sink.json")
-        save_json_file(sink_path, get_sink_recipe(color))
+        # sink_path = os.path.join(base_dir, f"{color}_sink.json")
+        # save_json_file(sink_path, get_sink_recipe(color))
 
         # Stove recipe
-        stove_path = os.path.join(base_dir, f"{color}_stove.json")
-        save_json_file(stove_path, get_stove_recipe(color))
+        # stove_path = os.path.join(base_dir, f"{color}_stove.json")
+        # save_json_file(stove_path, get_stove_recipe(color))
 
         # Cabinetry recipe
-        cabinetry_path = os.path.join(base_dir, f"{color}_cabinetry.json")
-        save_json_file(cabinetry_path, get_cabinetry_recipe(color))
+        # cabinetry_path = os.path.join(base_dir, f"{color}_cabinetry.json")
+        # save_json_file(cabinetry_path, get_cabinetry_recipe(color))
 
 if __name__ == "__main__":
     generate_recipes()

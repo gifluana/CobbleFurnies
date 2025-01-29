@@ -1,6 +1,8 @@
 {
     "values": [
-		{"id": "#cobblefurnies:chairs", "required": false},
-		{"id": "#cobblefurnies:tables", "required": false}
+      {"id": "#cobblefurnies:chairs", "required": false},
+      {"id": "#cobblefurnies:stools", "required": false},
+      {"id": "#cobblefurnies:tables", "required": false},
+      {"id": "#cobblefurnies:sofas", "required": false}
     ]
 }

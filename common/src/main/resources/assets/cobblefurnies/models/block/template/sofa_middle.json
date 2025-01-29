@@ -1,0 +1,76 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"render_type": "minecraft:cutout",
+	"texture_size": [128, 128],
+	"textures": {
+		"1": "#1",
+		"particle": "#1"
+	},
+	"elements": [
+		{
+			"from": [0, 7, 12],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 13.5]},
+			"faces": {
+				"north": {"uv": [4, 2.25, 6, 3.375], "texture": "#1"},
+				"east": {"uv": [3.125, 8.25, 3.625, 9.375], "texture": "#1"},
+				"south": {"uv": [4, 3.375, 6, 4.5], "texture": "#1"},
+				"west": {"uv": [3.625, 8.25, 4.125, 9.375], "texture": "#1"},
+				"up": {"uv": [8, 7.25, 6, 6.75], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"from": [0, 3, 0],
+			"to": [16, 7, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, -3, 16]},
+			"faces": {
+				"north": {"uv": [0, 7.25, 2, 7.75], "texture": "#1", "cullface": "north"},
+				"east": {"uv": [2, 7.25, 4, 7.75], "texture": "#1", "cullface": "east"},
+				"south": {"uv": [4, 7.25, 6, 7.75], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [6, 7.25, 8, 7.75], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [4, 2, 2, 0], "texture": "#1"},
+				"down": {"uv": [2, 2, 0, 4], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "sofa_middle",
+			"origin": [-2, 0, 18],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

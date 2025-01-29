@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "stools",
+    "key": {
+        "#": {
+            "item": "minecraft:yellow_wool"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "pattern": [
+        "##",
+        "//"
+    ],
+    "result": {
+        "count": 3,
+        "id": "cobblefurnies:yellow_stool"
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:red_sofa", "required": false},
+		{"id": "cobblefurnies:orange_sofa", "required": false},
+		{"id": "cobblefurnies:yellow_sofa", "required": false},
+		{"id": "cobblefurnies:brown_sofa", "required": false},
+		{"id": "cobblefurnies:lime_sofa", "required": false},
+		{"id": "cobblefurnies:green_sofa", "required": false},
+		{"id": "cobblefurnies:cyan_sofa", "required": false},
+		{"id": "cobblefurnies:light_blue_sofa", "required": false},
+		{"id": "cobblefurnies:blue_sofa", "required": false},
+		{"id": "cobblefurnies:magenta_sofa", "required": false},
+		{"id": "cobblefurnies:purple_sofa", "required": false},
+		{"id": "cobblefurnies:pink_sofa", "required": false},
+		{"id": "cobblefurnies:white_sofa", "required": false},
+		{"id": "cobblefurnies:light_gray_sofa", "required": false},
+		{"id": "cobblefurnies:gray_sofa", "required": false},
+		{"id": "cobblefurnies:black_sofa", "required": false}
+	]
+}

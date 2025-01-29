@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "cobblefurnies:block/stool/cyan"
+        },
+        "facing=east": {
+            "model": "cobblefurnies:block/stool/cyan",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "cobblefurnies:block/stool/cyan",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "cobblefurnies:block/stool/cyan",
+            "y": 270
+        }
+    }
+}

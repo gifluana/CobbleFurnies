@@ -7,4 +7,5 @@ public class CFBlockStateProperties {
     public static final BooleanProperty CONNECTED_RIGHT = BooleanProperty.create("connected_right");
     public static final BooleanProperty CONNECTED_LEFT = BooleanProperty.create("connected_left");
     public static final EnumProperty<CabinetryShape> CABINETRY_SHAPE = EnumProperty.create("shape", CabinetryShape.class);
+    public static final EnumProperty<SofaType> SOFA_TYPE = EnumProperty.create("type", SofaType.class);
 }

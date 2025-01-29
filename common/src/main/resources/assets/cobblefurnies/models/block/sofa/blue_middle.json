@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/sofa_middle",
+    "textures": {
+        "1": "cobblefurnies:block/sofa/blue"
+    }
+}
