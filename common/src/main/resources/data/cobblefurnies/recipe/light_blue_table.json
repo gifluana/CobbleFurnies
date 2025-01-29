@@ -8,11 +8,14 @@
         },
         "/": {
             "item": "minecraft:stick"
+        },
+        "P": {
+            "tag": "minecraft:planks"
         }
     },
     "pattern": [
         "   ",
-        "###",
+        "P#P",
         "/ /"
     ],
     "result": {

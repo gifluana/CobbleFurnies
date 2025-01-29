@@ -71,6 +71,23 @@
     "block.cobblefurnies.black_stove": "Black Stove",
     "block.cobblefurnies.brown_stove": "Brown Stove",
 
+    "block.cobblefurnies.red_cabinetry": "Red Cabinetry",
+    "block.cobblefurnies.orange_cabinetry": "Orange Cabinetry",
+    "block.cobblefurnies.yellow_cabinetry": "Yellow Cabinetry",
+    "block.cobblefurnies.lime_cabinetry": "Lime Cabinetry",
+    "block.cobblefurnies.green_cabinetry": "Green Cabinetry",
+    "block.cobblefurnies.cyan_cabinetry": "Cyan Cabinetry",
+    "block.cobblefurnies.light_blue_cabinetry": "Light Blue Cabinetry",
+    "block.cobblefurnies.blue_cabinetry": "Blue Cabinetry",
+    "block.cobblefurnies.magenta_cabinetry": "Magenta Cabinetry",
+    "block.cobblefurnies.purple_cabinetry": "Purple Cabinetry",
+    "block.cobblefurnies.pink_cabinetry": "Pink Cabinetry",
+    "block.cobblefurnies.white_cabinetry": "White Cabinetry",
+    "block.cobblefurnies.light_gray_cabinetry": "Light Gray Cabinetry",
+    "block.cobblefurnies.gray_cabinetry": "Gray Cabinetry",
+    "block.cobblefurnies.black_cabinetry": "Black Cabinetry",
+    "block.cobblefurnies.brown_cabinetry": "Brown Cabinetry",
+
     "container.cobblefurnies.stove": "Stove",
     "container.cobblefurnies.freezer": "Freezer",
     "container.cobblefurnies.fridge": "Fridge"

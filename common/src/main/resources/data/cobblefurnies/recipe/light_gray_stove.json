@@ -3,10 +3,10 @@
     "category": "building",
     "group": "chairs",
     "key": {
-        "#": {
+        "C": {
             "item": "minecraft:light_gray_concrete"
         },
-        "C": {
+        "#": {
             "item": "minecraft:calcite"
         },
         "B": {

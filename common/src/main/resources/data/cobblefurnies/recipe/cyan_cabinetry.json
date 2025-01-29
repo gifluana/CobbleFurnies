@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "chairs",
+    "key": {
+        "C": {
+            "item": "minecraft:cyan_concrete"
+        },
+        "#": {
+            "item": "minecraft:calcite"
+        }
+    },
+    "pattern": [
+        "###",
+        "CCC"
+    ],
+    "result": {
+        "count": 8,
+        "id": "cobblefurnies:cyan_cabinetry"
+    }
+}

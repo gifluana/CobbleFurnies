@@ -42,7 +42,7 @@ def generate_loot_tables():
     base_dir = os.path.join(script_dir, "cobblefurnies", "loot_tables", "blocks")
 
     # Blocks for which loot tables will be generated
-    blocks = ["table", "chair", "stove", "sink"]
+    blocks = ["table", "chair", "stove", "sink", "cabinetry"]
 
     # Generate loot tables for each color and block
     for color in colors:

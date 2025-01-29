@@ -1,0 +1,204 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "facing": "north",
+                "shape": "default"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_default",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "shape": "inner_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_left",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "shape": "inner_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_right",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "shape": "outer_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_left",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "shape": "outer_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_right",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "shape": "default"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_default",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "shape": "inner_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_left",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "shape": "inner_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_right",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "shape": "outer_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_left",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "shape": "outer_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_right",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "shape": "default"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_default",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "shape": "inner_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_left",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "shape": "inner_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_right",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "shape": "outer_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_left",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "shape": "outer_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_right",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "shape": "default"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_default",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "shape": "inner_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_left",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "shape": "inner_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_inner_corner_right",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "shape": "outer_corner_left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_left",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "shape": "outer_corner_right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/cabinetry/light_gray_outer_corner_right",
+                "y": 270
+            }
+        }
+    ]
+}

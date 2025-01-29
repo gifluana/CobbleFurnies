@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/cabinetry_default",
+    "textures": {
+        "2": "cobblefurnies:block/cabinetry/gray"
+    }
+}

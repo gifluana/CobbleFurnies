@@ -92,6 +92,23 @@ public class CFBlocks {
     public static final Supplier<Block> GRAY_STOVE = registerBlock("gray_stove", () -> new StoveBlock(Properties.MARBLE));
     public static final Supplier<Block> BLACK_STOVE = registerBlock("black_stove", () -> new StoveBlock(Properties.MARBLE));
 
+    public static final Supplier<Block> RED_CABINETRY = registerBlock("red_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> ORANGE_CABINETRY = registerBlock("orange_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> YELLOW_CABINETRY = registerBlock("yellow_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> BROWN_CABINETRY = registerBlock("brown_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIME_CABINETRY = registerBlock("lime_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> GREEN_CABINETRY = registerBlock("green_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> CYAN_CABINETRY = registerBlock("cyan_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIGHT_BLUE_CABINETRY = registerBlock("light_blue_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> BLUE_CABINETRY = registerBlock("blue_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> MAGENTA_CABINETRY = registerBlock("magenta_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> PURPLE_CABINETRY = registerBlock("purple_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> PINK_CABINETRY = registerBlock("pink_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> WHITE_CABINETRY = registerBlock("white_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIGHT_GRAY_CABINETRY = registerBlock("light_gray_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> GRAY_CABINETRY = registerBlock("gray_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+    public static final Supplier<Block> BLACK_CABINETRY = registerBlock("black_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
+
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = CFRegistry.registerBlock(name, block);
         CFRegistry.registerItem(name, () -> new BlockItem(supplier.get(), new Item.Properties()), "tab");
