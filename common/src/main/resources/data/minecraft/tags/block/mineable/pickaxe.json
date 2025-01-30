@@ -3,6 +3,8 @@
         {"id": "#cobblefurnies:sinks", "required": false},
         {"id": "#cobblefurnies:stoves", "required": false},
         {"id": "#cobblefurnies:cabinetry", "required": false},
-        {"id": "#cobblefurnies:drawers", "required": false}
+        {"id": "#cobblefurnies:drawers", "required": false},
+
+        {"id": "cobblefurnies:kitchen_floor", "required": false}
     ]
 }
