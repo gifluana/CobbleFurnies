@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_south_west_north",
+    "textures": {
+        "1": "cobblefurnies:block/table/jungle"
+    }
+}

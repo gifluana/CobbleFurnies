@@ -56,6 +56,17 @@
     "block.cobblefurnies.black_table": "Black Table",
     "block.cobblefurnies.brown_table": "Brown Table",
 
+    "block.cobblefurnies.bamboo_table": "Bamboo Table",
+    "block.cobblefurnies.birch_table": "Birch Table",
+    "block.cobblefurnies.cherry_table": "Cherry Table",
+    "block.cobblefurnies.crimson_table": "Crimson Table",
+    "block.cobblefurnies.dark_oak_table": "Dark Oak Table",
+    "block.cobblefurnies.jungle_table": "Jungle Table",
+    "block.cobblefurnies.mangrove_table": "Mangrove Table",
+    "block.cobblefurnies.oak_table": "Oak Table",
+    "block.cobblefurnies.spruce_table": "Spruce Table",
+    "block.cobblefurnies.warped_table": "Warped Table",
+
     "block.cobblefurnies.red_sink": "Red Sink",
     "block.cobblefurnies.orange_sink": "Orange Sink",
     "block.cobblefurnies.yellow_sink": "Yellow Sink",

@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/table_south_west",
+    "textures": {
+        "1": "cobblefurnies:block/table/oak"
+    }
+}

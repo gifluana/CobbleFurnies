@@ -16,6 +16,17 @@
 		{"id": "cobblefurnies:white_table", "required": false},
 		{"id": "cobblefurnies:light_gray_table", "required": false},
 		{"id": "cobblefurnies:gray_table", "required": false},
-		{"id": "cobblefurnies:black_table", "required": false}
+		{"id": "cobblefurnies:black_table", "required": false},
+
+		{"id": "cobblefurnies:bamboo_table", "required": false},
+		{"id": "cobblefurnies:birch_table", "required": false},
+		{"id": "cobblefurnies:cherry_table", "required": false},
+		{"id": "cobblefurnies:crimson_table", "required": false},
+		{"id": "cobblefurnies:dark_oak_table", "required": false},
+		{"id": "cobblefurnies:jungle_table", "required": false},
+		{"id": "cobblefurnies:mangrove_table", "required": false},
+		{"id": "cobblefurnies:oak_table", "required": false},
+		{"id": "cobblefurnies:spruce_table", "required": false},
+		{"id": "cobblefurnies:warped_table", "required": false}
 	]
 }
