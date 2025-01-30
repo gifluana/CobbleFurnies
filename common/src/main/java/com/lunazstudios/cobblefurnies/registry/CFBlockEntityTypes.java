@@ -1,5 +1,6 @@
 package com.lunazstudios.cobblefurnies.registry;
 
+import com.lunazstudios.cobblefurnies.block.entity.CabinetBlockEntity;
 import com.lunazstudios.cobblefurnies.block.entity.DrawerBlockEntity;
 import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -45,6 +46,20 @@ public class CFBlockEntityTypes {
                     CFBlocks.LIGHT_GRAY_DRAWER.get(),
                     CFBlocks.GRAY_DRAWER.get(),
                     CFBlocks.BLACK_DRAWER.get()
+            ));
+
+    public static final Supplier<BlockEntityType<CabinetBlockEntity>> CABINET = CFRegistry.registerBlockEntityType("cabinet",
+            () -> CFRegistry.createBlockEntityType(CabinetBlockEntity::new,
+                    CFBlocks.OAK_CABINET.get(),
+                    CFBlocks.SPRUCE_CABINET.get(),
+                    CFBlocks.BIRCH_CABINET.get(),
+                    CFBlocks.JUNGLE_CABINET.get(),
+                    CFBlocks.DARK_OAK_CABINET.get(),
+                    CFBlocks.MANGROVE_CABINET.get(),
+                    CFBlocks.BAMBOO_CABINET.get(),
+                    CFBlocks.CHERRY_CABINET.get(),
+                    CFBlocks.WARPED_CABINET.get(),
+                    CFBlocks.CRIMSON_CABINET.get()
             ));
 
     public static void init() {}

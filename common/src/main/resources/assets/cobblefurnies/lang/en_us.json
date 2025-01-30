@@ -139,7 +139,19 @@
     "block.cobblefurnies.black_drawer": "Black Drawer",
     "block.cobblefurnies.brown_drawer": "Brown Drawer",
 
+    "block.cobblefurnies.bamboo_cabinet": "Bamboo Cabinet",
+    "block.cobblefurnies.birch_cabinet": "Birch Cabinet",
+    "block.cobblefurnies.cherry_cabinet": "Cherry Cabinet",
+    "block.cobblefurnies.crimson_cabinet": "Crimson Cabinet",
+    "block.cobblefurnies.dark_oak_cabinet": "Dark Oak Cabinet",
+    "block.cobblefurnies.jungle_cabinet": "Jungle Cabinet",
+    "block.cobblefurnies.mangrove_cabinet": "Mangrove Cabinet",
+    "block.cobblefurnies.oak_cabinet": "Oak Cabinet",
+    "block.cobblefurnies.spruce_cabinet": "Spruce Cabinet",
+    "block.cobblefurnies.warped_cabinet": "Warped Cabinet",
+
     "container.cobblefurnies.stove": "Stove",
+    "container.cobblefurnies.cabinet": "Cabinet",
     "container.cobblefurnies.drawer": "Drawer",
     "container.cobblefurnies.freezer": "Freezer",
     "container.cobblefurnies.fridge": "Fridge"

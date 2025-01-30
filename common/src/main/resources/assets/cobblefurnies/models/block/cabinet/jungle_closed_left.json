@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/cabinet_closed_left",
+    "textures": {
+        "2": "cobblefurnies:block/cabinet/jungle"
+    }
+}

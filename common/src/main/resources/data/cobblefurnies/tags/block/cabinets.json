@@ -1,0 +1,15 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:bamboo_cabinet", "required": false},
+		{"id": "cobblefurnies:birch_cabinet", "required": false},
+		{"id": "cobblefurnies:cherry_cabinet", "required": false},
+		{"id": "cobblefurnies:crimson_cabinet", "required": false},
+		{"id": "cobblefurnies:dark_oak_cabinet", "required": false},
+		{"id": "cobblefurnies:jungle_cabinet", "required": false},
+		{"id": "cobblefurnies:mangrove_cabinet", "required": false},
+		{"id": "cobblefurnies:oak_cabinet", "required": false},
+		{"id": "cobblefurnies:spruce_cabinet", "required": false},
+		{"id": "cobblefurnies:warped_cabinet", "required": false}
+	]
+}

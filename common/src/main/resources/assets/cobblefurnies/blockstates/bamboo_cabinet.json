@@ -1,0 +1,67 @@
+{
+    "variants": {
+        "facing=north,open=false,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_left"
+        },
+        "facing=east,open=false,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_left",
+            "y": 90
+        },
+        "facing=south,open=false,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_left",
+            "y": 180
+        },
+        "facing=west,open=false,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_left",
+            "y": 270
+        },
+
+        "facing=north,open=false,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_right"
+        },
+        "facing=east,open=false,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_right",
+            "y": 90
+        },
+        "facing=south,open=false,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_right",
+            "y": 180
+        },
+        "facing=west,open=false,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_closed_right",
+            "y": 270
+        },
+
+        "facing=north,open=true,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_left"
+        },
+        "facing=east,open=true,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_left",
+            "y": 90
+        },
+        "facing=south,open=true,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_left",
+            "y": 180
+        },
+        "facing=west,open=true,hinge=left": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_left",
+            "y": 270
+        },
+
+        "facing=north,open=true,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_right"
+        },
+        "facing=east,open=true,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_right",
+            "y": 90
+        },
+        "facing=south,open=true,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_right",
+            "y": 180
+        },
+        "facing=west,open=true,hinge=right": {
+            "model": "cobblefurnies:block/cabinet/bamboo_open_right",
+            "y": 270
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/cabinet_closed_right",
+    "textures": {
+        "2": "cobblefurnies:block/cabinet/dark_oak"
+    }
+}

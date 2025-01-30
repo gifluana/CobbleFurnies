@@ -161,6 +161,17 @@ public class CFBlocks {
     public static final Supplier<Block> GRAY_DRAWER = registerBlock("gray_drawer", () -> new DrawerBlock(Properties.MARBLE));
     public static final Supplier<Block> BLACK_DRAWER = registerBlock("black_drawer", () -> new DrawerBlock(Properties.MARBLE));
 
+    public static final Supplier<Block> OAK_CABINET = registerBlock("oak_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> SPRUCE_CABINET = registerBlock("spruce_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> BIRCH_CABINET = registerBlock("birch_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> DARK_OAK_CABINET = registerBlock("dark_oak_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> JUNGLE_CABINET = registerBlock("jungle_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> MANGROVE_CABINET = registerBlock("mangrove_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_CABINET = registerBlock("bamboo_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> CHERRY_CABINET = registerBlock("cherry_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> CRIMSON_CABINET = registerBlock("crimson_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> WARPED_CABINET = registerBlock("warped_cabinet", () -> new CabinetBlock(Properties.WOOD));
+
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = CFRegistry.registerBlock(name, block);
         CFRegistry.registerItem(name, () -> new BlockItem(supplier.get(), new Item.Properties()), "tab");

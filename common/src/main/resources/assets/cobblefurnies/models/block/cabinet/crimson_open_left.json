@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/cabinet_open_left",
+    "textures": {
+        "2": "cobblefurnies:block/cabinet/crimson"
+    }
+}
