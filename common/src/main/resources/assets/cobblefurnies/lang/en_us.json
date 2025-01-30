@@ -122,7 +122,25 @@
     "block.cobblefurnies.black_sofa": "Black Sofa",
     "block.cobblefurnies.brown_sofa": "Brown Sofa",
 
+    "block.cobblefurnies.red_drawer": "Red Drawer",
+    "block.cobblefurnies.orange_drawer": "Orange Drawer",
+    "block.cobblefurnies.yellow_drawer": "Yellow Drawer",
+    "block.cobblefurnies.lime_drawer": "Lime Drawer",
+    "block.cobblefurnies.green_drawer": "Green Drawer",
+    "block.cobblefurnies.cyan_drawer": "Cyan Drawer",
+    "block.cobblefurnies.light_blue_drawer": "Light Blue Drawer",
+    "block.cobblefurnies.blue_drawer": "Blue Drawer",
+    "block.cobblefurnies.magenta_drawer": "Magenta Drawer",
+    "block.cobblefurnies.purple_drawer": "Purple Drawer",
+    "block.cobblefurnies.pink_drawer": "Pink Drawer",
+    "block.cobblefurnies.white_drawer": "White Drawer",
+    "block.cobblefurnies.light_gray_drawer": "Light Gray Drawer",
+    "block.cobblefurnies.gray_drawer": "Gray Drawer",
+    "block.cobblefurnies.black_drawer": "Black Drawer",
+    "block.cobblefurnies.brown_drawer": "Brown Drawer",
+
     "container.cobblefurnies.stove": "Stove",
+    "container.cobblefurnies.drawer": "Drawer",
     "container.cobblefurnies.freezer": "Freezer",
     "container.cobblefurnies.fridge": "Fridge"
 }

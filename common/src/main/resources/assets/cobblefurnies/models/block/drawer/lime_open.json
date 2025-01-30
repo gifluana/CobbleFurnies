@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/drawer_open",
+    "textures": {
+        "0": "cobblefurnies:block/drawer/lime"
+    }
+}

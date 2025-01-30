@@ -2,6 +2,7 @@
     "values": [
         {"id": "#cobblefurnies:sinks", "required": false},
         {"id": "#cobblefurnies:stoves", "required": false},
-        {"id": "#cobblefurnies:cabinetry", "required": false}
+        {"id": "#cobblefurnies:cabinetry", "required": false},
+        {"id": "#cobblefurnies:drawers", "required": false}
     ]
 }

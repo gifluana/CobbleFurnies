@@ -144,6 +144,23 @@ public class CFBlocks {
     public static final Supplier<Block> GRAY_CABINETRY = registerBlock("gray_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
     public static final Supplier<Block> BLACK_CABINETRY = registerBlock("black_cabinetry", () -> new CabinetryBlock(Properties.MARBLE));
 
+    public static final Supplier<Block> RED_DRAWER = registerBlock("red_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> ORANGE_DRAWER = registerBlock("orange_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> YELLOW_DRAWER = registerBlock("yellow_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> BROWN_DRAWER = registerBlock("brown_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIME_DRAWER = registerBlock("lime_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> GREEN_DRAWER = registerBlock("green_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> CYAN_DRAWER = registerBlock("cyan_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIGHT_BLUE_DRAWER = registerBlock("light_blue_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> BLUE_DRAWER = registerBlock("blue_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> MAGENTA_DRAWER = registerBlock("magenta_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> PURPLE_DRAWER = registerBlock("purple_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> PINK_DRAWER = registerBlock("pink_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> WHITE_DRAWER = registerBlock("white_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> LIGHT_GRAY_DRAWER = registerBlock("light_gray_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> GRAY_DRAWER = registerBlock("gray_drawer", () -> new DrawerBlock(Properties.MARBLE));
+    public static final Supplier<Block> BLACK_DRAWER = registerBlock("black_drawer", () -> new DrawerBlock(Properties.MARBLE));
+
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = CFRegistry.registerBlock(name, block);
         CFRegistry.registerItem(name, () -> new BlockItem(supplier.get(), new Item.Properties()), "tab");

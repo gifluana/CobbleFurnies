@@ -1,5 +1,6 @@
 package com.lunazstudios.cobblefurnies.registry;
 
+import com.lunazstudios.cobblefurnies.block.entity.DrawerBlockEntity;
 import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
@@ -25,6 +26,26 @@ public class CFBlockEntityTypes {
                     CFBlocks.GRAY_STOVE.get(),
                     CFBlocks.BLACK_STOVE.get()
                     ));
+
+    public static final Supplier<BlockEntityType<DrawerBlockEntity>> DRAWER = CFRegistry.registerBlockEntityType("drawer",
+            () -> CFRegistry.createBlockEntityType(DrawerBlockEntity::new,
+                    CFBlocks.RED_DRAWER.get(),
+                    CFBlocks.ORANGE_DRAWER.get(),
+                    CFBlocks.YELLOW_DRAWER.get(),
+                    CFBlocks.BROWN_DRAWER.get(),
+                    CFBlocks.LIME_DRAWER.get(),
+                    CFBlocks.GREEN_DRAWER.get(),
+                    CFBlocks.CYAN_DRAWER.get(),
+                    CFBlocks.LIGHT_BLUE_DRAWER.get(),
+                    CFBlocks.BLUE_DRAWER.get(),
+                    CFBlocks.MAGENTA_DRAWER.get(),
+                    CFBlocks.PURPLE_DRAWER.get(),
+                    CFBlocks.PINK_DRAWER.get(),
+                    CFBlocks.WHITE_DRAWER.get(),
+                    CFBlocks.LIGHT_GRAY_DRAWER.get(),
+                    CFBlocks.GRAY_DRAWER.get(),
+                    CFBlocks.BLACK_DRAWER.get()
+            ));
 
     public static void init() {}
 }

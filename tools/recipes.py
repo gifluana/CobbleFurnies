@@ -154,6 +154,33 @@ def get_stove_recipe(color):
         }
     }
 
+def get_drawer_recipe(color):
+    return {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "drawers",
+        "key": {
+            "C": {
+                "item": f"minecraft:{color}_concrete"
+            },
+            "#": {
+                "item": "minecraft:calcite"
+            },
+            "B": {
+                "item": "minecraft:barrel"
+            }
+        },
+        "pattern": [
+            " B ",
+            "###",
+            "CCC"
+        ],
+        "result": {
+            "count": 8,
+            "id": f"cobblefurnies:{color}_drawer"
+        }
+    }
+
 def get_cabinetry_recipe(color):
     return {
         "type": "minecraft:crafting_shaped",
@@ -206,8 +233,12 @@ def generate_recipes():
         # save_json_file(stool_path, get_stool_recipe(color))
 
         # Sofa recipe
-        sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
-        save_json_file(sofa_path, get_sofa_recipe(color))
+        # sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
+        # save_json_file(sofa_path, get_sofa_recipe(color))
+
+        # Sofa recipe
+        drawer_path = os.path.join(base_dir, f"{color}_drawer.json")
+        save_json_file(drawer_path, get_drawer_recipe(color))
 
         # Table recipe
         # table_path = os.path.join(base_dir, f"{color}_table.json")

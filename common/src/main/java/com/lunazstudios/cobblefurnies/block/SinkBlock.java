@@ -5,8 +5,18 @@ import com.lunazstudios.cobblefurnies.registry.CFBlockTags;
 import com.lunazstudios.cobblefurnies.util.block.ShapeUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -17,6 +27,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -69,6 +80,49 @@ public class SinkBlock extends Block implements SimpleWaterloggedBlock {
                 .setValue(CONNECTED_LEFT, false)
                 .setValue(CONNECTED_RIGHT, false)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+        // Always spawn water particles when the sink is clicked, even without an item
+        spawnWaterParticles(level, blockPos);
+        return InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if (itemStack.is(Items.BUCKET)) {
+            if (!level.isClientSide) {
+                ItemStack waterBucket = new ItemStack(Items.WATER_BUCKET);
+
+                if (!player.getAbilities().instabuild) {
+                    itemStack.shrink(1);
+                    if (!player.getInventory().add(waterBucket)) {
+                        player.drop(waterBucket, false);
+                    }
+                }
+
+                level.playSound(null, blockPos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0f, 1.0f);
+            }
+
+            spawnWaterParticles(level, blockPos);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        }
+
+        spawnWaterParticles(level, blockPos);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    private void spawnWaterParticles(Level level, BlockPos pos) {
+        if (level.isClientSide) {
+            for (int i = 0; i < 5; i++) {
+                level.addParticle(ParticleTypes.SPLASH,
+                        pos.getX() + 0.5 + (level.random.nextDouble() - 0.5) * 0.3,
+                        pos.getY() + 1.1,
+                        pos.getZ() + 0.5 + (level.random.nextDouble() - 0.5) * 0.3,
+                        0, 0.05, 0);
+            }
+        }
     }
 
     @Override
