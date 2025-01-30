@@ -1,5 +1,5 @@
 {
-    "item_group.cobblefurnies.tab": "Cobble Furnies",
+    "item_group.cobblefurnies.tab": "CobbleFurnies",
 
     "entity.cobblefurnies.seat": "Seat",
 
@@ -21,6 +21,17 @@
     "block.cobblefurnies.gray_chair": "Gray Chair",
     "block.cobblefurnies.black_chair": "Black Chair",
     "block.cobblefurnies.brown_chair": "Brown Chair",
+
+    "block.cobblefurnies.bamboo_chair": "Bamboo Chair",
+    "block.cobblefurnies.birch_chair": "Birch Chair",
+    "block.cobblefurnies.cherry_chair": "Cherry Chair",
+    "block.cobblefurnies.crimson_chair": "Crimson Chair",
+    "block.cobblefurnies.dark_oak_chair": "Dark Oak Chair",
+    "block.cobblefurnies.jungle_chair": "Jungle Chair",
+    "block.cobblefurnies.mangrove_chair": "Mangrove Chair",
+    "block.cobblefurnies.oak_chair": "Oak Chair",
+    "block.cobblefurnies.spruce_chair": "Spruce Chair",
+    "block.cobblefurnies.warped_chair": "Warped Chair",
 
     "block.cobblefurnies.red_stool": "Red Stool",
     "block.cobblefurnies.orange_stool": "Orange Stool",

@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "cobblefurnies:block/chair/warped"
+        },
+        "facing=east": {
+            "model": "cobblefurnies:block/chair/warped",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "cobblefurnies:block/chair/warped",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "cobblefurnies:block/chair/warped",
+            "y": 270
+        }
+    }
+}

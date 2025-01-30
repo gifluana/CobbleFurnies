@@ -12,10 +12,9 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
         CobbleFurniesClient.init();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
-                CFBlocks.RED_CHAIR.get(), CFBlocks.ORANGE_CHAIR.get(), CFBlocks.YELLOW_CHAIR.get(), CFBlocks.LIME_CHAIR.get(),
-                CFBlocks.GREEN_CHAIR.get(), CFBlocks.CYAN_CHAIR.get(), CFBlocks.LIGHT_BLUE_CHAIR.get(), CFBlocks.BLUE_CHAIR.get(),
-                CFBlocks.MAGENTA_CHAIR.get(), CFBlocks.PURPLE_CHAIR.get(), CFBlocks.PINK_CHAIR.get(), CFBlocks.WHITE_CHAIR.get(),
-                CFBlocks.LIGHT_GRAY_CHAIR.get(), CFBlocks.GRAY_CHAIR.get(), CFBlocks.BLACK_CHAIR.get(), CFBlocks.BROWN_CHAIR.get(),
+                CFBlocks.OAK_CHAIR.get(), CFBlocks.SPRUCE_CHAIR.get(), CFBlocks.BIRCH_CHAIR.get(), CFBlocks.DARK_OAK_CHAIR.get(),
+                CFBlocks.JUNGLE_CHAIR.get(), CFBlocks.MANGROVE_CHAIR.get(), CFBlocks.BAMBOO_CHAIR.get(), CFBlocks.CHERRY_CHAIR.get(),
+                CFBlocks.CRIMSON_CHAIR.get(), CFBlocks.WARPED_CHAIR.get(),
 
                 CFBlocks.RED_SINK.get(), CFBlocks.ORANGE_SINK.get(), CFBlocks.YELLOW_SINK.get(), CFBlocks.LIME_SINK.get(),
                 CFBlocks.GREEN_SINK.get(), CFBlocks.CYAN_SINK.get(), CFBlocks.LIGHT_BLUE_SINK.get(), CFBlocks.BLUE_SINK.get(),
