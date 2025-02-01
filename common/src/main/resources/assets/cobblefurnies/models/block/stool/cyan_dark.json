@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/stool",
+    "textures": {
+        "0": "cobblefurnies:block/stool/cyan_dark"
+    }
+}

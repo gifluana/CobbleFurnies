@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "chairs",
+    "key": {
+        "#": {
+            "item": "minecraft:yellow_dark_wool"
+        },
+        "/": {
+            "item": "minecraft:spruce_planks"
+        }
+    },
+    "pattern": [
+        "# ",
+        "##",
+        "//"
+    ],
+    "result": {
+        "count": 6,
+        "id": "cobblefurnies:yellow_dark_chair"
+    }
+}

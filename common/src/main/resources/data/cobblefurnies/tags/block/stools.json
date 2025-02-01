@@ -16,6 +16,23 @@
 		{"id": "cobblefurnies:white_stool", "required": false},
 		{"id": "cobblefurnies:light_gray_stool", "required": false},
 		{"id": "cobblefurnies:gray_stool", "required": false},
-		{"id": "cobblefurnies:black_stool", "required": false}
+		{"id": "cobblefurnies:black_stool", "required": false},
+
+		{"id": "cobblefurnies:red_dark_stool", "required": false},
+		{"id": "cobblefurnies:orange_dark_stool", "required": false},
+		{"id": "cobblefurnies:yellow_dark_stool", "required": false},
+		{"id": "cobblefurnies:brown_dark_stool", "required": false},
+		{"id": "cobblefurnies:lime_dark_stool", "required": false},
+		{"id": "cobblefurnies:green_dark_stool", "required": false},
+		{"id": "cobblefurnies:cyan_dark_stool", "required": false},
+		{"id": "cobblefurnies:light_blue_dark_stool", "required": false},
+		{"id": "cobblefurnies:blue_dark_stool", "required": false},
+		{"id": "cobblefurnies:magenta_dark_stool", "required": false},
+		{"id": "cobblefurnies:purple_dark_stool", "required": false},
+		{"id": "cobblefurnies:pink_dark_stool", "required": false},
+		{"id": "cobblefurnies:white_dark_stool", "required": false},
+		{"id": "cobblefurnies:light_gray_dark_stool", "required": false},
+		{"id": "cobblefurnies:gray_dark_stool", "required": false},
+		{"id": "cobblefurnies:black_dark_stool", "required": false}
 	]
 }

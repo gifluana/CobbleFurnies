@@ -51,5 +51,5 @@ def apply_palette_to_images(images_folder, json_palette):
 
 # Example usage
 images_folder = "colors"  # Folder containing images
-json_palette = "palette.json"  # JSON file with the color palette
+json_palette = "concrete_palette.json"  # JSON file with the color palette
 apply_palette_to_images(images_folder, json_palette)

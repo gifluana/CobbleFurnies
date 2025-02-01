@@ -8,6 +8,5 @@ public class CobbleFurniesClient {
 
     public static void init() {
         CFRegistry.registerEntityRenderers(CFEntityTypes.SEAT, SeatRenderer::new);
-
     }
 }

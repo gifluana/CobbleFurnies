@@ -10,7 +10,7 @@
             "item": "minecraft:stick"
         },
         "P": {
-            "tag": "minecraft:planks"
+            "item": "minecraft:oak_planks"
         }
     },
     "pattern": [

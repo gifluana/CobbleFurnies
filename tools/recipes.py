@@ -12,7 +12,7 @@ def get_chair_recipe(color):
                 "item": f"minecraft:{color}_wool"
             },
             "/": {
-                "item": "minecraft:stick"
+                "item": "minecraft:spruce_planks"
             }
         },
         "pattern": [
@@ -21,7 +21,7 @@ def get_chair_recipe(color):
             "//"
         ],
         "result": {
-            "count": 3,
+            "count": 6,
             "id": f"cobblefurnies:{color}_chair"
         }
     }
@@ -60,7 +60,7 @@ def get_stool_recipe(color):
                 "item": f"minecraft:{color}_wool"
             },
             "/": {
-                "item": "minecraft:stick"
+                "item": "minecraft:spruce_planks"
             }
         },
         "pattern": [
@@ -68,7 +68,7 @@ def get_stool_recipe(color):
             "//"
         ],
         "result": {
-            "count": 3,
+            "count": 6,
             "id": f"cobblefurnies:{color}_stool"
         }
     }
@@ -86,7 +86,7 @@ def get_table_recipe(color):
                 "item": "minecraft:stick"
             },
             "P": {
-                "tag": "minecraft:planks"
+                "item": "minecraft:spruce_planks"
             }
         },
         "pattern": [
@@ -236,13 +236,13 @@ def generate_recipes():
         # sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
         # save_json_file(sofa_path, get_sofa_recipe(color))
 
-        # Sofa recipe
-        drawer_path = os.path.join(base_dir, f"{color}_drawer.json")
-        save_json_file(drawer_path, get_drawer_recipe(color))
+        # Drawer recipe
+        # drawer_path = os.path.join(base_dir, f"{color}_drawer.json")
+        # save_json_file(drawer_path, get_drawer_recipe(color))
 
         # Table recipe
-        # table_path = os.path.join(base_dir, f"{color}_table.json")
-        # save_json_file(table_path, get_table_recipe(color))
+        table_path = os.path.join(base_dir, f"{color}_table.json")
+        save_json_file(table_path, get_table_recipe(color))
 
         # Sink recipe
         # sink_path = os.path.join(base_dir, f"{color}_sink.json")

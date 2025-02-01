@@ -7,7 +7,7 @@
             "item": "minecraft:lime_wool"
         },
         "/": {
-            "item": "minecraft:stick"
+            "item": "minecraft:oak_planks"
         }
     },
     "pattern": [
@@ -16,7 +16,7 @@
         "//"
     ],
     "result": {
-        "count": 3,
+        "count": 6,
         "id": "cobblefurnies:lime_chair"
     }
 }

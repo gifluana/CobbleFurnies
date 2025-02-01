@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "stools",
+    "key": {
+        "#": {
+            "item": "minecraft:blue_dark_wool"
+        },
+        "/": {
+            "item": "minecraft:spruce_planks"
+        }
+    },
+    "pattern": [
+        "##",
+        "//"
+    ],
+    "result": {
+        "count": 6,
+        "id": "cobblefurnies:blue_dark_stool"
+    }
+}
