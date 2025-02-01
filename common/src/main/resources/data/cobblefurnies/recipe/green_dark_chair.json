@@ -4,7 +4,7 @@
     "group": "chairs",
     "key": {
         "#": {
-            "item": "minecraft:green_dark_wool"
+            "item": "minecraft:green_wool"
         },
         "/": {
             "item": "minecraft:spruce_planks"

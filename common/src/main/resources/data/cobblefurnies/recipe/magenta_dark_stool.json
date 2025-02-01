@@ -4,7 +4,7 @@
     "group": "stools",
     "key": {
         "#": {
-            "item": "minecraft:magenta_dark_wool"
+            "item": "minecraft:magenta_wool"
         },
         "/": {
             "item": "minecraft:spruce_planks"
