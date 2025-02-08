@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "minecraft:block/air"
+        }
+    },
+    "athena:loader": "athena:carpet_ctm",
+    "ctm_textures": {
+        "center": "cobblefurnies:block/blocks/pokewool/magenta_center",
+        "empty": "cobblefurnies:block/blocks/pokewool/magenta_empty",
+        "horizontal": "cobblefurnies:block/blocks/pokewool/magenta_horizontal",
+        "particle": "cobblefurnies:block/blocks/pokewool/magenta_particle",
+        "vertical": "cobblefurnies:block/blocks/pokewool/magenta_vertical"
+    }
+}

@@ -1,8 +1,6 @@
 package com.lunazstudios.cobblefurnies.registry;
 
-import com.lunazstudios.cobblefurnies.block.entity.CabinetBlockEntity;
-import com.lunazstudios.cobblefurnies.block.entity.DrawerBlockEntity;
-import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
+import com.lunazstudios.cobblefurnies.block.entity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import java.util.function.Supplier;
@@ -59,7 +57,13 @@ public class CFBlockEntityTypes {
                     CFBlocks.BAMBOO_CABINET.get(),
                     CFBlocks.CHERRY_CABINET.get(),
                     CFBlocks.WARPED_CABINET.get(),
-                    CFBlocks.CRIMSON_CABINET.get()
+                    CFBlocks.CRIMSON_CABINET.get(),
+                    CFBlocks.APRICORN_CABINET.get()
+            ));
+
+    public static final Supplier<BlockEntityType<StatueBlockEntity>> STATUE = CFRegistry.registerBlockEntityType("statue",
+            () -> CFRegistry.createBlockEntityType(StatueBlockEntity::new,
+                    CFBlocks.STATUE_ANCIENT.get()
             ));
 
     public static void init() {}

@@ -67,4 +67,6 @@ public class CFRegistryImpl {
     public static Collection<ItemStack> getAllModItems() {
         return itemList;
     }
+
+
 }

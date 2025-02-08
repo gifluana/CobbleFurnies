@@ -44,6 +44,7 @@
 		{"id": "cobblefurnies:mangrove_chair", "required": false},
 		{"id": "cobblefurnies:oak_chair", "required": false},
 		{"id": "cobblefurnies:spruce_chair", "required": false},
-		{"id": "cobblefurnies:warped_chair", "required": false}
+		{"id": "cobblefurnies:warped_chair", "required": false},
+		{"id": "cobblefurnies:apricorn_chair", "required": false}
 	]
 }

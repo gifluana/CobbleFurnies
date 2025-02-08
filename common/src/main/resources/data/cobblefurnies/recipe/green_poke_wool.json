@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:green_wool"
+    },
+    "result": {
+        "count": 1,
+        "id": "cobblefurnies:green_poke_wool"
+    }
+}

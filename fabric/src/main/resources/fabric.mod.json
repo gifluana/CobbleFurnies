@@ -29,6 +29,9 @@
     "fabricloader": ">=0.16.10",
     "minecraft": "~1.21.1",
     "java": ">=21",
+    "geckolib": ">=4.7.3",
+    "athena": ">=4.0.0",
+    "cobblemon": ">=1.6.1",
     "fabric-api": "*"
   },
   "suggests": {

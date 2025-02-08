@@ -2,6 +2,8 @@ package com.lunazstudios.cobblefurnies.registry.neoforge;
 
 import com.lunazstudios.cobblefurnies.CobbleFurnies;
 import com.lunazstudios.cobblefurnies.registry.CFRegistry;
+import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
@@ -32,7 +34,6 @@ public class CFRegistryImpl {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(Registries.ENTITY_TYPE, CobbleFurnies.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> MOD_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CobbleFurnies.MOD_ID);;
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, CobbleFurnies.MOD_ID);
-
     public static final HashMap<String, List<Supplier<? extends ItemLike>>> ITEMS_TAB_MAP = new HashMap<>();
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
@@ -61,6 +62,10 @@ public class CFRegistryImpl {
 
     public static <T extends BlockEntity> BlockEntityType<T> createBlockEntityType(CFRegistry.BlockEntitySupplier<T> blockEntity, Block... validBlocks) {
         return BlockEntityType.Builder.of(blockEntity::create, validBlocks).build(null);
+    }
+
+    public static <T extends BlockEntity> void registerBlockEntityRenderer(Supplier<BlockEntityType<T>> type, BlockEntityRendererProvider<T> renderProvider) {
+        BlockEntityRenderers.register(type.get(), renderProvider);
     }
 
     public static boolean isFakePlayer(Player player) {

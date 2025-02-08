@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/carpet",
+    "textures": {
+        "wool": "cobblefurnies:block/blocks/pokewool/gray_particle"
+    }
+}

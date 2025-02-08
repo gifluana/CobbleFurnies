@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "minecraft:block/air"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "cobblefurnies:block/blocks/pokewool/light_blue_center",
+        "empty": "cobblefurnies:block/blocks/pokewool/light_blue_empty",
+        "horizontal": "cobblefurnies:block/blocks/pokewool/light_blue_horizontal",
+        "particle": "cobblefurnies:block/blocks/pokewool/light_blue_particle",
+        "vertical": "cobblefurnies:block/blocks/pokewool/light_blue_vertical"
+    }
+}

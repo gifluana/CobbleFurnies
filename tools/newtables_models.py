@@ -85,7 +85,7 @@ def save_json_file(path, data):
 def generate_files():
     # Read colors from the JSON file in the same directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    colors_file = os.path.join(script_dir, "colors.json")
+    colors_file = os.path.join(script_dir, "woods.json")
 
     with open(colors_file, "r", encoding="utf-8") as f:
         colors = json.load(f)

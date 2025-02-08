@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "carpet",
+    "key": {
+        "C": {
+            "item": "cobblefurnies:orange_poke_wool"
+        }
+    },
+    "pattern": [
+        "CC"
+    ],
+    "result": {
+        "count": 3,
+        "id": "cobblefurnies:orange_poke_wool_carpet"
+    }
+}

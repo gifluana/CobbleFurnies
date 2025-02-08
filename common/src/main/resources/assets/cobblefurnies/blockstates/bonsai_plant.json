@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "cobblefurnies:block/plant/bonsai"
+    },
+    "half=upper": {
+      "model": "cobblefurnies:block/plant/bonsai_top"
+    }
+  }
+}

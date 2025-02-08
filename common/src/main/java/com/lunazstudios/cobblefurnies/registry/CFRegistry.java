@@ -1,7 +1,5 @@
 package com.lunazstudios.cobblefurnies.registry;
 
-import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
-import com.lunazstudios.cobblefurnies.entity.SeatEntity;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -26,7 +24,6 @@ import java.util.function.Supplier;
  * Project: Another Furniture
  */
 public class CFRegistry {
-
     @ExpectPlatform
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         throw new AssertionError();

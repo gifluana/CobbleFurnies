@@ -7,7 +7,7 @@ public final class CobbleFurnies {
     public static final String MOD_ID = "cobblefurnies";
 
     public static void init() {
-        CFBlocks.register();
+        CFBlocks.init();
         CFBlockTags.init();
         CFEntityTypes.init();
         CFEntityTypeTags.init();

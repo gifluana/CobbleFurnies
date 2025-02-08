@@ -204,6 +204,38 @@ def get_cabinetry_recipe(color):
         }
     }
 
+def get_poke_wool_recipe(color):
+    return {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+            "item": f"minecraft:{color}_wool"
+        },
+        "result": {
+            "count": 1,
+            "id": f"cobblefurnies:{color}_poke_wool"
+        }
+    }
+
+
+def get_poke_wool_carpet_recipe(color):
+    return {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "carpet",
+        "key": {
+            "C": {
+                "item": f"cobblefurnies:{color}_poke_wool"
+            }
+        },
+        "pattern": [
+            "CC"
+        ],
+        "result": {
+            "count": 3,
+            "id": f"cobblefurnies:{color}_poke_wool_carpet"
+        }
+    }
+
 # Function to save JSON data to a file
 def save_json_file(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -241,8 +273,8 @@ def generate_recipes():
         # save_json_file(drawer_path, get_drawer_recipe(color))
 
         # Table recipe
-        table_path = os.path.join(base_dir, f"{color}_table.json")
-        save_json_file(table_path, get_table_recipe(color))
+        # table_path = os.path.join(base_dir, f"{color}_table.json")
+        # save_json_file(table_path, get_table_recipe(color))
 
         # Sink recipe
         # sink_path = os.path.join(base_dir, f"{color}_sink.json")
@@ -255,6 +287,16 @@ def generate_recipes():
         # Cabinetry recipe
         # cabinetry_path = os.path.join(base_dir, f"{color}_cabinetry.json")
         # save_json_file(cabinetry_path, get_cabinetry_recipe(color))
+
+        # Poke Wool recipe
+        # poke_wool_path = os.path.join(base_dir, f"{color}_poke_wool.json")
+        # save_json_file(poke_wool_path, get_poke_wool_recipe(color))
+
+        # Poke Wool Carpet recipe
+        poke_wool_carpet_path = os.path.join(base_dir, f"{color}_poke_wool_carpet.json")
+        save_json_file(poke_wool_carpet_path, get_poke_wool_carpet_recipe(color))
+
+
 
 if __name__ == "__main__":
     generate_recipes()
