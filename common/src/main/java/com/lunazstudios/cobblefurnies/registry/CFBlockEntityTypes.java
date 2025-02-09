@@ -66,5 +66,10 @@ public class CFBlockEntityTypes {
                     CFBlocks.STATUE_ANCIENT.get()
             ));
 
+    public static final Supplier<BlockEntityType<FurniCrafterBlockEntity>> FURNI_CRAFTER = CFRegistry.registerBlockEntityType("furnicrafter",
+            () -> CFRegistry.createBlockEntityType(FurniCrafterBlockEntity::new,
+                    CFBlocks.FURNI_CRAFTER.get()
+            ));
+
     public static void init() {}
 }

@@ -35,6 +35,7 @@ subprojects {
                 includeGroup("software.bernie.geckolib")
             }
         }
+        maven{url = "https://thedarkcolour.github.io/KotlinForForge/"}
     }
 
     dependencies {

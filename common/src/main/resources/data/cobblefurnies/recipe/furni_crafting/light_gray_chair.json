@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 3,
+            "item": "minecraft:light_gray_wool"
+        },
+        {
+            "count": 2,
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:light_gray_chair",
+        "count": 2
+    }
+}

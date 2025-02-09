@@ -71,7 +71,7 @@ public class BonsaiPlantBlock extends Block {
         BlockState otherHalfState = level.getBlockState(otherHalfPos);
 
         if (otherHalfState.is(this) && otherHalfState.getValue(HALF) != half) {
-            level.destroyBlock(otherHalfPos, !player.isCreative());
+            level.destroyBlock(otherHalfPos, false);
         }
 
         super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);

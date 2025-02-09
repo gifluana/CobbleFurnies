@@ -50,6 +50,7 @@ dependencies {
     modImplementation "com.cobblemon:neoforge:${project.cobblemon_version}"
 
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.9.21"
+    modImplementation "thedarkcolour:kotlinforforge-neoforge:${project.kotlin_for_forge_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

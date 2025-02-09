@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 3,
+            "item": "minecraft:gray_concrete"
+        },
+        {
+            "count": 3,
+            "item": "minecraft:calcite"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:gray_stove",
+        "count": 1
+    }
+}

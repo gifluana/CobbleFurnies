@@ -1,15 +1,24 @@
 package com.lunazstudios.cobblefurnies.registry;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.inventory.MenuAccess;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -24,6 +33,19 @@ import java.util.function.Supplier;
  * Project: Another Furniture
  */
 public class CFRegistry {
+
+    @FunctionalInterface
+    public interface ScreenFactory<T extends AbstractContainerMenu, U extends Screen> {
+        U create(T menu, Inventory inventory, Component title);
+    }
+
+    @ExpectPlatform
+    public static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void registerScreen(
+            Supplier<MenuType<M>> menuType, ScreenFactory<M, U> screenFactory) {
+        throw new AssertionError();
+    }
+
+
     @ExpectPlatform
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         throw new AssertionError();

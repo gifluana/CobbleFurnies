@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "A": {
+            "tag": "minecraft:planks"
+        },
+        "B": {
+            "item": "minecraft:shears"
+        },
+        "C": {
+            "item": "minecraft:iron_axe"
+        }
+    },
+    "pattern": [
+        "BC",
+        "AA"
+    ],
+    "result": {
+        "count": 1,
+        "id": "cobblefurnies:furnicrafter"
+    }
+}

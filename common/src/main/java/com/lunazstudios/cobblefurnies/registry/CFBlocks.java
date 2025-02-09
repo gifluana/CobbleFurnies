@@ -28,6 +28,7 @@ public class CFBlocks {
         public static BlockBehaviour.Properties LAMP = WOOD.lightLevel((blockState) -> blockState.hasProperty(BlockStateProperties.LIT) && blockState.getValue(BlockStateProperties.LIT) ? (blockState.getValue(CFBlockStateProperties.LEVEL_1_3) * 5) : 0);
     }
 
+    public static final Supplier<Block> FURNI_CRAFTER = registerBlock("furnicrafter", () -> new FurniCrafterBlock(Properties.CONCRETE));
 
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));

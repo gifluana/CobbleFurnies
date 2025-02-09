@@ -1,5 +1,6 @@
 package com.lunazstudios.cobblefurnies;
 
+import com.lunazstudios.cobblefurnies.network.CFNetwork;
 import com.lunazstudios.cobblefurnies.registry.*;
 import net.minecraft.resources.ResourceLocation;
 
@@ -12,6 +13,10 @@ public final class CobbleFurnies {
         CFEntityTypes.init();
         CFEntityTypeTags.init();
         CFBlockEntityTypes.init();
+        CFRecipes.register();
+        CFMenus.register();
+        CFScreens.init();
+        CFNetwork.registerPackets();
     }
 
     public static ResourceLocation id(String name) {

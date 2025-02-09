@@ -5,6 +5,7 @@
         {"id": "#cobblefurnies:cabinetry", "required": false},
         {"id": "#cobblefurnies:drawers", "required": false},
 
-        {"id": "cobblefurnies:kitchen_floor", "required": false}
+        {"id": "cobblefurnies:kitchen_floor", "required": false},
+        {"id": "cobblefurnies:statue_ancient", "required": false}
     ]
 }

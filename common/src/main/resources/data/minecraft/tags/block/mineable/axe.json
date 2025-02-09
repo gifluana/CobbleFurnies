@@ -4,6 +4,10 @@
       {"id": "#cobblefurnies:stools", "required": false},
       {"id": "#cobblefurnies:tables", "required": false},
       {"id": "#cobblefurnies:sofas", "required": false},
-      {"id": "#cobblefurnies:cabinets", "required": false}
+      {"id": "#cobblefurnies:cabinets", "required": false},
+
+      {"id": "cobblefurnies:bamboo_floor", "required": false},
+      {"id": "cobblefurnies:bonsai_plant", "required": false},
+      {"id": "cobblefurnies:furnicrafter", "required": false}
     ]
 }

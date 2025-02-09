@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 2,
+            "item": "minecraft:purple_wool"
+        },
+        {
+            "count": 2,
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:purple_stool",
+        "count": 2
+    }
+}

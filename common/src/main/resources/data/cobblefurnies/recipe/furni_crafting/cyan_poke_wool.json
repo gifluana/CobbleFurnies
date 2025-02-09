@@ -1,0 +1,13 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "minecraft:cyan_wool"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:cyan_poke_wool",
+        "count": 1
+    }
+}

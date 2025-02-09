@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 3,
+            "item": "minecraft:cyan_concrete"
+        },
+        {
+            "count": 3,
+            "item": "minecraft:calcite"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:cyan_stove",
+        "count": 1
+    }
+}

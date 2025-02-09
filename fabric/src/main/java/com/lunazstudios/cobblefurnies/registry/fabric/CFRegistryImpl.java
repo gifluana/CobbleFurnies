@@ -3,6 +3,9 @@ package com.lunazstudios.cobblefurnies.registry.fabric;
 import com.lunazstudios.cobblefurnies.CobbleFurnies;
 import com.lunazstudios.cobblefurnies.registry.CFRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.inventory.MenuAccess;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -13,8 +16,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -25,6 +32,12 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class CFRegistryImpl {
+
+
+    public static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void registerScreen(
+            Supplier<MenuType<M>> menuType, CFRegistry.ScreenFactory<M, U> screenFactory) {
+        MenuScreens.register(menuType.get(), (MenuScreens.ScreenConstructor<M, U>) (menu, inventory, title) -> screenFactory.create(menu, inventory, title));
+    }
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         var registry = Registry.register(BuiltInRegistries.BLOCK, CobbleFurnies.id(name), block.get());
@@ -67,6 +80,5 @@ public class CFRegistryImpl {
     public static Collection<ItemStack> getAllModItems() {
         return itemList;
     }
-
 
 }

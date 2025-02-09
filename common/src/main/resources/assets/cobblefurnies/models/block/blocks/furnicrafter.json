@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "cobblefurnies:block/blocks/furnicrafter_bottom",
+    "east": "cobblefurnies:block/blocks/furnicrafter_side",
+    "north": "cobblefurnies:block/blocks/furnicrafter_side",
+    "particle": "cobblefurnies:block/blocks/furnicrafter_side",
+    "south": "cobblefurnies:block/blocks/furnicrafter_side",
+    "up": "cobblefurnies:block/blocks/furnicrafter_top",
+    "west": "cobblefurnies:block/blocks/furnicrafter_side"
+  }
+}

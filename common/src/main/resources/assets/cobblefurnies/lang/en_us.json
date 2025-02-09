@@ -1,10 +1,16 @@
 {
     "item_group.cobblefurnies.tab": "CobbleFurnies",
 
+    "gui.cobblefurnies.hold_shift_for_details": "Hold SHIFT for details.",
+
     "entity.cobblefurnies.seat": "Seat",
 
+    "block.cobblefurnies.furnicrafter": "Furni Crafter",
     "block.cobblefurnies.kitchen_floor": "Kitchen Floor",
     "block.cobblefurnies.bamboo_floor": "Bamboo Floor",
+
+    "block.cobblefurnies.bonsai_plant": "Bonsai Plant",
+    "block.cobblefurnies.statue_ancient": "Ancient Statue",
 
     "block.cobblefurnies.red_poke_wool": "Red Poké Wool",
     "block.cobblefurnies.red_poke_wool_carpet": "Red Poké Wool Carpet",
@@ -262,6 +268,7 @@
     "block.cobblefurnies.warped_cabinet": "Warped Cabinet",
     "block.cobblefurnies.apricorn_cabinet": "Apricorn Cabinet",
 
+    "container.cobblefurnies.furni_crafter": "Furni Crafter",
     "container.cobblefurnies.stove": "Stove",
     "container.cobblefurnies.cabinet": "Cabinet",
     "container.cobblefurnies.drawer": "Drawer",

@@ -1,3 +1,6 @@
 {
-  "parent": "cobblefurnies/block/statue/statue_ancient"
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "cobblefurnies:item/statue_ancient"
+  }
 }
