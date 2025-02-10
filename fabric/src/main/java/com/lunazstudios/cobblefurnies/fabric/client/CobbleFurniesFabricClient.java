@@ -1,15 +1,20 @@
 package com.lunazstudios.cobblefurnies.fabric.client;
 
 import com.lunazstudios.cobblefurnies.client.CobbleFurniesClient;
+import com.lunazstudios.cobblefurnies.client.screen.FurniCrafterScreen;
 import com.lunazstudios.cobblefurnies.registry.CFBlocks;
+import com.lunazstudios.cobblefurnies.registry.CFMenus;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
 
 public final class CobbleFurniesFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         CobbleFurniesClient.init();
+
+        MenuScreens.register(CFMenus.FURNI_CRAFTER_MENU.get(), FurniCrafterScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
                 CFBlocks.OAK_CHAIR.get(), CFBlocks.SPRUCE_CHAIR.get(), CFBlocks.BIRCH_CHAIR.get(), CFBlocks.DARK_OAK_CHAIR.get(),

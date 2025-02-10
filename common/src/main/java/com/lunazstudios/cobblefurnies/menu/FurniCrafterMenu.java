@@ -40,7 +40,7 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
     private static final int OUTPUT_SLOT_INDEX = 0;
 
     public FurniCrafterMenu(int id, Inventory inventory, Level level, BlockPos pos, SimpleContainer outputContainer) {
-        super(CFMenus.FURNI_CRAFTER_MENU, id);
+        super(CFMenus.FURNI_CRAFTER_MENU.get(), id);
         this.access = ContainerLevelAccess.create(level, pos);
         this.player = inventory.player;
         this.level = level;

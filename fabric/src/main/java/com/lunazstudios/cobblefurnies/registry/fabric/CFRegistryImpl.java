@@ -3,9 +3,6 @@ package com.lunazstudios.cobblefurnies.registry.fabric;
 import com.lunazstudios.cobblefurnies.CobbleFurnies;
 import com.lunazstudios.cobblefurnies.registry.CFRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.inventory.MenuAccess;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -20,6 +17,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
@@ -33,10 +31,19 @@ import java.util.function.Supplier;
 
 public class CFRegistryImpl {
 
+    public static <T extends Recipe<?>> Supplier<RecipeSerializer<T>> registerRecipeSerializer(String name, Supplier<RecipeSerializer<T>> recipeSerializer) {
+        RecipeSerializer<T> registered = Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, CobbleFurnies.id(name), recipeSerializer.get());
+        return () -> registered;
+    }
 
-    public static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void registerScreen(
-            Supplier<MenuType<M>> menuType, CFRegistry.ScreenFactory<M, U> screenFactory) {
-        MenuScreens.register(menuType.get(), (MenuScreens.ScreenConstructor<M, U>) (menu, inventory, title) -> screenFactory.create(menu, inventory, title));
+    public static <T extends Recipe<?>> Supplier<RecipeType<T>> registerRecipeType(String name, Supplier<RecipeType<T>> recipeType) {
+        RecipeType<T> registered = Registry.register(BuiltInRegistries.RECIPE_TYPE, CobbleFurnies.id(name), recipeType.get());
+        return () -> registered;
+    }
+
+    public static <M extends AbstractContainerMenu> Supplier<MenuType<M>> registerMenuType(String name, Supplier<MenuType<M>> menuType) {
+        MenuType<M> registered = Registry.register(BuiltInRegistries.MENU, CobbleFurnies.id(name), menuType.get());
+        return () -> registered;
     }
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {

@@ -16,10 +16,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Collections;
+import java.util.List;
 
 public class BonsaiPlantBlock extends Block {
     public static final EnumProperty<DoubleBlockHalf> HALF = EnumProperty.create("half", DoubleBlockHalf.class);
@@ -75,6 +80,14 @@ public class BonsaiPlantBlock extends Block {
         }
 
         super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);
+    }
+
+    @Override
+    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER) {
+            return Collections.emptyList();
+        }
+        return super.getDrops(blockState, builder);
     }
 
     @Override

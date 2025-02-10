@@ -33,7 +33,7 @@ public class CFBlocks {
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));
 
-    public static final Supplier<Block> BONSAI_PLANT = registerBlock("bonsai_plant", () -> new BonsaiPlantBlock(Properties.WOOD));
+    public static final Supplier<Block> BONSAI_PLANT = registerBlock("bonsai_plant", () -> new BonsaiPlantBlock(Properties.WOOD.noOcclusion()));
 
     public static final Supplier<Block> RED_POKE_WOOL = registerBlock("red_poke_wool", () -> new Block(Properties.WOOL));
     public static final Supplier<Block> RED_POKE_WOOL_CARPET = registerBlock("red_poke_wool_carpet", () -> new CarpetBlock(Properties.WOOL));

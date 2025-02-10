@@ -17,6 +17,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
@@ -34,17 +35,20 @@ import java.util.function.Supplier;
  */
 public class CFRegistry {
 
-    @FunctionalInterface
-    public interface ScreenFactory<T extends AbstractContainerMenu, U extends Screen> {
-        U create(T menu, Inventory inventory, Component title);
-    }
-
     @ExpectPlatform
-    public static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void registerScreen(
-            Supplier<MenuType<M>> menuType, ScreenFactory<M, U> screenFactory) {
+    public static <M extends AbstractContainerMenu> Supplier<MenuType<M>> registerMenuType(String name, Supplier<MenuType<M>> menuType) {
         throw new AssertionError();
     }
 
+    @ExpectPlatform
+    public static <T extends Recipe<?>> Supplier<RecipeType<T>> registerRecipeType(String name, Supplier<RecipeType<T>> recipeType) {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static <T extends Recipe<?>> Supplier<RecipeSerializer<T>> registerRecipeSerializer(String name, Supplier<RecipeSerializer<T>> recipeSerializer) {
+        throw new AssertionError();
+    }
 
     @ExpectPlatform
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
