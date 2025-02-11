@@ -82,9 +82,12 @@ public class SinkBlock extends Block implements SimpleWaterloggedBlock {
                 .setValue(WATERLOGGED, false));
     }
 
+    protected boolean propagatesSkylightDown(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+        return blockState.getFluidState().isEmpty();
+    }
+
     @Override
     protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
-        // Always spawn water particles when the sink is clicked, even without an item
         spawnWaterParticles(level, blockPos);
         return InteractionResult.sidedSuccess(level.isClientSide);
     }

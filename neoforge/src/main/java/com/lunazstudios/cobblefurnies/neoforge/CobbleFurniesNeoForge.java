@@ -3,8 +3,6 @@ package com.lunazstudios.cobblefurnies.neoforge;
 import com.lunazstudios.cobblefurnies.CobbleFurnies;
 import com.lunazstudios.cobblefurnies.client.screen.FurniCrafterScreen;
 import com.lunazstudios.cobblefurnies.registry.CFMenus;
-import com.lunazstudios.cobblefurnies.registry.CFRecipes;
-import com.lunazstudios.cobblefurnies.registry.CFScreens;
 import com.lunazstudios.cobblefurnies.registry.neoforge.CFRegistryImpl;
 import com.lunazstudios.cobblefurnies.registry.neoforge.CFTabsImpl;
 import net.neoforged.api.distmarker.Dist;

@@ -2,6 +2,7 @@
 	"credit": "Made with Blockbench",
 	"render_type": "minecraft:cutout",
 	"texture_size": [64, 64],
+	"ambientocclusion": false,
 	"textures": {
 		"0": "#0",
 		"particle": "#0"

@@ -1,13 +1,15 @@
 package com.lunazstudios.cobblefurnies.network.message;
 
+import com.lunazstudios.cobblefurnies.network.CFNetwork;
 import dev.architectury.networking.NetworkManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import com.lunazstudios.cobblefurnies.menu.FurniCrafterMenu;
 import com.lunazstudios.cobblefurnies.client.screen.FurniCrafterScreen;
 import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 
-public record SyncCraftableRecipesMessage(int containerId, boolean[] craftable) {
+public record SyncCraftableRecipesMessage(int containerId, boolean[] craftable) implements CustomPacketPayload {
     public static final StreamCodec<RegistryFriendlyByteBuf, SyncCraftableRecipesMessage> CODEC =
             StreamCodec.of(
                     (buf, msg) -> {
@@ -38,5 +40,10 @@ public record SyncCraftableRecipesMessage(int containerId, boolean[] craftable) 
                 }
             }
         });
+    }
+
+    @Override
+    public Type<? extends CustomPacketPayload> type() {
+        return CFNetwork.CRAFTABLE_RECIPES_SYNC_TYPE;
     }
 }

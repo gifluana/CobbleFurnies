@@ -4,6 +4,7 @@ import com.lunazstudios.cobblefurnies.block.*;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.BarrierBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -32,6 +33,8 @@ public class CFBlocks {
 
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));
+
+    public static final Supplier<Block> STATUE_ANCIENT = registerBlock("statue_ancient", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
 
     public static final Supplier<Block> BONSAI_PLANT = registerBlock("bonsai_plant", () -> new BonsaiPlantBlock(Properties.WOOD.noOcclusion()));
 
@@ -287,8 +290,6 @@ public class CFBlocks {
     public static final Supplier<Block> CRIMSON_CABINET = registerBlock("crimson_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> WARPED_CABINET = registerBlock("warped_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> APRICORN_CABINET = registerBlock("apricorn_cabinet", () -> new CabinetBlock(Properties.WOOD));
-
-    public static final Supplier<Block> STATUE_ANCIENT = registerBlock("statue_ancient", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = CFRegistry.registerBlock(name, block);

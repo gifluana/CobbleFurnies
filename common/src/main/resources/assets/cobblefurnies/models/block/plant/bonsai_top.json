@@ -3,5 +3,6 @@
 	"textures": {
 		"particle": "cobblefurnies:block/plant/bonsai"
 	},
+	"ambientocclusion": false,
 	"elements": []
 }

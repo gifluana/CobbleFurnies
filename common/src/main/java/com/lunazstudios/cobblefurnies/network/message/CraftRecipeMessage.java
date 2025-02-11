@@ -1,13 +1,14 @@
 package com.lunazstudios.cobblefurnies.network.message;
 
+import com.lunazstudios.cobblefurnies.network.CFNetwork;
 import dev.architectury.networking.NetworkManager;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.server.level.ServerPlayer;
 import com.lunazstudios.cobblefurnies.menu.FurniCrafterMenu;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
 
-public record CraftRecipeMessage(int containerId, int recipeIndex) {
+public record CraftRecipeMessage(int containerId, int recipeIndex) implements CustomPacketPayload {
     public static final StreamCodec<RegistryFriendlyByteBuf, CraftRecipeMessage> CODEC =
             StreamCodec.of(
                     (buf, msg) -> {
@@ -25,5 +26,10 @@ public record CraftRecipeMessage(int containerId, int recipeIndex) {
                 menu.craftSelectedRecipe(message.recipeIndex);
             }
         });
+    }
+
+    @Override
+    public Type<? extends CustomPacketPayload> type() {
+        return CFNetwork.CRAFT_RECIPE_TYPE;
     }
 }

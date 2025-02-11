@@ -2,6 +2,7 @@ package com.lunazstudios.cobblefurnies.menu;
 
 import com.lunazstudios.cobblefurnies.block.entity.FurniCrafterBlockEntity;
 import com.lunazstudios.cobblefurnies.network.CFNetwork;
+import com.lunazstudios.cobblefurnies.network.message.SyncCraftableRecipesMessage;
 import com.lunazstudios.cobblefurnies.recipe.CountedIngredient;
 import com.lunazstudios.cobblefurnies.recipe.FurniCraftingRecipe;
 import com.lunazstudios.cobblefurnies.registry.CFMenus;
@@ -83,20 +84,16 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
     private void syncCraftableRecipesToClient() {
         if (!(player instanceof ServerPlayer serverPlayer)) return;
 
-        RegistryFriendlyByteBuf buf = new RegistryFriendlyByteBuf(
-                Unpooled.buffer(),
-                serverPlayer.registryAccess()
-        );
-
-        buf.writeInt(containerId);
-        buf.writeInt(canCraftRecipes.size());
-
-        for (boolean canCraft : canCraftRecipes) {
-            buf.writeBoolean(canCraft);
+        boolean[] craftable = new boolean[canCraftRecipes.size()];
+        for (int i = 0; i < canCraftRecipes.size(); i++) {
+            craftable[i] = canCraftRecipes.get(i);
         }
 
-        NetworkManager.sendToPlayer(serverPlayer, CFNetwork.CRAFTABLE_RECIPES_SYNC, buf);
+        SyncCraftableRecipesMessage message = new SyncCraftableRecipesMessage(containerId, craftable);
+
+        NetworkManager.sendToPlayer(serverPlayer, message);
     }
+
 
     private void fetchAvailableRecipes() {
         this.availableRecipes = level.getRecipeManager()

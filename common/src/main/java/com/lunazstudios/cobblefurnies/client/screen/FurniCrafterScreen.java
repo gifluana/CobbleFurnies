@@ -54,6 +54,7 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
     private double scroll = 0;
     private int hoveredRecipeIndex = -1;
     private int clickedY = -1;
+    private int scrollbarDragOffset = 0;
 
     public FurniCrafterScreen(FurniCrafterMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
@@ -110,7 +111,7 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
     protected void renderBg(GuiGraphics graphics, float partialTicks, int mouseX, int mouseY) {
         graphics.blit(TEXTURE, leftPos, topPos, 0, 0, imageWidth, imageHeight, 256, 256);
         renderRecipes(graphics, mouseX, mouseY);
-        renderScrollbar(graphics, mouseY);
+        renderScrollbar(graphics);
     }
 
     private void renderRecipes(GuiGraphics graphics, int mouseX, int mouseY) {
@@ -145,27 +146,19 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
         graphics.disableScissor();
     }
 
-    private void renderScrollbar(GuiGraphics graphics, int mouseY) {
+    private void renderScrollbar(GuiGraphics graphics) {
         int maxScroll = getMaxScroll();
         int scrollbarX = leftPos + GRID_X_OFFSET + WINDOW_WIDTH + 3;
         int scrollbarY = topPos + GRID_Y_OFFSET - Y_OFFSET_CORRECTION;
-        int scrollbarPos = (int) ((getScrollAmount(mouseY) / (double) maxScroll) * (SCROLLBAR_AREA - SCROLLBAR_HEIGHT));
+        int trackHeight = SCROLLBAR_AREA - SCROLLBAR_HEIGHT;
+        int currentHandlePos = maxScroll > 0 ? (int) ((scroll / (double) maxScroll) * trackHeight) : 0;
         int textureX = maxScroll > 0 ? SCROLLBAR_TEXTURE_ENABLED_X : SCROLLBAR_TEXTURE_DISABLED_X;
-        graphics.blit(TEXTURE, scrollbarX, scrollbarY + scrollbarPos, textureX, SCROLLBAR_TEXTURE_Y, 12, SCROLLBAR_HEIGHT, 256, 256);
+        graphics.blit(TEXTURE, scrollbarX, scrollbarY + currentHandlePos, textureX, SCROLLBAR_TEXTURE_Y, 12, SCROLLBAR_HEIGHT, 256, 256);
     }
 
     private int getMaxScroll() {
         int totalRows = (int) Math.ceil(recipes.size() / (double) RECIPES_PER_ROW);
         return Math.max(0, totalRows * BUTTON_SIZE - WINDOW_HEIGHT);
-    }
-
-    private double getScrollAmount(int mouseY) {
-        return Mth.clamp(scroll + getScrollbarDelta(mouseY), 0, getMaxScroll());
-    }
-
-    private int getScrollbarDelta(int mouseY) {
-        double scrollPerUnit = getMaxScroll() / (double) (SCROLLBAR_AREA - SCROLLBAR_HEIGHT);
-        return clickedY != -1 ? (int) ((mouseY - clickedY) * scrollPerUnit) : 0;
     }
 
     private boolean isMouseWithinBounds(double mouseX, double mouseY, int x, int y, int width, int height) {
@@ -181,8 +174,12 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
                 return true;
             }
             int scrollbarX = leftPos + GRID_X_OFFSET + WINDOW_WIDTH + 3;
-            int scrollbarPos = (int) ((getScrollAmount((int) mouseY) / (double) getMaxScroll()) * (SCROLLBAR_AREA - SCROLLBAR_HEIGHT));
-            if (isMouseWithinBounds(mouseX, mouseY, scrollbarX, topPos + GRID_Y_OFFSET - Y_OFFSET_CORRECTION + scrollbarPos, 12, SCROLLBAR_HEIGHT)) {
+            int scrollbarY = topPos + GRID_Y_OFFSET - Y_OFFSET_CORRECTION;
+            int maxScroll = getMaxScroll();
+            int trackHeight = SCROLLBAR_AREA - SCROLLBAR_HEIGHT;
+            int currentHandlePos = maxScroll > 0 ? (int) ((scroll / (double) maxScroll) * trackHeight) : 0;
+            if (isMouseWithinBounds(mouseX, mouseY, scrollbarX, scrollbarY + currentHandlePos, 12, SCROLLBAR_HEIGHT)) {
+                scrollbarDragOffset = (int) mouseY - (scrollbarY + currentHandlePos);
                 clickedY = (int) mouseY;
                 return true;
             }
@@ -191,9 +188,21 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
     }
 
     @Override
+    public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
+        if (clickedY != -1) {
+            int scrollbarY = topPos + GRID_Y_OFFSET - Y_OFFSET_CORRECTION;
+            int trackHeight = SCROLLBAR_AREA - SCROLLBAR_HEIGHT;
+            int newHandlePos = (int) mouseY - scrollbarY - scrollbarDragOffset;
+            newHandlePos = Mth.clamp(newHandlePos, 0, trackHeight);
+            scroll = (newHandlePos / (double) trackHeight) * getMaxScroll();
+            return true;
+        }
+        return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
+    }
+
+    @Override
     public boolean mouseReleased(double mouseX, double mouseY, int button) {
         if (button == GLFW.GLFW_MOUSE_BUTTON_LEFT && clickedY != -1) {
-            scroll = getScrollAmount((int) mouseY);
             clickedY = -1;
             return true;
         }
@@ -210,14 +219,12 @@ public class FurniCrafterScreen extends AbstractContainerScreen<FurniCrafterMenu
     }
 
     private void craftItem(int recipeIndex) {
-        var registryAccess = Minecraft.getInstance().player.registryAccess();
-        RegistryFriendlyByteBuf buf = new RegistryFriendlyByteBuf(Unpooled.buffer(), registryAccess);
         CraftRecipeMessage message = new CraftRecipeMessage(menu.containerId, recipeIndex);
-        CraftRecipeMessage.CODEC.encode(buf, message);
-        NetworkManager.sendToServer(CFNetwork.CRAFT_RECIPE, buf);
+        NetworkManager.sendToServer(message);
     }
 
     public void updateRecipeButtons() {
         updateRecipes();
     }
 }
+

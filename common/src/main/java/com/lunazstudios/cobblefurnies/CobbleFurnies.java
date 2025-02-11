@@ -15,7 +15,6 @@ public final class CobbleFurnies {
         CFBlockEntityTypes.init();
         CFRecipes.register();
         CFMenus.register();
-        CFScreens.init();
         CFNetwork.registerPackets();
     }
 

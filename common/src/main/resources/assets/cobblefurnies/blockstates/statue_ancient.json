@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "cobblefurnies/block/statue/statue_ancient"}
+    "": { "model": "cobblefurnies:block/statue/statue_ancient"}
   }
 }
