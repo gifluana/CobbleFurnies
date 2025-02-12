@@ -36,6 +36,8 @@ subprojects {
             }
         }
         maven{url = "https://thedarkcolour.github.io/KotlinForForge/"}
+        maven { url "https://maven.shedaniel.me" }
+
     }
 
     dependencies {

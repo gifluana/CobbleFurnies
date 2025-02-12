@@ -20,6 +20,9 @@
     ],
     "client": [
       "com.lunazstudios.cobblefurnies.fabric.client.CobbleFurniesFabricClient"
+    ],
+    "rei_client": [
+      "com.lunazstudios.cobblefurnies.fabric.compat.CobbleFurniesREIClient"
     ]
   },
   "mixins": [
