@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north,channel=1": { "model": "cobblefurnies:block/tv/tv_off" },
+    "facing=north,channel=2": { "model": "cobblefurnies:block/tv/tv_channel_2" },
+    "facing=north,channel=3": { "model": "cobblefurnies:block/tv/tv_channel_3" },
+
+    "facing=east,channel=1": { "model": "cobblefurnies:block/tv/tv_off", "y": 90 },
+    "facing=east,channel=2": { "model": "cobblefurnies:block/tv/tv_channel_2", "y": 90 },
+    "facing=east,channel=3": { "model": "cobblefurnies:block/tv/tv_channel_3", "y": 90 },
+
+    "facing=south,channel=1": { "model": "cobblefurnies:block/tv/tv_off", "y": 180 },
+    "facing=south,channel=2": { "model": "cobblefurnies:block/tv/tv_channel_2", "y": 180 },
+    "facing=south,channel=3": { "model": "cobblefurnies:block/tv/tv_channel_3", "y": 180 },
+
+    "facing=west,channel=1": { "model": "cobblefurnies:block/tv/tv_off", "y": 270 },
+    "facing=west,channel=2": { "model": "cobblefurnies:block/tv/tv_channel_2", "y": 270 },
+    "facing=west,channel=3": { "model": "cobblefurnies:block/tv/tv_channel_3", "y": 270 }
+  }
+}

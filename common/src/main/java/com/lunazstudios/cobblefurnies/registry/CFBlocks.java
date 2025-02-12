@@ -30,6 +30,9 @@ public class CFBlocks {
 
     public static final Supplier<Block> FURNI_CRAFTER = registerBlock("furnicrafter", () -> new FurniCrafterBlock(Properties.CONCRETE));
 
+    public static final Supplier<Block> TV = registerBlock("tv", () -> new TVBlock(Properties.CONCRETE));
+    public static final Supplier<Block> CES = registerBlock("ces", () -> new CESBlock(Properties.CONCRETE));
+
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));
 

@@ -29,7 +29,8 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
                 CFBlocks.RED_STOVE.get(), CFBlocks.ORANGE_STOVE.get(), CFBlocks.YELLOW_STOVE.get(), CFBlocks.LIME_STOVE.get(),
                 CFBlocks.GREEN_STOVE.get(), CFBlocks.CYAN_STOVE.get(), CFBlocks.LIGHT_BLUE_STOVE.get(), CFBlocks.BLUE_STOVE.get(),
                 CFBlocks.MAGENTA_STOVE.get(), CFBlocks.PURPLE_STOVE.get(), CFBlocks.PINK_STOVE.get(), CFBlocks.WHITE_STOVE.get(),
-                CFBlocks.LIGHT_GRAY_STOVE.get(), CFBlocks.GRAY_STOVE.get(), CFBlocks.BLACK_STOVE.get(), CFBlocks.BROWN_STOVE.get()
+                CFBlocks.LIGHT_GRAY_STOVE.get(), CFBlocks.GRAY_STOVE.get(), CFBlocks.BLACK_STOVE.get(), CFBlocks.BROWN_STOVE.get(),
+                CFBlocks.TV.get(), CFBlocks.CES.get()
                 );
     }
 }

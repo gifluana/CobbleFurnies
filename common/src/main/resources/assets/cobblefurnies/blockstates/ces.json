@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cobblefurnies:block/ces" },
+    "facing=east": { "model": "cobblefurnies:block/ces", "y": 90 },
+    "facing=south": { "model": "cobblefurnies:block/ces", "y": 180 },
+    "facing=west": { "model": "cobblefurnies:block/ces", "y": 270 }
+  }
+}
