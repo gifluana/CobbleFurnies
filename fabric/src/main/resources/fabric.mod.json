@@ -34,7 +34,7 @@
     "java": ">=21",
     "geckolib": ">=4.7.3",
     "athena": ">=4.0.0",
-    "cobblemon": ">=1.6.1",
+    "cobblemon": ">=1.6.0",
     "fabric-api": "*"
   },
   "suggests": {

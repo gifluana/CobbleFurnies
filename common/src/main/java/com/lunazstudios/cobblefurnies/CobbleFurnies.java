@@ -16,6 +16,7 @@ public final class CobbleFurnies {
         CFRecipes.register();
         CFMenus.register();
         CFNetwork.registerPackets();
+        CFSoundEvents.init();
     }
 
     public static ResourceLocation id(String name) {

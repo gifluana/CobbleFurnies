@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:light_freezer", "required": false},
+		{"id": "cobblefurnies:light_fridge", "required": false},
+		{"id": "cobblefurnies:dark_freezer", "required": false},
+		{"id": "cobblefurnies:dark_fridge", "required": false}
+	]
+}

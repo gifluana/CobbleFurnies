@@ -7,6 +7,7 @@
 		{"id": "cobblefurnies:crimson_cabinet", "required": false},
 		{"id": "cobblefurnies:dark_oak_cabinet", "required": false},
 		{"id": "cobblefurnies:jungle_cabinet", "required": false},
+		{"id": "cobblefurnies:acacia_cabinet", "required": false},
 		{"id": "cobblefurnies:mangrove_cabinet", "required": false},
 		{"id": "cobblefurnies:oak_cabinet", "required": false},
 		{"id": "cobblefurnies:spruce_cabinet", "required": false},

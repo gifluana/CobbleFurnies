@@ -25,6 +25,9 @@ configurations {
 }
 
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     maven {
         name = 'NeoForged'
         url = 'https://maven.neoforged.net/releases'
@@ -55,10 +58,9 @@ dependencies {
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
     modImplementation "earth.terrarium.athena:athena-neoforge-1.21:${athena_version}"
     modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
-    // modImplementation "com.cobblemon:neoforge:${project.cobblemon_version}"
+    modImplementation "com.cobblemon:neoforge:${project.cobblemon_version}"
 
-    // implementation "org.jetbrains.kotlin:kotlin-reflect:1.9.21"
-    // modImplementation "thedarkcolour:kotlinforforge-neoforge:${project.kotlin_for_forge_version}"
+    modImplementation "thedarkcolour:kotlinforforge-neoforge:${project.kotlin_for_forge_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

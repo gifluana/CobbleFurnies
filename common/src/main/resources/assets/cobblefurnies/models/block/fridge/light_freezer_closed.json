@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/freezer_closed",
+    "textures": {
+        "2": "cobblefurnies:block/fridge/light_fridge"
+    }
+}

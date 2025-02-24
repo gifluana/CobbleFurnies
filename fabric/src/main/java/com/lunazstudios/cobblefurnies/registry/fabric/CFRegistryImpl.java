@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -30,6 +31,11 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class CFRegistryImpl {
+
+    public static <T extends SoundEvent> Supplier<T> registerSoundEvent(String name, Supplier<T> soundEvent) {
+        var registry = Registry.register(BuiltInRegistries.SOUND_EVENT, CobbleFurnies.id(name), soundEvent.get());
+        return () -> registry;
+    }
 
     public static <T extends Recipe<?>> Supplier<RecipeSerializer<T>> registerRecipeSerializer(String name, Supplier<RecipeSerializer<T>> recipeSerializer) {
         RecipeSerializer<T> registered = Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, CobbleFurnies.id(name), recipeSerializer.get());

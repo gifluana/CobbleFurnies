@@ -1,0 +1,16 @@
+{
+  "block.fridge.open": {
+    "category": "block",
+    "sounds": [
+      "cobblefurnies:fridge_open"
+    ],
+    "subtitle": "subtitles.block.cobblefurnies.fridge.open"
+  },
+  "block.fridge.close": {
+    "category": "block",
+    "sounds": [
+      "cobblefurnies:fridge_close"
+    ],
+    "subtitle": "subtitles.block.cobblefurnies.fridge.close"
+  }
+}

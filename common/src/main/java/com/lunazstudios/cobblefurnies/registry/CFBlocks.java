@@ -28,6 +28,14 @@ public class CFBlocks {
         public static BlockBehaviour.Properties LAMP = WOOD.lightLevel((blockState) -> blockState.hasProperty(BlockStateProperties.LIT) && blockState.getValue(BlockStateProperties.LIT) ? (blockState.getValue(CFBlockStateProperties.LEVEL_1_3) * 5) : 0);
     }
 
+    public static final Supplier<Block> LIGHT_TOILET = registerBlock("light_toilet", () -> new ToiletBlock(Properties.MARBLE));
+    public static final Supplier<Block> DARK_TOILET = registerBlock("dark_toilet", () -> new ToiletBlock(Properties.MARBLE));
+
+    public static final Supplier<Block> LIGHT_FREEZER = registerBlockOnly("light_freezer", () -> new FreezerBlock(Properties.CONCRETE));
+    public static final Supplier<Block> LIGHT_FRIDGE = registerBlock("light_fridge", () -> new FridgeBlock(Properties.CONCRETE, CFBlocks.LIGHT_FREEZER.get()));
+    public static final Supplier<Block> DARK_FREEZER = registerBlockOnly("dark_freezer", () -> new FreezerBlock(Properties.CONCRETE));
+    public static final Supplier<Block> DARK_FRIDGE = registerBlock("dark_fridge", () -> new FridgeBlock(Properties.CONCRETE, CFBlocks.DARK_FREEZER.get()));
+
     public static final Supplier<Block> FURNI_CRAFTER = registerBlock("furnicrafter", () -> new FurniCrafterBlock(Properties.CONCRETE));
 
     public static final Supplier<Block> TV = registerBlock("tv", () -> new TVBlock(Properties.CONCRETE));
@@ -111,6 +119,7 @@ public class CFBlocks {
     public static final Supplier<Block> BIRCH_CHAIR = registerBlock("birch_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> DARK_OAK_CHAIR = registerBlock("dark_oak_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> JUNGLE_CHAIR = registerBlock("jungle_chair", () -> new WoodChairBlock(Properties.WOOD));
+    public static final Supplier<Block> ACACIA_CHAIR = registerBlock("acacia_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_CHAIR = registerBlock("mangrove_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> BAMBOO_CHAIR = registerBlock("bamboo_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> CHERRY_CHAIR = registerBlock("cherry_chair", () -> new WoodChairBlock(Properties.WOOD));
@@ -206,6 +215,7 @@ public class CFBlocks {
     public static final Supplier<Block> BIRCH_TABLE = registerBlock("birch_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> DARK_OAK_TABLE = registerBlock("dark_oak_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> JUNGLE_TABLE = registerBlock("jungle_table", () -> new TableBlock(Properties.WOOD));
+    public static final Supplier<Block> ACACIA_TABLE = registerBlock("acacia_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_TABLE = registerBlock("mangrove_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> BAMBOO_TABLE = registerBlock("bamboo_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> CHERRY_TABLE = registerBlock("cherry_table", () -> new TableBlock(Properties.WOOD));
@@ -286,6 +296,7 @@ public class CFBlocks {
     public static final Supplier<Block> BIRCH_CABINET = registerBlock("birch_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> DARK_OAK_CABINET = registerBlock("dark_oak_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> JUNGLE_CABINET = registerBlock("jungle_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> ACACIA_CABINET = registerBlock("acacia_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_CABINET = registerBlock("mangrove_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> BAMBOO_CABINET = registerBlock("bamboo_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> CHERRY_CABINET = registerBlock("cherry_cabinet", () -> new CabinetBlock(Properties.WOOD));

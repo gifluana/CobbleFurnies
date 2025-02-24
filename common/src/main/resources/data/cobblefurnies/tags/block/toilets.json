@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:light_toilet", "required": false},
+		{"id": "cobblefurnies:dark_toilet", "required": false}
+	]
+}

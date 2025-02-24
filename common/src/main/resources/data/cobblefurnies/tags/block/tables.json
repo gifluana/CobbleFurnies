@@ -41,6 +41,7 @@
 		{"id": "cobblefurnies:crimson_table", "required": false},
 		{"id": "cobblefurnies:dark_oak_table", "required": false},
 		{"id": "cobblefurnies:jungle_table", "required": false},
+		{"id": "cobblefurnies:acacia_table", "required": false},
 		{"id": "cobblefurnies:mangrove_table", "required": false},
 		{"id": "cobblefurnies:oak_table", "required": false},
 		{"id": "cobblefurnies:spruce_table", "required": false},

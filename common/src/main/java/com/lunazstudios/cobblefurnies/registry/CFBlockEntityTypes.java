@@ -52,6 +52,7 @@ public class CFBlockEntityTypes {
                     CFBlocks.SPRUCE_CABINET.get(),
                     CFBlocks.BIRCH_CABINET.get(),
                     CFBlocks.JUNGLE_CABINET.get(),
+                    CFBlocks.ACACIA_CABINET.get(),
                     CFBlocks.DARK_OAK_CABINET.get(),
                     CFBlocks.MANGROVE_CABINET.get(),
                     CFBlocks.BAMBOO_CABINET.get(),
@@ -64,6 +65,18 @@ public class CFBlockEntityTypes {
     public static final Supplier<BlockEntityType<StatueBlockEntity>> STATUE = CFRegistry.registerBlockEntityType("statue",
             () -> CFRegistry.createBlockEntityType(StatueBlockEntity::new,
                     CFBlocks.STATUE_ANCIENT.get()
+            ));
+
+    public static final Supplier<BlockEntityType<FridgeBlockEntity>> FRIDGE = CFRegistry.registerBlockEntityType("fridge",
+            () -> CFRegistry.createBlockEntityType(FridgeBlockEntity::new,
+                    CFBlocks.LIGHT_FRIDGE.get(),
+                    CFBlocks.DARK_FRIDGE.get()
+            ));
+
+    public static final Supplier<BlockEntityType<FreezerBlockEntity>> FREEZER = CFRegistry.registerBlockEntityType("freezer",
+            () -> CFRegistry.createBlockEntityType(FreezerBlockEntity::new,
+                    CFBlocks.LIGHT_FREEZER.get(),
+                    CFBlocks.DARK_FREEZER.get()
             ));
 
     public static final Supplier<BlockEntityType<FurniCrafterBlockEntity>> FURNI_CRAFTER = CFRegistry.registerBlockEntityType("furnicrafter",

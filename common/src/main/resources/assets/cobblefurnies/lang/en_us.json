@@ -9,8 +9,19 @@
     "block.cobblefurnies.kitchen_floor": "Kitchen Floor",
     "block.cobblefurnies.bamboo_floor": "Bamboo Floor",
 
+    "block.cobblefurnies.light_fridge": "Light Fridge",
+    "block.cobblefurnies.light_freezer": "Light Freezer",
+    "block.cobblefurnies.dark_fridge": "Dark Fridge",
+    "block.cobblefurnies.dark_freezer": "Dark Freezer",
+
+    "block.cobblefurnies.light_toilet": "Light Toilet",
+    "block.cobblefurnies.dark_toilet": "Dark Toilet",
+
     "block.cobblefurnies.bonsai_plant": "Bonsai Plant",
     "block.cobblefurnies.statue_ancient": "Ancient Statue",
+
+    "block.cobblefurnies.tv": "TV",
+    "block.cobblefurnies.ces": "CES (Cobble Entertainment System)",
 
     "block.cobblefurnies.red_poke_wool": "Red Poké Wool",
     "block.cobblefurnies.red_poke_wool_carpet": "Red Poké Wool Carpet",
@@ -85,6 +96,7 @@
     "block.cobblefurnies.crimson_chair": "Crimson Chair",
     "block.cobblefurnies.dark_oak_chair": "Dark Oak Chair",
     "block.cobblefurnies.jungle_chair": "Jungle Chair",
+    "block.cobblefurnies.acacia_chair": "Acacia Chair",
     "block.cobblefurnies.mangrove_chair": "Mangrove Chair",
     "block.cobblefurnies.oak_chair": "Oak Chair",
     "block.cobblefurnies.spruce_chair": "Spruce Chair",
@@ -165,6 +177,7 @@
     "block.cobblefurnies.crimson_table": "Crimson Table",
     "block.cobblefurnies.dark_oak_table": "Dark Oak Table",
     "block.cobblefurnies.jungle_table": "Jungle Table",
+    "block.cobblefurnies.acacia_table": "Acacia Table",
     "block.cobblefurnies.mangrove_table": "Mangrove Table",
     "block.cobblefurnies.oak_table": "Oak Table",
     "block.cobblefurnies.spruce_table": "Spruce Table",
@@ -188,7 +201,7 @@
     "block.cobblefurnies.black_sink": "Black Sink",
     "block.cobblefurnies.brown_sink": "Brown Sink",
 
-    "block.cobblefurnies.red_stove": "Red Stone",
+    "block.cobblefurnies.red_stove": "Red Stove",
     "block.cobblefurnies.orange_stove": "Orange Stove",
     "block.cobblefurnies.yellow_stove": "Yellow Stove",
     "block.cobblefurnies.lime_stove": "Lime Stove",
@@ -262,6 +275,7 @@
     "block.cobblefurnies.crimson_cabinet": "Crimson Cabinet",
     "block.cobblefurnies.dark_oak_cabinet": "Dark Oak Cabinet",
     "block.cobblefurnies.jungle_cabinet": "Jungle Cabinet",
+    "block.cobblefurnies.acacia_cabinet": "Acacia Cabinet",
     "block.cobblefurnies.mangrove_cabinet": "Mangrove Cabinet",
     "block.cobblefurnies.oak_cabinet": "Oak Cabinet",
     "block.cobblefurnies.spruce_cabinet": "Spruce Cabinet",

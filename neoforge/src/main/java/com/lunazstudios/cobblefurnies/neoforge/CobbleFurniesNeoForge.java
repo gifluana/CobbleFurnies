@@ -24,6 +24,7 @@ public final class CobbleFurniesNeoForge {
         CFRegistryImpl.MENUS.register(bus);
         CFRegistryImpl.RECIPE_TYPES.register(bus);
         CFRegistryImpl.RECIPE_SERIALIZERS.register(bus);
+        CFRegistryImpl.SOUND_EVENTS.register(bus);
         CFTabsImpl.register(bus);
     }
 
