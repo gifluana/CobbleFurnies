@@ -1,0 +1,6 @@
+{
+  "parent": "cobblefurnies:block/template/poke_chair",
+  "textures": {
+    "0": "cobblefurnies:block/desk/poke_ball"
+  }
+}

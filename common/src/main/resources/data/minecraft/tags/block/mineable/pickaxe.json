@@ -6,8 +6,20 @@
         {"id": "#cobblefurnies:drawers", "required": false},
         {"id": "#cobblefurnies:fridges", "required": false},
         {"id": "#cobblefurnies:toilets", "required": false},
+        {"id": "#cobblefurnies:statues", "required": false},
 
         {"id": "cobblefurnies:kitchen_floor", "required": false},
-        {"id": "cobblefurnies:statue_ancient", "required": false}
+        {"id": "cobblefurnies:lab_floor", "required": false},
+        {"id": "cobblefurnies:azure_mosaic", "required": false},
+        {"id": "cobblefurnies:butter_mosaic", "required": false},
+        {"id": "cobblefurnies:goldenrod_mosaic", "required": false},
+        {"id": "cobblefurnies:iced_porcelain", "required": false},
+        {"id": "cobblefurnies:ironlace_ceramic", "required": false},
+        {"id": "cobblefurnies:minted_porcelain", "required": false},
+        {"id": "cobblefurnies:pale_ceramic", "required": false},
+        {"id": "cobblefurnies:pool_ceramic", "required": false},
+        {"id": "cobblefurnies:vanilla_mosaic", "required": false},
+        {"id": "cobblefurnies:poke_ball_desk", "required": false},
+        {"id": "cobblefurnies:poke_ball_chair", "required": false}
     ]
 }

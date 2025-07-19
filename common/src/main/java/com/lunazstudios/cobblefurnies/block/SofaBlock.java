@@ -175,7 +175,11 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock {
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
 
-        return direction.getAxis().isHorizontal() ? state.setValue(TYPE, getConnection(state, (Level)level, currentPos)) : super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
+        if (direction.getAxis().isHorizontal() && level instanceof Level realLevel) {
+            return state.setValue(TYPE, getConnection(state, realLevel, currentPos));
+        }
+
+        return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
     }
 
     @Override
@@ -250,6 +254,7 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock {
     }
 
     public static SofaType getConnection(BlockState state, Level level, BlockPos pos) {
+        if (level == null) return SofaType.SINGLE;
         Direction facing = state.getValue(FACING);
 
         Direction dir1;
@@ -305,7 +310,23 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock {
 
     @Override
     public BlockState rotate(BlockState state, Rotation rotation) {
-        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+        Direction newFacing = rotation.rotate(state.getValue(FACING));
+        SofaType newType = rotateType(state.getValue(TYPE), rotation);
+        return state.setValue(FACING, newFacing).setValue(TYPE, newType);
+    }
+
+    private static SofaType rotateType(SofaType type, Rotation rotation) {
+        return switch (type) {
+            case INNER_LEFT -> (rotation == Rotation.CLOCKWISE_90 || rotation == Rotation.COUNTERCLOCKWISE_90)
+                    ? SofaType.INNER_RIGHT : type;
+            case INNER_RIGHT -> (rotation == Rotation.CLOCKWISE_90 || rotation == Rotation.COUNTERCLOCKWISE_90)
+                    ? SofaType.INNER_LEFT : type;
+            case OUTER_LEFT -> (rotation == Rotation.CLOCKWISE_90 || rotation == Rotation.COUNTERCLOCKWISE_90)
+                    ? SofaType.OUTER_RIGHT : type;
+            case OUTER_RIGHT -> (rotation == Rotation.CLOCKWISE_90 || rotation == Rotation.COUNTERCLOCKWISE_90)
+                    ? SofaType.OUTER_LEFT : type;
+            default -> type;
+        };
     }
 
     @Override

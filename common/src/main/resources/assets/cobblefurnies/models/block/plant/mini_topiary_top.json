@@ -1,0 +1,8 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"particle": "cobblefurnies:block/plant/mini_topiary"
+	},
+	"ambientocclusion": false,
+	"elements": []
+}

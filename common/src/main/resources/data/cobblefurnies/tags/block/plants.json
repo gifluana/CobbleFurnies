@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:bonsai_plant", "required": false},
+		{"id": "cobblefurnies:potted_pothos", "required": false},
+		{"id": "cobblefurnies:mini_topiary", "required": false}
+	]
+}

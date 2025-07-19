@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "cobblefurnies:block/blocks/grass_block_2"
+  }
+}

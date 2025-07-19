@@ -8,6 +8,17 @@
     "block.cobblefurnies.furnicrafter": "Furni Crafter",
     "block.cobblefurnies.kitchen_floor": "Kitchen Floor",
     "block.cobblefurnies.bamboo_floor": "Bamboo Floor",
+    "block.cobblefurnies.bamboo_planks": "Bamboo Planks",
+    "block.cobblefurnies.azure_mosaic": "Azure Mosaic",
+    "block.cobblefurnies.butter_mosaic": "Butter Mosaic",
+    "block.cobblefurnies.vanilla_mosaic": "Vanilla Mosaic",
+    "block.cobblefurnies.goldenrod_mosaic": "Goldenrod Mosaic",
+    "block.cobblefurnies.ironlace_ceramic": "Ironlace Ceramic",
+    "block.cobblefurnies.lab_floor": "Lab Floor",
+    "block.cobblefurnies.minted_porcelain": "Minted Porcelain",
+    "block.cobblefurnies.iced_porcelain": "Iced Porcelain",
+    "block.cobblefurnies.pale_ceramic": "Pale Ceramic",
+    "block.cobblefurnies.pool_ceramic": "Pool Ceramic",
 
     "block.cobblefurnies.light_fridge": "Light Fridge",
     "block.cobblefurnies.light_freezer": "Light Freezer",
@@ -18,7 +29,17 @@
     "block.cobblefurnies.dark_toilet": "Dark Toilet",
 
     "block.cobblefurnies.bonsai_plant": "Bonsai Plant",
+    "block.cobblefurnies.potted_pothos": "Potted Pothos",
+    "block.cobblefurnies.mini_topiary": "Mini Topiary",
+
+    "block.cobblefurnies.poke_ball_desk": "Poké Ball Desk",
+    "block.cobblefurnies.poke_ball_chair": "Poké Ball Chair",
+
     "block.cobblefurnies.statue_ancient": "Ancient Statue",
+    "block.cobblefurnies.statue_bulbasaur": "Bulbasaur Statue",
+    "block.cobblefurnies.statue_squirtle": "Squirtle Statue",
+    "block.cobblefurnies.statue_charmander": "Charmander Statue",
+    "block.cobblefurnies.statue_pikachu": "Pikachu Statue",
 
     "block.cobblefurnies.tv": "TV",
     "block.cobblefurnies.ces": "CES (Cobble Entertainment System)",

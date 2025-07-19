@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "cobblefurnies:block/plant/mini_topiary"
+    },
+    "half=upper": {
+      "model": "cobblefurnies:block/plant/mini_topiary_top"
+    }
+  }
+}

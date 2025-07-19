@@ -40,7 +40,8 @@ public class StoolBlock extends SeatBlock implements SimpleWaterloggedBlock {
             Block.box(2, 0, 12, 4, 4, 14),
             Block.box(12, 0, 12, 14, 4, 14),
             Block.box(12, 0, 2, 14, 4, 4),
-            Block.box(2, 4, 2, 14, 7, 14));
+            Block.box(2, 4, 2, 14, 7, 14)
+    );
 
     public StoolBlock(Properties properties) {
         super(properties);

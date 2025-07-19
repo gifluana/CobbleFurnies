@@ -4,9 +4,7 @@ import com.lunazstudios.cobblefurnies.block.*;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CarpetBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -21,12 +19,16 @@ import java.util.function.Supplier;
 public class CFBlocks {
 
     public static class Properties {
+        public static BlockBehaviour.Properties GRASS = Block.Properties.of().strength(0.6F).sound(SoundType.GRASS).mapColor(MapColor.GRASS);
         public static BlockBehaviour.Properties WOOD = Block.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS);
         public static BlockBehaviour.Properties WOOL = Block.Properties.of().strength(0.8F).sound(SoundType.WOOL).ignitedByLava().mapColor(MapColor.WOOL).instrument(NoteBlockInstrument.GUITAR);
         public static BlockBehaviour.Properties MARBLE = Block.Properties.of().strength(1.5F, 6.0F).sound(SoundType.CALCITE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
         public static BlockBehaviour.Properties CONCRETE = Block.Properties.of().strength(1.8F).sound(SoundType.STONE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
         public static BlockBehaviour.Properties LAMP = WOOD.lightLevel((blockState) -> blockState.hasProperty(BlockStateProperties.LIT) && blockState.getValue(BlockStateProperties.LIT) ? (blockState.getValue(CFBlockStateProperties.LEVEL_1_3) * 5) : 0);
     }
+
+    public static final Supplier<Block> POKE_BALL_DESK = registerBlock("poke_ball_desk", () -> new PokeDeskBlock(Properties.CONCRETE));
+    public static final Supplier<Block> POKE_BALL_CHAIR = registerBlock("poke_ball_chair", () -> new PokeChairBlock(Properties.CONCRETE));
 
     public static final Supplier<Block> LIGHT_TOILET = registerBlock("light_toilet", () -> new ToiletBlock(Properties.MARBLE));
     public static final Supplier<Block> DARK_TOILET = registerBlock("dark_toilet", () -> new ToiletBlock(Properties.MARBLE));
@@ -41,12 +43,31 @@ public class CFBlocks {
     public static final Supplier<Block> TV = registerBlock("tv", () -> new TVBlock(Properties.CONCRETE));
     public static final Supplier<Block> CES = registerBlock("ces", () -> new CESBlock(Properties.CONCRETE));
 
+//    public static final Supplier<Block> GRASS_BLOCK = registerBlock("grass_block", () -> new GrassBlock(Properties.GRASS));
+//    public static final Supplier<Block> CLEARER_GRASS_BLOCK = registerBlock("clearer_grass_block", () -> new GrassBlock(Properties.GRASS));
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new Block(Properties.WOOD));
+    public static final Supplier<Block> AZURE_MOSAIC = registerBlock("azure_mosaic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> BUTTER_MOSAIC = registerBlock("butter_mosaic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> VANILLA_MOSAIC = registerBlock("vanilla_mosaic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> GOLDENROD_MOSAIC = registerBlock("goldenrod_mosaic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> ICED_PORCELAIN = registerBlock("iced_porcelain", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> MINTED_PORCELAIN = registerBlock("minted_porcelain", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> IRONLACE_CERAMIC = registerBlock("ironlace_ceramic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> PALE_CERAMIC = registerBlock("pale_ceramic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> POOL_CERAMIC = registerBlock("pool_ceramic", () -> new Block(Properties.MARBLE));
+    public static final Supplier<Block> LAB_FLOOR = registerBlock("lab_floor", () -> new Block(Properties.MARBLE));
 
     public static final Supplier<Block> STATUE_ANCIENT = registerBlock("statue_ancient", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
+    public static final Supplier<Block> STATUE_PIKACHU = registerBlock("statue_pikachu", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
+    public static final Supplier<Block> STATUE_CHARMANDER = registerBlock("statue_charmander", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
+    public static final Supplier<Block> STATUE_SQUIRTLE = registerBlock("statue_squirtle", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
+    public static final Supplier<Block> STATUE_BULBASAUR = registerBlock("statue_bulbasaur", () -> new StatueBlock(Properties.MARBLE.noOcclusion()));
 
     public static final Supplier<Block> BONSAI_PLANT = registerBlock("bonsai_plant", () -> new BonsaiPlantBlock(Properties.WOOD.noOcclusion()));
+    public static final Supplier<Block> MINI_TOPIARY = registerBlock("mini_topiary", () -> new MiniTopiaryBlock(Properties.WOOD.noOcclusion()));
+    public static final Supplier<Block> POTTED_POTHOS = registerBlock("potted_pothos", () -> new PottedPothosBlock(Properties.WOOD.noOcclusion()));
 
     public static final Supplier<Block> RED_POKE_WOOL = registerBlock("red_poke_wool", () -> new Block(Properties.WOOL));
     public static final Supplier<Block> RED_POKE_WOOL_CARPET = registerBlock("red_poke_wool_carpet", () -> new CarpetBlock(Properties.WOOL));

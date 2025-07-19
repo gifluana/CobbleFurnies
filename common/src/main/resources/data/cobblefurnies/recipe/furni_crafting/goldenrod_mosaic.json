@@ -1,0 +1,13 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "minecraft:yellow_concrete"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:goldenrod_mosaic",
+        "count": 1
+    }
+}

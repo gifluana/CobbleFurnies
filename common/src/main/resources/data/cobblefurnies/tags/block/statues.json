@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:statue_ancient", "required": false},
+		{"id": "cobblefurnies:statue_pikachu", "required": false},
+		{"id": "cobblefurnies:statue_squirtle", "required": false},
+		{"id": "cobblefurnies:statue_charmander", "required": false},
+		{"id": "cobblefurnies:statue_bulbasaur", "required": false}
+	]
+}

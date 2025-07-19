@@ -17,9 +17,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -195,5 +193,33 @@ public class CabinetBlock extends BaseEntityBlock {
 
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        Direction facing = state.getValue(FACING);
+        DoorHingeSide hinge = state.getValue(HINGE);
+
+        switch (mirror) {
+            case LEFT_RIGHT:
+                if (facing.getAxis() == Direction.Axis.Z) {
+                    facing = mirror.mirror(facing);
+                    hinge = hinge == DoorHingeSide.LEFT ? DoorHingeSide.RIGHT : DoorHingeSide.LEFT;
+                }
+                break;
+            case FRONT_BACK:
+                if (facing.getAxis() == Direction.Axis.X) {
+                    facing = mirror.mirror(facing);
+                    hinge = hinge == DoorHingeSide.LEFT ? DoorHingeSide.RIGHT : DoorHingeSide.LEFT;
+                }
+                break;
+        }
+
+        return state.setValue(FACING, facing).setValue(HINGE, hinge);
     }
 }

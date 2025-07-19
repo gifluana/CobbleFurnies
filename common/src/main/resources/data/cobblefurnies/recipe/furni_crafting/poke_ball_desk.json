@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "minecraft:red_concrete"
+        },
+        {
+            "count": 1,
+            "item": "minecraft:white_concrete"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:poke_ball_desk",
+        "count": 1
+    }
+}

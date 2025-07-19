@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "minecraft:block/air"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "cobblefurnies:block/blocks/grass_blocks/clearer_grass_block_center",
+        "empty": "cobblefurnies:block/blocks/grass_blocks/clearer_grass_block_empty",
+        "horizontal": "cobblefurnies:block/blocks/grass_blocks/clearer_grass_block_horizontal",
+        "particle": "cobblefurnies:block/blocks/grass_blocks/clearer_grass_block_particle",
+        "vertical": "cobblefurnies:block/blocks/grass_blocks/clearer_grass_block_vertical"
+    }
+}

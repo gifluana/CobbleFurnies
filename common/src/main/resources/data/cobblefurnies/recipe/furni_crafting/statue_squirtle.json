@@ -1,0 +1,13 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 3,
+            "item": "minecraft:stone"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:statue_squirtle",
+        "count": 1
+    }
+}

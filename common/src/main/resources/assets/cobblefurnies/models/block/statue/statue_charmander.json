@@ -1,0 +1,11 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "textures": {
+    "particle": "cobblefurnies:block/statue/statue_charmander"
+  }
+}
