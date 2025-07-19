@@ -18,10 +18,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -221,7 +218,11 @@ public class StoveBlock extends BaseEntityBlock {
         builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, OPEN);
     }
 
-    private BlockState getConnections(BlockState state, LevelAccessor level, BlockPos pos) {
+    private BlockState getConnections(BlockState state, @Nullable LevelAccessor level, @Nullable BlockPos pos) {
+        if (level == null || pos == null) {
+            return state.setValue(CONNECTED_LEFT, false).setValue(CONNECTED_RIGHT, false);
+        }
+
         Direction facing = state.getValue(FACING);
         boolean left = validConnection(level.getBlockState(pos.relative(facing.getCounterClockWise())));
         boolean right = validConnection(level.getBlockState(pos.relative(facing.getClockWise())));
@@ -239,5 +240,20 @@ public class StoveBlock extends BaseEntityBlock {
 
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation) {
+        Direction newFacing = rotation.rotate(state.getValue(FACING));
+        return getConnections(
+                state.setValue(FACING, newFacing),
+                null,
+                null
+        );
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return this.rotate(state, mirror.getRotation(state.getValue(FACING)));
     }
 }
