@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/stool",
     "textures": {
-        "0": "cobblefurnies:block/stool/yellow_dark"
+        "0": "cobblefurnies:block/stool/yellow_dark",
+        "particle": "cobblefurnies:block/particles/color/yellow"
     }
 }

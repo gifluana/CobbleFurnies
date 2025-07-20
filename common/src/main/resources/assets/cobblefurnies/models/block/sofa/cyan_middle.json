@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/sofa_middle",
     "textures": {
-        "1": "cobblefurnies:block/sofa/cyan"
+        "1": "cobblefurnies:block/sofa/cyan",
+        "particle": "cobblefurnies:block/particles/color/cyan"
     }
 }

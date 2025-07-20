@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinetry_outer_corner_right",
     "textures": {
-        "2": "cobblefurnies:block/cabinetry/purple"
+        "2": "cobblefurnies:block/cabinetry/purple",
+        "particle": "cobblefurnies:block/particles/color/purple"
     }
 }

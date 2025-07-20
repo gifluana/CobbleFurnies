@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/sofa_right",
     "textures": {
-        "1": "cobblefurnies:block/sofa/green"
+        "1": "cobblefurnies:block/sofa/green",
+        "particle": "cobblefurnies:block/particles/color/green"
     }
 }

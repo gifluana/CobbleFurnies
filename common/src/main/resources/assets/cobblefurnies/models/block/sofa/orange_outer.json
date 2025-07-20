@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/sofa_outer",
     "textures": {
-        "1": "cobblefurnies:block/sofa/orange"
+        "1": "cobblefurnies:block/sofa/orange",
+        "particle": "cobblefurnies:block/particles/color/orange"
     }
 }

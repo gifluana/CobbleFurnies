@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinet_closed_right",
     "textures": {
-        "2": "cobblefurnies:block/cabinet/mangrove"
+        "2": "cobblefurnies:block/cabinet/mangrove",
+        "particle": "cobblefurnies:block/particles/table/mangrove"
     }
 }

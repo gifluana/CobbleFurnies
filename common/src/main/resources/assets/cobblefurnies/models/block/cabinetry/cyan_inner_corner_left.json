@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinetry_inner_corner_left",
     "textures": {
-        "2": "cobblefurnies:block/cabinetry/cyan"
+        "2": "cobblefurnies:block/cabinetry/cyan",
+        "particle": "cobblefurnies:block/particles/color/cyan"
     }
 }

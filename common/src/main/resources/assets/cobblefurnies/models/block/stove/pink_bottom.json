@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/stove_bottom",
     "textures": {
-        "0": "cobblefurnies:block/stove/pink"
+        "0": "cobblefurnies:block/stove/pink",
+        "particle": "cobblefurnies:block/particles/color/pink"
     }
 }

@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/table_west_north",
     "textures": {
-        "1": "cobblefurnies:block/table/cherry"
+        "1": "cobblefurnies:block/table/cherry",
+        "particle": "cobblefurnies:block/particles/table/cherry"
     }
 }

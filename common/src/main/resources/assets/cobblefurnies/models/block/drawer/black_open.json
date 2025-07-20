@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/drawer_open",
     "textures": {
-        "0": "cobblefurnies:block/drawer/black"
+        "0": "cobblefurnies:block/drawer/black",
+        "particle": "cobblefurnies:block/particles/color/black"
     }
 }

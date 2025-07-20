@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinet_open_right",
     "textures": {
-        "2": "cobblefurnies:block/cabinet/apricorn"
+        "2": "cobblefurnies:block/cabinet/apricorn",
+        "particle": "cobblefurnies:block/particles/table/apricorn"
     }
 }

@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/table_north_east_south_west",
     "textures": {
-        "1": "cobblefurnies:block/table/lime"
+        "1": "cobblefurnies:block/table/lime",
+        "particle": "cobblefurnies:block/particles/table/lime"
     }
 }

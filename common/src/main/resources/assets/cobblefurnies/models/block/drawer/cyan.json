@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/drawer",
     "textures": {
-        "0": "cobblefurnies:block/drawer/cyan"
+        "0": "cobblefurnies:block/drawer/cyan",
+        "particle": "cobblefurnies:block/particles/color/cyan"
     }
 }

@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/sofa_left",
     "textures": {
-        "1": "cobblefurnies:block/sofa/black"
+        "1": "cobblefurnies:block/sofa/black",
+        "particle": "cobblefurnies:block/particles/color/black"
     }
 }

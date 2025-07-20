@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinetry_default",
     "textures": {
-        "2": "cobblefurnies:block/cabinetry/black"
+        "2": "cobblefurnies:block/cabinetry/black",
+        "particle": "cobblefurnies:block/particles/color/black"
     }
 }

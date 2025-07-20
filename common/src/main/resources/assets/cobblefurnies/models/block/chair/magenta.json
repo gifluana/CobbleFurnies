@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/chair",
     "textures": {
-        "1": "cobblefurnies:block/chair/magenta"
+        "1": "cobblefurnies:block/chair/magenta",
+        "particle": "cobblefurnies:block/particles/color/magenta"
     }
 }

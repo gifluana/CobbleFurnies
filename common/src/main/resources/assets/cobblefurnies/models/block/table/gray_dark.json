@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/table",
     "textures": {
-        "1": "cobblefurnies:block/table/gray_dark"
+        "1": "cobblefurnies:block/table/gray_dark",
+        "particle": "cobblefurnies:block/particles/table/gray_dark"
     }
 }

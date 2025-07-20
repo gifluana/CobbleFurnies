@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinetry_default",
     "textures": {
-        "2": "cobblefurnies:block/cabinetry/lime"
+        "2": "cobblefurnies:block/cabinetry/lime",
+        "particle": "cobblefurnies:block/particles/color/lime"
     }
 }

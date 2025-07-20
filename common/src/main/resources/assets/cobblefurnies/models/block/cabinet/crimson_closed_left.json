@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/cabinet_closed_left",
     "textures": {
-        "2": "cobblefurnies:block/cabinet/crimson"
+        "2": "cobblefurnies:block/cabinet/crimson",
+        "particle": "cobblefurnies:block/particles/table/crimson"
     }
 }

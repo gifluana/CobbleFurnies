@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/stove_bottom_right",
     "textures": {
-        "0": "cobblefurnies:block/stove/white"
+        "0": "cobblefurnies:block/stove/white",
+        "particle": "cobblefurnies:block/particles/color/white"
     }
 }

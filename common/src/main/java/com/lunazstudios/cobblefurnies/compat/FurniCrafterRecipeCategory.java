@@ -1,4 +1,4 @@
-package com.lunazstudios.cobblefurnies.neoforge.compat;
+package com.lunazstudios.cobblefurnies.compat;
 
 import com.lunazstudios.cobblefurnies.CobbleFurnies;
 import com.lunazstudios.cobblefurnies.recipe.CountedIngredient;

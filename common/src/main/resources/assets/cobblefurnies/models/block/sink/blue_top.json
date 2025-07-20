@@ -1,6 +1,7 @@
 {
     "parent": "cobblefurnies:block/template/sink_top",
     "textures": {
-        "1": "cobblefurnies:block/sink/blue"
+        "1": "cobblefurnies:block/sink/blue",
+        "particle": "cobblefurnies:block/particles/color/blue"
     }
 }
