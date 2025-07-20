@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/wood_chair",
+    "textures": {
+        "1": "cobblefurnies:block/chair/saccharine",
+        "particle": "cobblefurnies:block/particles/table/saccharine"
+    }
+}

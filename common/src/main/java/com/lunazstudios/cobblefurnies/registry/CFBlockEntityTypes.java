@@ -59,7 +59,8 @@ public class CFBlockEntityTypes {
                     CFBlocks.CHERRY_CABINET.get(),
                     CFBlocks.WARPED_CABINET.get(),
                     CFBlocks.CRIMSON_CABINET.get(),
-                    CFBlocks.APRICORN_CABINET.get()
+                    CFBlocks.APRICORN_CABINET.get(),
+                    CFBlocks.SACCHARINE_CABINET.get()
             ));
 
     public static final Supplier<BlockEntityType<StatueBlockEntity>> STATUE = CFRegistry.registerBlockEntityType("statue",

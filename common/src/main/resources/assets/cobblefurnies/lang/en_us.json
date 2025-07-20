@@ -123,6 +123,7 @@
     "block.cobblefurnies.spruce_chair": "Spruce Chair",
     "block.cobblefurnies.warped_chair": "Warped Chair",
     "block.cobblefurnies.apricorn_chair": "Apricorn Chair",
+    "block.cobblefurnies.saccharine_chair": "Saccharine Chair",
 
     "block.cobblefurnies.red_stool": "Red Stool",
     "block.cobblefurnies.orange_stool": "Orange Stool",
@@ -204,6 +205,7 @@
     "block.cobblefurnies.spruce_table": "Spruce Table",
     "block.cobblefurnies.warped_table": "Warped Table",
     "block.cobblefurnies.apricorn_table": "Apricorn Table",
+    "block.cobblefurnies.saccharine_table": "Saccharine Table",
 
     "block.cobblefurnies.red_sink": "Red Sink",
     "block.cobblefurnies.orange_sink": "Orange Sink",
@@ -302,6 +304,7 @@
     "block.cobblefurnies.spruce_cabinet": "Spruce Cabinet",
     "block.cobblefurnies.warped_cabinet": "Warped Cabinet",
     "block.cobblefurnies.apricorn_cabinet": "Apricorn Cabinet",
+    "block.cobblefurnies.saccharine_cabinet": "Saccharine Cabinet",
 
     "container.cobblefurnies.furni_crafter": "Furni Crafter",
     "container.cobblefurnies.stove": "Stove",

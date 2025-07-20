@@ -46,6 +46,7 @@
 		{"id": "cobblefurnies:oak_table", "required": false},
 		{"id": "cobblefurnies:spruce_table", "required": false},
 		{"id": "cobblefurnies:warped_table", "required": false},
-		{"id": "cobblefurnies:apricorn_table", "required": false}
+		{"id": "cobblefurnies:apricorn_table", "required": false},
+		{"id": "cobblefurnies:saccharine_table", "required": false}
 	]
 }

@@ -14,7 +14,7 @@ public class CFTabsImpl {
     public static final CreativeModeTab CF_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             CobbleFurnies.id("tab"),
             FabricItemGroup.builder().title(Component.translatable("item_group." + CobbleFurnies.MOD_ID + ".tab"))
-                    .icon(() -> new ItemStack(CFBlocks.LIGHT_BLUE_CHAIR.get().asItem())).displayItems((parameters, output) -> {
+                    .icon(() -> new ItemStack(CFBlocks.LIGHT_BLUE_SOFA.get().asItem())).displayItems((parameters, output) -> {
                         output.acceptAll(CFRegistry.getAllModItems());
                     }).build());
 

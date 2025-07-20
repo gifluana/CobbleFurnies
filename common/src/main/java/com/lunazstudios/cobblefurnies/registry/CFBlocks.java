@@ -147,6 +147,7 @@ public class CFBlocks {
     public static final Supplier<Block> CRIMSON_CHAIR = registerBlock("crimson_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> WARPED_CHAIR = registerBlock("warped_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> APRICORN_CHAIR = registerBlock("apricorn_chair", () -> new WoodChairBlock(Properties.WOOD));
+    public static final Supplier<Block> SACCHARINE_CHAIR = registerBlock("saccharine_chair", () -> new WoodChairBlock(Properties.WOOD));
 
     public static final Supplier<Block> RED_STOOL = registerBlock("red_stool", () -> new StoolBlock(Properties.WOOD));
     public static final Supplier<Block> RED_DARK_STOOL = registerBlock("red_dark_stool", () -> new StoolBlock(Properties.WOOD));
@@ -243,6 +244,7 @@ public class CFBlocks {
     public static final Supplier<Block> CRIMSON_TABLE = registerBlock("crimson_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> WARPED_TABLE = registerBlock("warped_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> APRICORN_TABLE = registerBlock("apricorn_table", () -> new TableBlock(Properties.WOOD));
+    public static final Supplier<Block> SACCHARINE_TABLE = registerBlock("saccharine_table", () -> new TableBlock(Properties.WOOD));
 
     public static final Supplier<Block> RED_SINK = registerBlock("red_sink", () -> new SinkBlock(Properties.MARBLE));
     public static final Supplier<Block> ORANGE_SINK = registerBlock("orange_sink", () -> new SinkBlock(Properties.MARBLE));
@@ -324,6 +326,7 @@ public class CFBlocks {
     public static final Supplier<Block> CRIMSON_CABINET = registerBlock("crimson_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> WARPED_CABINET = registerBlock("warped_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> APRICORN_CABINET = registerBlock("apricorn_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> SACCHARINE_CABINET = registerBlock("saccharine_cabinet", () -> new CabinetBlock(Properties.WOOD));
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = CFRegistry.registerBlock(name, block);
