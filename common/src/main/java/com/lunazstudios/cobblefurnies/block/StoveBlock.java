@@ -2,6 +2,7 @@ package com.lunazstudios.cobblefurnies.block;
 
 import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
+import com.lunazstudios.cobblefurnies.registry.CFBlockEntityTypes;
 import com.lunazstudios.cobblefurnies.registry.CFBlockTags;
 import com.lunazstudios.cobblefurnies.util.block.ShapeUtil;
 import com.mojang.serialization.MapCodec;
@@ -20,6 +21,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -94,6 +97,15 @@ public class StoveBlock extends BaseEntityBlock {
         return InteractionResult.CONSUME;
     }
 
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide ? null : BaseEntityBlock.createTickerHelper(
+                type,
+                CFBlockEntityTypes.STOVE.get(),
+                StoveBlockEntity::serverTick
+        );
+    }
+
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (state.is(newState.getBlock())) return;
 
@@ -103,11 +115,6 @@ public class StoveBlock extends BaseEntityBlock {
             level.updateNeighbourForOutputSignal(pos, this);
         }
         super.onRemove(state, level, pos, newState, isMoving);
-    }
-
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof StoveBlockEntity stoveBE) stoveBE.recheckOpen();
     }
 
     @Nullable

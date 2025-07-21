@@ -12,6 +12,7 @@
 		{"id": "cobblefurnies:oak_cabinet", "required": false},
 		{"id": "cobblefurnies:spruce_cabinet", "required": false},
 		{"id": "cobblefurnies:warped_cabinet", "required": false},
-		{"id": "cobblefurnies:apricorn_cabinet", "required": false}
+		{"id": "cobblefurnies:apricorn_cabinet", "required": false},
+		{"id": "cobblefurnies:saccharine_cabinet", "required": false}
 	]
 }

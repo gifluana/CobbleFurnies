@@ -123,6 +123,7 @@
     "block.cobblefurnies.spruce_chair": "Spruce Chair",
     "block.cobblefurnies.warped_chair": "Warped Chair",
     "block.cobblefurnies.apricorn_chair": "Apricorn Chair",
+    "block.cobblefurnies.saccharine_chair": "Saccharine Chair",
 
     "block.cobblefurnies.red_stool": "Red Stool",
     "block.cobblefurnies.orange_stool": "Orange Stool",
@@ -204,6 +205,7 @@
     "block.cobblefurnies.spruce_table": "Spruce Table",
     "block.cobblefurnies.warped_table": "Warped Table",
     "block.cobblefurnies.apricorn_table": "Apricorn Table",
+    "block.cobblefurnies.saccharine_table": "Saccharine Table",
 
     "block.cobblefurnies.red_sink": "Red Sink",
     "block.cobblefurnies.orange_sink": "Orange Sink",
@@ -273,6 +275,23 @@
     "block.cobblefurnies.black_sofa": "Black Sofa",
     "block.cobblefurnies.brown_sofa": "Brown Sofa",
 
+    "block.cobblefurnies.red_armchair": "Red Armchair",
+    "block.cobblefurnies.orange_armchair": "Orange Armchair",
+    "block.cobblefurnies.yellow_armchair": "Yellow Armchair",
+    "block.cobblefurnies.lime_armchair": "Lime Armchair",
+    "block.cobblefurnies.green_armchair": "Green Armchair",
+    "block.cobblefurnies.cyan_armchair": "Cyan Armchair",
+    "block.cobblefurnies.light_blue_armchair": "Light Blue Armchair",
+    "block.cobblefurnies.blue_armchair": "Blue Armchair",
+    "block.cobblefurnies.magenta_armchair": "Magenta Armchair",
+    "block.cobblefurnies.purple_armchair": "Purple Armchair",
+    "block.cobblefurnies.pink_armchair": "Pink Armchair",
+    "block.cobblefurnies.white_armchair": "White Armchair",
+    "block.cobblefurnies.light_gray_armchair": "Light Gray Armchair",
+    "block.cobblefurnies.gray_armchair": "Gray Armchair",
+    "block.cobblefurnies.black_armchair": "Black Armchair",
+    "block.cobblefurnies.brown_armchair": "Brown Armchair",
+
     "block.cobblefurnies.red_drawer": "Red Drawer",
     "block.cobblefurnies.orange_drawer": "Orange Drawer",
     "block.cobblefurnies.yellow_drawer": "Yellow Drawer",
@@ -302,6 +321,7 @@
     "block.cobblefurnies.spruce_cabinet": "Spruce Cabinet",
     "block.cobblefurnies.warped_cabinet": "Warped Cabinet",
     "block.cobblefurnies.apricorn_cabinet": "Apricorn Cabinet",
+    "block.cobblefurnies.saccharine_cabinet": "Saccharine Cabinet",
 
     "container.cobblefurnies.furni_crafter": "Furni Crafter",
     "container.cobblefurnies.stove": "Stove",

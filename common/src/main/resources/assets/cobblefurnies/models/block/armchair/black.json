@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/armchair",
+    "textures": {
+        "1": "cobblefurnies:block/armchair/black",
+        "particle": "cobblefurnies:block/particles/color/black"
+    }
+}

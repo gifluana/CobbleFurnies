@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "kantoblocks:<name of the block>"
+                    "name": "cobblefurnies:acacia_cabinet"
                 }
             ],
             "conditions": [

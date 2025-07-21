@@ -1,28 +1,39 @@
-![banner](https://i.imgur.com/mgiZ4ct.jpeg)
-![requires_architectury](https://i.imgur.com/pIrXd83.png) ![fabric](https://i.imgur.com/D40j3RV.png) ![neoforge](https://i.imgur.com/ou0Id20.png)
+![KeyArt featuring Luna and Pikachu watching TV.](https://i.imgur.com/Ihkl7pC.jpeg)
 
-## About
-**CobbleFurnies** is a decorative furniture mod designed to seamlessly fit into the **Cobblemon** experience while remaining a great addition to any Minecraft world. Built with a vanilla-friendly aesthetic, this mod expands your building possibilities by introducing functional and stylish furniture pieces.
+<p align="center">
+    <img src="https://i.imgur.com/D40j3RV.png" alt="Fabric" width="105" height="28">
+    <img src="https://i.imgur.com/ou0Id20.png" alt="NeoForge" width="127" height="28">
+    <img src="https://i.imgur.com/pIrXd83.png" alt="Requires ArchitecturyAPI" width="222" height="28">
+    <img src="https://i.imgur.com/48cXpQd.png" alt="Requires Cobblemon" width="211" height="28">
+    <img src="https://i.imgur.com/gtHzVOl.png" alt="Requires AthenaCTM" width="193" height="28">
+    <img src="https://i.imgur.com/y7WHx3t.png" alt="Requires Geckolib" width="211" height="28">
+    <img src="https://i.imgur.com/Yr2BrdD.png" alt="Requires FabricAPI (For Fabric)" width="211" height="28">
+</p>
 
-## Features
-- **4 Types of Furniture** – Chairs, tables, stoves, and sinks to enhance your builds.
-- **16 Color Variations** – Customize your furniture with a variety of colors to match your style.
-- **Seamless Connectivity** – Sinks and stoves connect to each other for a smooth and immersive design.
-- **Vanilla-Friendly Design** – Designed to fit naturally within the game's aesthetics.
-- **Cobblemon-Compatible** – Made to complement **Cobblemon**, but fully functional in any modpack.
+Whether you're building a professor's lab, a bustling Pokécenter, or just a cozy cabin in the woods, **CobbleFurnies** is here to bring your creations to life with beautifully crafted, Cobblemon-inspired furniture that blends seamlessly into your Minecraft world!
 
-## Installation
-1. Download the latest version from [Modrinth](https://modrinth.com/) or [CurseForge](https://www.curseforge.com/).
-2. Install **NeoForge** or **Fabric** (based on your version).
-3. Place the mod `.jar` file into the **mods** folder.
-4. Launch the game and enjoy decorating with **CobbleFurnies**!
+***
+
+## Frequently Asked Questions
+
+**Q: Can I use this mod in my modpack or create content with it?**  
+**A:** Absolutely! You're welcome to include **CobbleFurnies** in your modpack or feature it in your videos. Just remember to credit the mod appropriately and avoid claiming it as your own work.
+
+**Q: Will you backport to 1.20.1 or other previous versions?**
+**A:** Backports to 1.20.1 are planned to ensure compatibility with Cobblemon and maintain consistency, but there are no plans to support olders versions.
+
+**Q: Will there be furniture variants for other wood types?**  
+**A:** Yes! We plan to add variants for all wood types in the future, along with compatibility for other mods to enhance your building options.
+
+***
 
 ## Credits
-Special thanks to **Starfish Studios** and the creators of **Another Furniture** for their contributions to the registry, table, and chair code.  
+Special thanks to **Starfish Studios**, the creators of **Another Furniture** for their contributions to the registry, table, and chair code, which helped make this mod possible.
 
-## License
-This mod is licensed under the **MIT License**, allowing free use, modification, and distribution with proper credit.
+Special thanks to **MrCrayfish**, the creator of **Refurbished Furniture**, which I had inspiration for making the custom crafting.
 
----
-
-Whether you're building a professor's lab, a bustling Pokécenter, or just a cozy cabin in the woods, **CobbleFurnies** is here to bring your world to life!  
+***
+<div align="center">
+    <p><i>CobbleFurnies is not affiliated with Cobblemon nor Minecraft.</i></p>
+    <p><i>Minecraft is a trademark of Mojang Synergies AB  |  Cobblemon is a trademark of CobbledStudios</i></p>
+</div>
