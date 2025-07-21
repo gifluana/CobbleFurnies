@@ -23,6 +23,11 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
                 CFBlocks.MINI_TOPIARY.get(), CFBlocks.POTTED_POTHOS.get(),
 
+                CFBlocks.RED_CURTAIN.get(), CFBlocks.ORANGE_CURTAIN.get(), CFBlocks.YELLOW_CURTAIN.get(), CFBlocks.LIME_CURTAIN.get(),
+                CFBlocks.GREEN_CURTAIN.get(), CFBlocks.CYAN_CURTAIN.get(), CFBlocks.LIGHT_BLUE_CURTAIN.get(), CFBlocks.BLUE_CURTAIN.get(),
+                CFBlocks.MAGENTA_CURTAIN.get(), CFBlocks.PURPLE_CURTAIN.get(), CFBlocks.PINK_CURTAIN.get(), CFBlocks.WHITE_CURTAIN.get(),
+                CFBlocks.LIGHT_GRAY_CURTAIN.get(), CFBlocks.GRAY_CURTAIN.get(), CFBlocks.BLACK_CURTAIN.get(), CFBlocks.BROWN_CURTAIN.get(),
+
                 CFBlocks.OAK_CHAIR.get(), CFBlocks.SPRUCE_CHAIR.get(), CFBlocks.BIRCH_CHAIR.get(), CFBlocks.DARK_OAK_CHAIR.get(),
                 CFBlocks.JUNGLE_CHAIR.get(), CFBlocks.MANGROVE_CHAIR.get(), CFBlocks.BAMBOO_CHAIR.get(), CFBlocks.ACACIA_CHAIR.get(),
                 CFBlocks.CHERRY_CHAIR.get(), CFBlocks.CRIMSON_CHAIR.get(), CFBlocks.WARPED_CHAIR.get(), CFBlocks.APRICORN_CHAIR.get(),

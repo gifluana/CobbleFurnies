@@ -1,0 +1,304 @@
+{
+    "variants": {
+        "facing=north,horizontal_part=left,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top"
+        },
+        "facing=north,horizontal_part=left,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open"
+        },
+        "facing=north,horizontal_part=left,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom"
+        },
+        "facing=north,horizontal_part=left,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open"
+        },
+        "facing=north,horizontal_part=middle,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top"
+        },
+        "facing=north,horizontal_part=middle,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top_open"
+        },
+        "facing=north,horizontal_part=middle,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_bottom"
+        },
+        "facing=north,horizontal_part=middle,vertical_part=bottom,open=true": {
+            "model": "minecraft:block/air"
+        },
+        "facing=north,horizontal_part=right,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top"
+        },
+        "facing=north,horizontal_part=right,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open"
+        },
+        "facing=north,horizontal_part=right,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom"
+        },
+        "facing=north,horizontal_part=right,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open"
+        },
+        "facing=north,horizontal_part=single,vertical_part=top,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top"
+        },
+        "facing=north,horizontal_part=single,vertical_part=top,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top"
+        },
+        "facing=north,horizontal_part=single,vertical_part=top,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open"
+        },
+        "facing=north,horizontal_part=single,vertical_part=top,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open"
+        },
+        "facing=north,horizontal_part=single,vertical_part=bottom,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom"
+        },
+        "facing=north,horizontal_part=single,vertical_part=bottom,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom"
+        },
+        "facing=north,horizontal_part=single,vertical_part=bottom,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open"
+        },
+        "facing=north,horizontal_part=single,vertical_part=bottom,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open"
+        },
+        "facing=south,horizontal_part=left,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 180
+        },
+        "facing=south,horizontal_part=left,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=left,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 180
+        },
+        "facing=south,horizontal_part=left,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=middle,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top",
+            "y": 180
+        },
+        "facing=south,horizontal_part=middle,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=middle,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_bottom",
+            "y": 180
+        },
+        "facing=south,horizontal_part=middle,vertical_part=bottom,open=true": {
+            "model": "minecraft:block/air",
+            "y": 180
+        },
+        "facing=south,horizontal_part=right,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 180
+        },
+        "facing=south,horizontal_part=right,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=right,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 180
+        },
+        "facing=south,horizontal_part=right,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=top,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=top,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=top,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=top,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=bottom,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=bottom,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=bottom,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 180
+        },
+        "facing=south,horizontal_part=single,vertical_part=bottom,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 180
+        },
+        "facing=east,horizontal_part=left,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 90
+        },
+        "facing=east,horizontal_part=left,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=left,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 90
+        },
+        "facing=east,horizontal_part=left,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=middle,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top",
+            "y": 90
+        },
+        "facing=east,horizontal_part=middle,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=middle,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_bottom",
+            "y": 90
+        },
+        "facing=east,horizontal_part=middle,vertical_part=bottom,open=true": {
+            "model": "minecraft:block/air",
+            "y": 90
+        },
+        "facing=east,horizontal_part=right,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 90
+        },
+        "facing=east,horizontal_part=right,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=right,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 90
+        },
+        "facing=east,horizontal_part=right,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=top,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=top,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=top,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=top,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=bottom,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=bottom,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=bottom,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 90
+        },
+        "facing=east,horizontal_part=single,vertical_part=bottom,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 90
+        },
+        "facing=west,horizontal_part=left,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 270
+        },
+        "facing=west,horizontal_part=left,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=left,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 270
+        },
+        "facing=west,horizontal_part=left,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=middle,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top",
+            "y": 270
+        },
+        "facing=west,horizontal_part=middle,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_top_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=middle,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_middle_bottom",
+            "y": 270
+        },
+        "facing=west,horizontal_part=middle,vertical_part=bottom,open=true": {
+            "model": "minecraft:block/air",
+            "y": 270
+        },
+        "facing=west,horizontal_part=right,vertical_part=top,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 270
+        },
+        "facing=west,horizontal_part=right,vertical_part=top,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=right,vertical_part=bottom,open=false": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 270
+        },
+        "facing=west,horizontal_part=right,vertical_part=bottom,open=true": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=top,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=top,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=top,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_top_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=top,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_top_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=bottom,open=false,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=bottom,open=false,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=bottom,open=true,hinge=left": {
+            "model": "cobblefurnies:block/curtain/green_curtain_left_bottom_open",
+            "y": 270
+        },
+        "facing=west,horizontal_part=single,vertical_part=bottom,open=true,hinge=right": {
+            "model": "cobblefurnies:block/curtain/green_curtain_right_bottom_open",
+            "y": 270
+        }
+    }
+}

@@ -6,6 +6,8 @@
       {"id": "#cobblefurnies:sofas", "required": false},
       {"id": "#cobblefurnies:cabinets", "required": false},
       {"id": "#cobblefurnies:plants", "required": false},
+      {"id": "#cobblefurnies:armchairs", "required": false},
+      {"id": "#cobblefurnies:curtains", "required": false},
 
       {"id": "cobblefurnies:bamboo_floor", "required": false},
       {"id": "cobblefurnies:bamboo_planks", "required": false},

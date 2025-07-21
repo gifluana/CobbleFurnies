@@ -1,6 +1,0 @@
-{
-    "parent": "cobblefurnies:block/template/armchair",
-    "textures": {
-        "1": "cobblefurnies:block/armchair/white"
-    }
-}
