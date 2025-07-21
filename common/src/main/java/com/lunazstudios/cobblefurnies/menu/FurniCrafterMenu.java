@@ -99,7 +99,7 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
         this.availableRecipes = level.getRecipeManager()
                 .getAllRecipesFor(CFRecipes.FURNI_CRAFTING_RECIPE_TYPE)
                 .stream()
-                .sorted(Comparator.comparing(holder -> holder.value().getResultItem(null).getHoverName().getString()))
+                .sorted(Comparator.comparing(RecipeHolder::id))
                 .collect(Collectors.toList());
     }
 

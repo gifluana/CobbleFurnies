@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/curtain_full",
+    "textures": {
+        "top": "cobblefurnies:block/curtain/cyan_closed_top",
+        "bottom": "cobblefurnies:block/curtain/cyan_closed_bottom"
+    }
+}

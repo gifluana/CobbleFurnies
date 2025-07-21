@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 2,
+            "item": "minecraft:orange_wool"
+        },
+        {
+            "count": 3,
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:orange_armchair",
+        "count": 2
+    }
+}

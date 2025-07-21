@@ -9,4 +9,7 @@ public class CFBlockStateProperties {
     public static final BooleanProperty CONNECTED_LEFT = BooleanProperty.create("connected_left");
     public static final EnumProperty<CabinetryShape> CABINETRY_SHAPE = EnumProperty.create("shape", CabinetryShape.class);
     public static final EnumProperty<SofaType> SOFA_TYPE = EnumProperty.create("type", SofaType.class);
+    public static final EnumProperty<CurtainVerticalPart> CURTAIN_VERTICAL = EnumProperty.create("vertical_part", CurtainVerticalPart.class);
+    public static final EnumProperty<CurtainHorizontalPart> CURTAIN_HORIZONTAL = EnumProperty.create("horizontal_part", CurtainHorizontalPart.class);
+    public static final BooleanProperty OPEN = BooleanProperty.create("open");
 }

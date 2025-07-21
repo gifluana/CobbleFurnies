@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:red_armchair", "required": false},
+		{"id": "cobblefurnies:orange_armchair", "required": false},
+		{"id": "cobblefurnies:yellow_armchair", "required": false},
+		{"id": "cobblefurnies:brown_armchair", "required": false},
+		{"id": "cobblefurnies:lime_armchair", "required": false},
+		{"id": "cobblefurnies:green_armchair", "required": false},
+		{"id": "cobblefurnies:cyan_armchair", "required": false},
+		{"id": "cobblefurnies:light_blue_armchair", "required": false},
+		{"id": "cobblefurnies:blue_armchair", "required": false},
+		{"id": "cobblefurnies:magenta_armchair", "required": false},
+		{"id": "cobblefurnies:purple_armchair", "required": false},
+		{"id": "cobblefurnies:pink_armchair", "required": false},
+		{"id": "cobblefurnies:white_armchair", "required": false},
+		{"id": "cobblefurnies:light_gray_armchair", "required": false},
+		{"id": "cobblefurnies:gray_armchair", "required": false},
+		{"id": "cobblefurnies:black_armchair", "required": false}
+	]
+}

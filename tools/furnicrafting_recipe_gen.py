@@ -246,6 +246,44 @@ def get_poke_wool_carpet_recipe(color):
         }
     }
 
+def get_curtain_recipe(color):
+    return {
+        "type": "cobblefurnies:furni_crafting",
+        "materials": [
+            {
+                "count": 2,
+                "item": f"minecraft:{color}_wool"
+            },
+            {
+                "count": 1,
+                "item": "minecraft:stick"
+            }
+        ],
+        "result": {
+            "id": f"cobblefurnies:{color}_curtain",
+            "count": 2
+        }
+    }
+
+def get_armchair_recipe(color):
+    return {
+        "type": "cobblefurnies:furni_crafting",
+        "materials": [
+            {
+                "count": 2,
+                "item": f"minecraft:{color}_wool"
+            },
+            {
+                "count": 3,
+                "item": "minecraft:stick"
+            }
+        ],
+        "result": {
+            "id": f"cobblefurnies:{color}_armchair",
+            "count": 2
+        }
+    }
+
 # Function to save JSON data to a file
 def save_json_file(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -270,43 +308,49 @@ def generate_recipes():
 
     # Generate recipes for each color
     for color in colors:
-        poke_wool_path = os.path.join(base_dir, f"{color}_poke_wool.json")
-        save_json_file(poke_wool_path, get_poke_wool_recipe(color))
+        armchair_path = os.path.join(base_dir, f"{color}_armchair.json")
+        save_json_file(armchair_path, get_armchair_recipe(color))
+
+        curtain_path = os.path.join(base_dir, f"{color}_curtain.json")
+        save_json_file(curtain_path, get_curtain_recipe(color))
+
+    #    poke_wool_path = os.path.join(base_dir, f"{color}_poke_wool.json")
+    #    save_json_file(poke_wool_path, get_poke_wool_recipe(color))
         
-        colored_chair_path = os.path.join(base_dir, f"{color}_chair.json")
-        save_json_file(colored_chair_path, get_colored_chair_recipe(color))
+    #    colored_chair_path = os.path.join(base_dir, f"{color}_chair.json")
+    #    save_json_file(colored_chair_path, get_colored_chair_recipe(color))
 
-        colored_stool_path = os.path.join(base_dir, f"{color}_stool.json")
-        save_json_file(colored_stool_path, get_colored_stool_recipe(color))
+    #    colored_stool_path = os.path.join(base_dir, f"{color}_stool.json")
+    #    save_json_file(colored_stool_path, get_colored_stool_recipe(color))
 
-        sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
-        save_json_file(sofa_path, get_sofa_recipe(color))
+    #    sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
+    #    save_json_file(sofa_path, get_sofa_recipe(color))
 
-        colored_table_path = os.path.join(base_dir, f"{color}_table.json")
-        save_json_file(colored_table_path, get_colored_table_recipe(color))
+    #    colored_table_path = os.path.join(base_dir, f"{color}_table.json")
+    #    save_json_file(colored_table_path, get_colored_table_recipe(color))
         
-        sink_path = os.path.join(base_dir, f"{color}_sink.json")
-        save_json_file(sink_path, get_sink_recipe(color))
+    #    sink_path = os.path.join(base_dir, f"{color}_sink.json")
+    #   save_json_file(sink_path, get_sink_recipe(color))
         
-        stove_path = os.path.join(base_dir, f"{color}_stove.json")
-        save_json_file(stove_path, get_stove_recipe(color))
+    #   stove_path = os.path.join(base_dir, f"{color}_stove.json")
+    #    save_json_file(stove_path, get_stove_recipe(color))
 
-        cabinetry_path = os.path.join(base_dir, f"{color}_cabinetry.json")
-        save_json_file(cabinetry_path, get_cabinetry_recipe(color))
+    #    cabinetry_path = os.path.join(base_dir, f"{color}_cabinetry.json")
+    #    save_json_file(cabinetry_path, get_cabinetry_recipe(color))
 
-        colored_drawer_path = os.path.join(base_dir, f"{color}_drawer.json")
-        save_json_file(colored_drawer_path, get_drawer_recipe(color))
+    #    colored_drawer_path = os.path.join(base_dir, f"{color}_drawer.json")
+    #    save_json_file(colored_drawer_path, get_drawer_recipe(color))
 
     # Generate recipes for each wood type
-    for wood in woods:
-        cabinet_path = os.path.join(base_dir, f"{wood}_cabinet.json")
-        save_json_file(cabinet_path, get_cabinet_recipe(wood))
+    #for wood in woods:
+    #    cabinet_path = os.path.join(base_dir, f"{wood}_cabinet.json")
+    #    save_json_file(cabinet_path, get_cabinet_recipe(wood))
 
-        wood_chair_path = os.path.join(base_dir, f"{wood}_chair.json")
-        save_json_file(wood_chair_path, get_wood_chair_recipe(wood))
+    #    wood_chair_path = os.path.join(base_dir, f"{wood}_chair.json")
+    #    save_json_file(wood_chair_path, get_wood_chair_recipe(wood))
 
-        wood_table_path = os.path.join(base_dir, f"{wood}_table.json")
-        save_json_file(wood_table_path, get_wood_table_recipe(wood))
+    #    wood_table_path = os.path.join(base_dir, f"{wood}_table.json")
+    #    save_json_file(wood_table_path, get_wood_table_recipe(wood))
 
 if __name__ == "__main__":
     generate_recipes()

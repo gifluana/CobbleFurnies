@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/curtain_bottom",
+    "textures": {
+        "curtain": "cobblefurnies:block/curtain/pink_right_open_bottom"
+    }
+}
