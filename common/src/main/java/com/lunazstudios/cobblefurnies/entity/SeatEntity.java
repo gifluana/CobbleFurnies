@@ -1,5 +1,6 @@
 package com.lunazstudios.cobblefurnies.entity;
 
+import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.lunazstudios.cobblefurnies.block.SeatBlock;
 import com.lunazstudios.cobblefurnies.registry.CFEntityTypes;
 import net.minecraft.core.BlockPos;
@@ -85,6 +86,7 @@ public class SeatEntity extends Entity {
         if (entity instanceof Creeper) return 1 / 4f;
         if (entity instanceof Cat) return 1 / 8f;
         if (entity instanceof Wolf) return 1 / 16f;
+        if (entity instanceof PokemonEntity) return 1 / 16f;
         return 0;
     }
 

@@ -199,6 +199,23 @@ public class CFBlocks {
     public static final Supplier<Block> GRAY_SOFA = registerBlock("gray_sofa", () -> new SofaBlock(Properties.WOOD));
     public static final Supplier<Block> BLACK_SOFA = registerBlock("black_sofa", () -> new SofaBlock(Properties.WOOD));
 
+    public static final Supplier<Block> RED_ARMCHAIR = registerBlock("red_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> ORANGE_ARMCHAIR = registerBlock("orange_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> YELLOW_ARMCHAIR = registerBlock("yellow_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> BROWN_ARMCHAIR = registerBlock("brown_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> LIME_ARMCHAIR = registerBlock("lime_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> GREEN_ARMCHAIR = registerBlock("green_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> CYAN_ARMCHAIR = registerBlock("cyan_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> LIGHT_BLUE_ARMCHAIR = registerBlock("light_blue_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> BLUE_ARMCHAIR = registerBlock("blue_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> MAGENTA_ARMCHAIR = registerBlock("magenta_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> PURPLE_ARMCHAIR = registerBlock("purple_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> PINK_ARMCHAIR = registerBlock("pink_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> WHITE_ARMCHAIR = registerBlock("white_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> LIGHT_GRAY_ARMCHAIR = registerBlock("light_gray_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> GRAY_ARMCHAIR = registerBlock("gray_armchair", () -> new ArmchairBlock(Properties.WOOD));
+    public static final Supplier<Block> BLACK_ARMCHAIR = registerBlock("black_armchair", () -> new ArmchairBlock(Properties.WOOD));
+
     public static final Supplier<Block> RED_TABLE = registerBlock("red_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> RED_DARK_TABLE = registerBlock("red_dark_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> ORANGE_TABLE = registerBlock("orange_table", () -> new TableBlock(Properties.WOOD));
