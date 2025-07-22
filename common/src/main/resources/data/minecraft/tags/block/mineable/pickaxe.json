@@ -20,6 +20,9 @@
         {"id": "cobblefurnies:pool_ceramic", "required": false},
         {"id": "cobblefurnies:vanilla_mosaic", "required": false},
         {"id": "cobblefurnies:poke_ball_desk", "required": false},
-        {"id": "cobblefurnies:poke_ball_chair", "required": false}
+        {"id": "cobblefurnies:poke_ball_chair", "required": false},
+
+        {"id": "cobblefurnies:tv", "required": false},
+        {"id": "cobblefurnies:ces", "required": false}
     ]
 }
