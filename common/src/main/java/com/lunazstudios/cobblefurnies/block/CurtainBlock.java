@@ -7,7 +7,6 @@ import com.lunazstudios.cobblefurnies.util.block.ShapeUtil;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -24,6 +23,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -203,6 +203,14 @@ public class CurtainBlock extends HorizontalDirectionalBlock {
         }
 
         return InteractionResult.CONSUME;
+    }
+
+    @Override
+    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        if (blockState.getValue(VERTICAL) == CurtainVerticalPart.TOP) {
+            return Collections.emptyList();
+        }
+        return super.getDrops(blockState, builder);
     }
 
     private void toggleCurtain(Level level, BlockPos origin, Direction facing) {
