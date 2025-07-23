@@ -2,16 +2,16 @@
     "type": "cobblefurnies:furni_crafting",
     "materials": [
         {
-            "count": 2,
+            "count": 1,
             "item": "minecraft:green_wool"
         },
         {
-            "count": 3,
+            "count": 2,
             "item": "minecraft:stick"
         }
     ],
     "result": {
         "id": "cobblefurnies:green_armchair",
-        "count": 2
+        "count": 1
     }
 }
