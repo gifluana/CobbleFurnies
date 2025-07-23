@@ -1,0 +1,17 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "minecraft:warped_planks"
+        },
+        {
+            "count": 2,
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:warped_wall_support",
+        "count": 4
+    }
+}

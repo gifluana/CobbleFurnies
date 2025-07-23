@@ -12,4 +12,5 @@ public class CFBlockStateProperties {
     public static final EnumProperty<CurtainVerticalPart> CURTAIN_VERTICAL = EnumProperty.create("vertical_part", CurtainVerticalPart.class);
     public static final EnumProperty<CurtainHorizontalPart> CURTAIN_HORIZONTAL = EnumProperty.create("horizontal_part", CurtainHorizontalPart.class);
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final EnumProperty<WallSupportShape> WALL_SUPPORT_SHAPE = EnumProperty.create("shape", WallSupportShape.class);
 }

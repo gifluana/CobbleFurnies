@@ -26,6 +26,7 @@ public class CFBlockTags {
     public static final TagKey<Block> CHAIRS_TUCKABLE_UNDER = blockTag("chairs_tuckable_under");
     public static final TagKey<Block> ABOVE_BYPASSES_SEAT_CHECK = blockTag("above_bypasses_seat_check");
     public static final TagKey<Block> TABLES_CONNECTABLE = blockTag("table_connectable");
+    public static final TagKey<Block> WALL_SUPPORT_CONNECTABLE = blockTag("wall_support_connectable");
     public static final TagKey<Block> DONT_CONNECT_TO_PANES = blockTag("dont_connect_to_panes");
     public static final TagKey<Block> CAN_USE_SHUTTERS_THROUGH = blockTag("can_use_shutters_through");
     public static final TagKey<Block> SINKS_CONNECTABLE = blockTag("sink_connectable");

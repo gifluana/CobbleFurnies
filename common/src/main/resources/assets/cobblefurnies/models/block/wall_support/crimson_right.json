@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/wall_support_right",
+    "textures": {
+        "0": "cobblefurnies:block/wall_support/crimson",
+        "particle": "cobblefurnies:block/particles/table/crimson"
+    }
+}
