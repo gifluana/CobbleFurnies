@@ -63,4 +63,5 @@ shadowJar {
 
 remapJar {
     input.set shadowJar.archiveFile
+    destinationDirectory.set(rootProject.file("builds/fabric"))
 }

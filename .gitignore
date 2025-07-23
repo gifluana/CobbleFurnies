@@ -2,6 +2,7 @@
 
 
 .idea/
+builds/
 *.iml
 *.ipr
 *.iws
