@@ -2,7 +2,7 @@
     "type": "cobblefurnies:furni_crafting",
     "materials": [
         {
-            "count": 3,
+            "count": 1,
             "item": "minecraft:jungle_planks"
         },
         {
@@ -12,6 +12,6 @@
     ],
     "result": {
         "id": "cobblefurnies:jungle_chair",
-        "count": 2
+        "count": 1
     }
 }

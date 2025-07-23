@@ -2,7 +2,7 @@
     "type": "cobblefurnies:furni_crafting",
     "materials": [
         {
-            "count": 3,
+            "count": 1,
             "item": "minecraft:red_wool"
         },
         {
@@ -11,7 +11,7 @@
         }
     ],
     "result": {
-        "id": "cobblefurnies:red_dark_chair",
-        "count": 2
+        "id": "cobblefurnies:red_chair",
+        "count": 1
     }
 }

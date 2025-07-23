@@ -2,7 +2,7 @@
     "type": "cobblefurnies:furni_crafting",
     "materials": [
         {
-            "count": 2,
+            "count": 1,
             "item": "minecraft:light_blue_wool"
         },
         {
@@ -11,7 +11,7 @@
         }
     ],
     "result": {
-        "id": "cobblefurnies:light_blue_dark_stool",
+        "id": "cobblefurnies:light_blue_stool",
         "count": 2
     }
 }

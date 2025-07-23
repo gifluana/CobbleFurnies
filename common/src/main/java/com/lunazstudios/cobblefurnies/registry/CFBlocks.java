@@ -21,6 +21,9 @@ public class CFBlocks {
     public static class Properties {
         public static BlockBehaviour.Properties GRASS = Block.Properties.of().strength(0.6F).sound(SoundType.GRASS).mapColor(MapColor.GRASS);
         public static BlockBehaviour.Properties WOOD = Block.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS);
+        public static BlockBehaviour.Properties NETHER_WOOD = Block.Properties.of().strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD).mapColor(MapColor.WOOD);
+        public static BlockBehaviour.Properties BAMBOO_WOOD = WOOD.sound(SoundType.BAMBOO_WOOD);
+        public static BlockBehaviour.Properties CHERRY_WOOD = WOOD.sound(SoundType.CHERRY_WOOD);
         public static BlockBehaviour.Properties WOOL = Block.Properties.of().strength(0.8F).sound(SoundType.WOOL).ignitedByLava().mapColor(MapColor.WOOL).instrument(NoteBlockInstrument.GUITAR);
         public static BlockBehaviour.Properties MARBLE = Block.Properties.of().strength(1.5F, 6.0F).sound(SoundType.CALCITE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
         public static BlockBehaviour.Properties CONCRETE = Block.Properties.of().strength(1.8F).sound(SoundType.STONE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
@@ -159,10 +162,10 @@ public class CFBlocks {
     public static final Supplier<Block> JUNGLE_CHAIR = registerBlock("jungle_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> ACACIA_CHAIR = registerBlock("acacia_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_CHAIR = registerBlock("mangrove_chair", () -> new WoodChairBlock(Properties.WOOD));
-    public static final Supplier<Block> BAMBOO_CHAIR = registerBlock("bamboo_chair", () -> new WoodChairBlock(Properties.WOOD));
-    public static final Supplier<Block> CHERRY_CHAIR = registerBlock("cherry_chair", () -> new WoodChairBlock(Properties.WOOD));
-    public static final Supplier<Block> CRIMSON_CHAIR = registerBlock("crimson_chair", () -> new WoodChairBlock(Properties.WOOD));
-    public static final Supplier<Block> WARPED_CHAIR = registerBlock("warped_chair", () -> new WoodChairBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_CHAIR = registerBlock("bamboo_chair", () -> new WoodChairBlock(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> CHERRY_CHAIR = registerBlock("cherry_chair", () -> new WoodChairBlock(Properties.CHERRY_WOOD));
+    public static final Supplier<Block> CRIMSON_CHAIR = registerBlock("crimson_chair", () -> new WoodChairBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> WARPED_CHAIR = registerBlock("warped_chair", () -> new WoodChairBlock(Properties.NETHER_WOOD));
     public static final Supplier<Block> APRICORN_CHAIR = registerBlock("apricorn_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_CHAIR = registerBlock("saccharine_chair", () -> new WoodChairBlock(Properties.WOOD));
 
@@ -173,10 +176,10 @@ public class CFBlocks {
     public static final Supplier<Block> JUNGLE_WALL_SUPPORT = registerBlock("jungle_wall_support", () -> new WallSupportBlock(Properties.WOOD));
     public static final Supplier<Block> ACACIA_WALL_SUPPORT = registerBlock("acacia_wall_support", () -> new WallSupportBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_WALL_SUPPORT = registerBlock("mangrove_wall_support", () -> new WallSupportBlock(Properties.WOOD));
-    public static final Supplier<Block> BAMBOO_WALL_SUPPORT = registerBlock("bamboo_wall_support", () -> new WallSupportBlock(Properties.WOOD));
-    public static final Supplier<Block> CHERRY_WALL_SUPPORT = registerBlock("cherry_wall_support", () -> new WallSupportBlock(Properties.WOOD));
-    public static final Supplier<Block> CRIMSON_WALL_SUPPORT = registerBlock("crimson_wall_support", () -> new WallSupportBlock(Properties.WOOD));
-    public static final Supplier<Block> WARPED_WALL_SUPPORT = registerBlock("warped_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_WALL_SUPPORT = registerBlock("bamboo_wall_support", () -> new WallSupportBlock(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> CHERRY_WALL_SUPPORT = registerBlock("cherry_wall_support", () -> new WallSupportBlock(Properties.CHERRY_WOOD));
+    public static final Supplier<Block> CRIMSON_WALL_SUPPORT = registerBlock("crimson_wall_support", () -> new WallSupportBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> WARPED_WALL_SUPPORT = registerBlock("warped_wall_support", () -> new WallSupportBlock(Properties.NETHER_WOOD));
     public static final Supplier<Block> APRICORN_WALL_SUPPORT = registerBlock("apricorn_wall_support", () -> new WallSupportBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_WALL_SUPPORT = registerBlock("saccharine_wall_support", () -> new WallSupportBlock(Properties.WOOD));
 
@@ -287,10 +290,10 @@ public class CFBlocks {
     public static final Supplier<Block> JUNGLE_TABLE = registerBlock("jungle_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> ACACIA_TABLE = registerBlock("acacia_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_TABLE = registerBlock("mangrove_table", () -> new TableBlock(Properties.WOOD));
-    public static final Supplier<Block> BAMBOO_TABLE = registerBlock("bamboo_table", () -> new TableBlock(Properties.WOOD));
-    public static final Supplier<Block> CHERRY_TABLE = registerBlock("cherry_table", () -> new TableBlock(Properties.WOOD));
-    public static final Supplier<Block> CRIMSON_TABLE = registerBlock("crimson_table", () -> new TableBlock(Properties.WOOD));
-    public static final Supplier<Block> WARPED_TABLE = registerBlock("warped_table", () -> new TableBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_TABLE = registerBlock("bamboo_table", () -> new TableBlock(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> CHERRY_TABLE = registerBlock("cherry_table", () -> new TableBlock(Properties.CHERRY_WOOD));
+    public static final Supplier<Block> CRIMSON_TABLE = registerBlock("crimson_table", () -> new TableBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> WARPED_TABLE = registerBlock("warped_table", () -> new TableBlock(Properties.NETHER_WOOD));
     public static final Supplier<Block> APRICORN_TABLE = registerBlock("apricorn_table", () -> new TableBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_TABLE = registerBlock("saccharine_table", () -> new TableBlock(Properties.WOOD));
 
@@ -369,10 +372,10 @@ public class CFBlocks {
     public static final Supplier<Block> JUNGLE_CABINET = registerBlock("jungle_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> ACACIA_CABINET = registerBlock("acacia_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> MANGROVE_CABINET = registerBlock("mangrove_cabinet", () -> new CabinetBlock(Properties.WOOD));
-    public static final Supplier<Block> BAMBOO_CABINET = registerBlock("bamboo_cabinet", () -> new CabinetBlock(Properties.WOOD));
-    public static final Supplier<Block> CHERRY_CABINET = registerBlock("cherry_cabinet", () -> new CabinetBlock(Properties.WOOD));
-    public static final Supplier<Block> CRIMSON_CABINET = registerBlock("crimson_cabinet", () -> new CabinetBlock(Properties.WOOD));
-    public static final Supplier<Block> WARPED_CABINET = registerBlock("warped_cabinet", () -> new CabinetBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_CABINET = registerBlock("bamboo_cabinet", () -> new CabinetBlock(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> CHERRY_CABINET = registerBlock("cherry_cabinet", () -> new CabinetBlock(Properties.CHERRY_WOOD));
+    public static final Supplier<Block> CRIMSON_CABINET = registerBlock("crimson_cabinet", () -> new CabinetBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> WARPED_CABINET = registerBlock("warped_cabinet", () -> new CabinetBlock(Properties.NETHER_WOOD));
     public static final Supplier<Block> APRICORN_CABINET = registerBlock("apricorn_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_CABINET = registerBlock("saccharine_cabinet", () -> new CabinetBlock(Properties.WOOD));
 

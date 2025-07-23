@@ -2,8 +2,8 @@
     "type": "cobblefurnies:furni_crafting",
     "materials": [
         {
-            "count": 3,
-            "item": "cobblemon:saccharine_planks"
+            "count": 1,
+            "item": "minecraft:saccharine_planks"
         },
         {
             "count": 2,
