@@ -166,6 +166,20 @@ public class CFBlocks {
     public static final Supplier<Block> APRICORN_CHAIR = registerBlock("apricorn_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_CHAIR = registerBlock("saccharine_chair", () -> new WoodChairBlock(Properties.WOOD));
 
+    public static final Supplier<Block> OAK_WALL_SUPPORT = registerBlock("oak_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> SPRUCE_WALL_SUPPORT = registerBlock("spruce_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> BIRCH_WALL_SUPPORT = registerBlock("birch_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> DARK_OAK_WALL_SUPPORT = registerBlock("dark_oak_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> JUNGLE_WALL_SUPPORT = registerBlock("jungle_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> ACACIA_WALL_SUPPORT = registerBlock("acacia_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> MANGROVE_WALL_SUPPORT = registerBlock("mangrove_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_WALL_SUPPORT = registerBlock("bamboo_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> CHERRY_WALL_SUPPORT = registerBlock("cherry_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> CRIMSON_WALL_SUPPORT = registerBlock("crimson_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> WARPED_WALL_SUPPORT = registerBlock("warped_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> APRICORN_WALL_SUPPORT = registerBlock("apricorn_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+    public static final Supplier<Block> SACCHARINE_WALL_SUPPORT = registerBlock("saccharine_wall_support", () -> new WallSupportBlock(Properties.WOOD));
+
     public static final Supplier<Block> RED_STOOL = registerBlock("red_stool", () -> new StoolBlock(Properties.WOOD));
     public static final Supplier<Block> RED_DARK_STOOL = registerBlock("red_dark_stool", () -> new StoolBlock(Properties.WOOD));
     public static final Supplier<Block> ORANGE_STOOL = registerBlock("orange_stool", () -> new StoolBlock(Properties.WOOD));

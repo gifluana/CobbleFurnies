@@ -1,0 +1,64 @@
+{
+    "variants": {
+        "facing=north,shape=single": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_single"
+        },
+        "facing=east,shape=single": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_single",
+            "y": 90
+        },
+        "facing=south,shape=single": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_single",
+            "y": 180
+        },
+        "facing=west,shape=single": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_single",
+            "y": 270
+        },
+        "facing=north,shape=left": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_left"
+        },
+        "facing=east,shape=left": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_left",
+            "y": 90
+        },
+        "facing=south,shape=left": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_left",
+            "y": 180
+        },
+        "facing=west,shape=left": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_left",
+            "y": 270
+        },
+        "facing=north,shape=right": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_right"
+        },
+        "facing=east,shape=right": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_right",
+            "y": 90
+        },
+        "facing=south,shape=right": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_right",
+            "y": 180
+        },
+        "facing=west,shape=right": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_right",
+            "y": 270
+        },
+        "facing=north,shape=middle": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_middle"
+        },
+        "facing=east,shape=middle": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_middle",
+            "y": 90
+        },
+        "facing=south,shape=middle": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_middle",
+            "y": 180
+        },
+        "facing=west,shape=middle": {
+            "model": "cobblefurnies:block/wall_support/dark_oak_middle",
+            "y": 270
+        }
+    }
+}

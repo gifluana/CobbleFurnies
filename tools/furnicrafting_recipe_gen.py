@@ -284,6 +284,25 @@ def get_armchair_recipe(color):
         }
     }
 
+def get_wall_support_recipe(wood):
+    return {
+        "type": "cobblefurnies:furni_crafting",
+        "materials": [
+            {
+                "count": 1,
+                "item": f"minecraft:{wood}_planks"
+            },
+            {
+                "count": 2,
+                "item": "minecraft:stick"
+            }
+        ],
+        "result": {
+            "id": f"cobblefurnies:{wood}_wall_support",
+            "count": 4
+        }
+    }
+
 # Function to save JSON data to a file
 def save_json_file(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -307,12 +326,12 @@ def generate_recipes():
     base_dir = os.path.join(script_dir, "cobblefurnies", "recipes")
 
     # Generate recipes for each color
-    for color in colors:
-        armchair_path = os.path.join(base_dir, f"{color}_armchair.json")
-        save_json_file(armchair_path, get_armchair_recipe(color))
+    #for color in colors:
+    #    armchair_path = os.path.join(base_dir, f"{color}_armchair.json")
+    #    save_json_file(armchair_path, get_armchair_recipe(color))
 
-        curtain_path = os.path.join(base_dir, f"{color}_curtain.json")
-        save_json_file(curtain_path, get_curtain_recipe(color))
+    #    curtain_path = os.path.join(base_dir, f"{color}_curtain.json")
+    #    save_json_file(curtain_path, get_curtain_recipe(color))
 
     #    poke_wool_path = os.path.join(base_dir, f"{color}_poke_wool.json")
     #    save_json_file(poke_wool_path, get_poke_wool_recipe(color))
@@ -342,7 +361,10 @@ def generate_recipes():
     #    save_json_file(colored_drawer_path, get_drawer_recipe(color))
 
     # Generate recipes for each wood type
-    #for wood in woods:
+    for wood in woods:
+        wall_support_path = os.path.join(base_dir, f"{wood}_wall_support.json")
+        save_json_file(wall_support_path, get_wall_support_recipe(wood))
+
     #    cabinet_path = os.path.join(base_dir, f"{wood}_cabinet.json")
     #    save_json_file(cabinet_path, get_cabinet_recipe(wood))
 

@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/wall_support_middle",
+    "textures": {
+        "0": "cobblefurnies:block/wall_support/dark_oak",
+        "particle": "cobblefurnies:block/particles/table/dark_oak"
+    }
+}

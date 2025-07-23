@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/wall_support_single",
+    "textures": {
+        "0": "cobblefurnies:block/wall_support/apricorn",
+        "particle": "cobblefurnies:block/particles/table/apricorn"
+    }
+}
