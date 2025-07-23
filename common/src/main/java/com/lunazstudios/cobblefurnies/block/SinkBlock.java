@@ -227,7 +227,11 @@ public class SinkBlock extends Block implements SimpleWaterloggedBlock {
         builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED);
     }
 
-    private BlockState getConnections(BlockState state, LevelAccessor level, BlockPos pos) {
+    private BlockState getConnections(BlockState state, @Nullable LevelAccessor level, @Nullable BlockPos pos) {
+        if (level == null || pos == null) {
+            return state.setValue(CONNECTED_LEFT, false).setValue(CONNECTED_RIGHT, false);
+        }
+
         Direction facing = state.getValue(FACING);
         boolean left = validConnection(level.getBlockState(pos.relative(facing.getCounterClockWise())));
         boolean right = validConnection(level.getBlockState(pos.relative(facing.getClockWise())));
