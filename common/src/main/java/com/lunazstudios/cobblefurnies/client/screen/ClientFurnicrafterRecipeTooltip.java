@@ -60,6 +60,10 @@ public class ClientFurnicrafterRecipeTooltip implements ClientTooltipComponent {
 
     private ItemStack getStack(CountedIngredient material) {
         ItemStack[] items = material.ingredient().getItems();
+        if (items.length == 0) {
+            System.out.println("Empty ingredient stack for recipe");
+            return ItemStack.EMPTY;
+        }
         int index = (int) ((Util.getMillis() / 1000) % items.length);
         return items[index];
     }
