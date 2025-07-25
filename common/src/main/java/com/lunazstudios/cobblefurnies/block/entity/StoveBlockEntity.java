@@ -160,6 +160,17 @@ public class StoveBlockEntity extends BaseContainerBlockEntity implements Crafti
         }
     }
 
+    public void handleSafeDrop() {
+        if (this.cookingProgress > 0) {
+            ItemStack result = this.getItem(RESULT_SLOT);
+            ItemStack preview = this.getItem(PREVIEW_SLOT);
+
+            if (!preview.isEmpty() && (result.isEmpty() || ItemStack.isSameItemSameComponents(preview, result))) {
+                this.setItem(PREVIEW_SLOT, ItemStack.EMPTY);
+            }
+        }
+    }
+
     private static Optional<RecipeHolder<CookingPotRecipeBase>> fetchRecipe(Level level, CraftingInput input, RecipeType<? extends CookingPotRecipeBase> type) {
         return level.getRecipeManager().getRecipeFor(type, input, level)
                 .map(r -> (RecipeHolder<CookingPotRecipeBase>) r);

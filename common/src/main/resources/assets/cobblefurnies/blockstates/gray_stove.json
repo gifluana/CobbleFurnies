@@ -2,6 +2,45 @@
     "multipart": [
         {
             "when": {
+                "facing": "west",
+                "connected_left": "false",
+                "connected_right": "false"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/gray_bottom",
+                "y": 270
+            }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "red" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_red" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "yellow" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_yellow" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "white" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_white" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "pink" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_pink" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "green" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_green" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "blue" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_blue" }
+        },
+        {
+            "when": { "has_pot": true, "pot_color": "black" },
+            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_black" }
+        },
+        {
+            "when": {
                 "facing": "north"
             },
             "apply": {
@@ -194,17 +233,6 @@
             "apply": {
                 "model": "cobblefurnies:block/stove/gray_bottom",
                 "y": 180
-            }
-        },
-        {
-            "when": {
-                "facing": "west",
-                "connected_left": "false",
-                "connected_right": "false"
-            },
-            "apply": {
-                "model": "cobblefurnies:block/stove/gray_bottom",
-                "y": 270
             }
         }
     ]
