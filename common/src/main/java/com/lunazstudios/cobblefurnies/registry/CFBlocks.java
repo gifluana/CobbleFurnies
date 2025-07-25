@@ -49,8 +49,8 @@ public class CFBlocks {
 //    public static final Supplier<Block> GRASS_BLOCK = registerBlock("grass_block", () -> new GrassBlock(Properties.GRASS));
 //    public static final Supplier<Block> CLEARER_GRASS_BLOCK = registerBlock("clearer_grass_block", () -> new GrassBlock(Properties.GRASS));
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
-    public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.WOOD));
-    public static final Supplier<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new Block(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new Block(Properties.BAMBOO_WOOD));
     public static final Supplier<Block> AZURE_MOSAIC = registerBlock("azure_mosaic", () -> new Block(Properties.MARBLE));
     public static final Supplier<Block> BUTTER_MOSAIC = registerBlock("butter_mosaic", () -> new Block(Properties.MARBLE));
     public static final Supplier<Block> VANILLA_MOSAIC = registerBlock("vanilla_mosaic", () -> new Block(Properties.MARBLE));
