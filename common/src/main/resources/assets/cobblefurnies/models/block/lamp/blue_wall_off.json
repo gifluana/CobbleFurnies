@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/lamp_wall",
+    "textures": {
+        "1": "cobblefurnies:block/lamp/blue_off",
+        "particle": "cobblefurnies:block/particles/color/blue"
+    }
+}

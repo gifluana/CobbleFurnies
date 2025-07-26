@@ -23,6 +23,11 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
                 CFBlocks.MINI_TOPIARY.get(), CFBlocks.POTTED_POTHOS.get(),
 
+                CFBlocks.RED_LAMP.get(), CFBlocks.ORANGE_LAMP.get(), CFBlocks.YELLOW_LAMP.get(), CFBlocks.LIME_LAMP.get(),
+                CFBlocks.GREEN_LAMP.get(), CFBlocks.CYAN_LAMP.get(), CFBlocks.LIGHT_BLUE_LAMP.get(), CFBlocks.BLUE_LAMP.get(),
+                CFBlocks.MAGENTA_LAMP.get(), CFBlocks.PURPLE_LAMP.get(), CFBlocks.PINK_LAMP.get(), CFBlocks.WHITE_LAMP.get(),
+                CFBlocks.LIGHT_GRAY_LAMP.get(), CFBlocks.GRAY_LAMP.get(), CFBlocks.BLACK_LAMP.get(), CFBlocks.BROWN_LAMP.get(),
+
                 CFBlocks.RED_CURTAIN.get(), CFBlocks.ORANGE_CURTAIN.get(), CFBlocks.YELLOW_CURTAIN.get(), CFBlocks.LIME_CURTAIN.get(),
                 CFBlocks.GREEN_CURTAIN.get(), CFBlocks.CYAN_CURTAIN.get(), CFBlocks.LIGHT_BLUE_CURTAIN.get(), CFBlocks.BLUE_CURTAIN.get(),
                 CFBlocks.MAGENTA_CURTAIN.get(), CFBlocks.PURPLE_CURTAIN.get(), CFBlocks.PINK_CURTAIN.get(), CFBlocks.WHITE_CURTAIN.get(),

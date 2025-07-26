@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:red_lamp", "required": false},
+		{"id": "cobblefurnies:orange_lamp", "required": false},
+		{"id": "cobblefurnies:yellow_lamp", "required": false},
+		{"id": "cobblefurnies:brown_lamp", "required": false},
+		{"id": "cobblefurnies:lime_lamp", "required": false},
+		{"id": "cobblefurnies:green_lamp", "required": false},
+		{"id": "cobblefurnies:cyan_lamp", "required": false},
+		{"id": "cobblefurnies:light_blue_lamp", "required": false},
+		{"id": "cobblefurnies:blue_lamp", "required": false},
+		{"id": "cobblefurnies:magenta_lamp", "required": false},
+		{"id": "cobblefurnies:purple_lamp", "required": false},
+		{"id": "cobblefurnies:pink_lamp", "required": false},
+		{"id": "cobblefurnies:white_lamp", "required": false},
+		{"id": "cobblefurnies:light_gray_lamp", "required": false},
+		{"id": "cobblefurnies:gray_lamp", "required": false},
+		{"id": "cobblefurnies:black_lamp", "required": false}
+	]
+}

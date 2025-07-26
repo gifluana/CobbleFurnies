@@ -303,6 +303,29 @@ def get_wall_support_recipe(wood):
         }
     }
 
+def get_lamp_recipe(color):
+    return {
+        "type": "cobblefurnies:furni_crafting",
+        "materials": [
+            {
+                "count": 1,
+                "item": f"minecraft:{color}_wool"
+            },
+            {
+                "count": 1,
+                "item": "minecraft:stick"
+            },
+            {
+                "count": 1,
+                "item": "minecraft:redstone"
+            }
+        ],
+        "result": {
+            "id": f"cobblefurnies:{color}_lamp",
+            "count": 1
+        }
+    }
+
 # Function to save JSON data to a file
 def save_json_file(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -327,6 +350,9 @@ def generate_recipes():
 
     # Generate recipes for each color
     for color in colors:
+        lamp_path = os.path.join(base_dir, f"{color}_lamp.json")
+        save_json_file(lamp_path, get_lamp_recipe(color))
+
         #armchair_path = os.path.join(base_dir, f"{color}_armchair.json")
         #save_json_file(armchair_path, get_armchair_recipe(color))
 
@@ -336,11 +362,11 @@ def generate_recipes():
         #poke_wool_path = os.path.join(base_dir, f"{color}_poke_wool.json")
         #save_json_file(poke_wool_path, get_poke_wool_recipe(color))
         
-        colored_chair_path = os.path.join(base_dir, f"{color}_dark_chair.json")
-        save_json_file(colored_chair_path, get_colored_chair_recipe(color))
+        #colored_chair_path = os.path.join(base_dir, f"{color}_dark_chair.json")
+        #save_json_file(colored_chair_path, get_colored_chair_recipe(color))
 
-        colored_stool_path = os.path.join(base_dir, f"{color}_dark_stool.json")
-        save_json_file(colored_stool_path, get_colored_stool_recipe(color))
+        #colored_stool_path = os.path.join(base_dir, f"{color}_dark_stool.json")
+        #save_json_file(colored_stool_path, get_colored_stool_recipe(color))
 
         #sofa_path = os.path.join(base_dir, f"{color}_sofa.json")
         #save_json_file(sofa_path, get_sofa_recipe(color))
