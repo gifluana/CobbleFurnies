@@ -16,4 +16,5 @@ public class CFBlockStateProperties {
     public static final EnumProperty<WallSupportShape> WALL_SUPPORT_SHAPE = EnumProperty.create("shape", WallSupportShape.class);
     public static final BooleanProperty HAS_POT = BooleanProperty.create("has_pot");
     public static final EnumProperty<PotColor> POT_COLOR = EnumProperty.create("pot_color", PotColor.class);
+    public static final EnumProperty<MountType> MOUNT_TYPE = EnumProperty.create("mount_type", MountType.class);
 }

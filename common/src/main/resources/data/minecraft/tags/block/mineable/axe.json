@@ -8,6 +8,7 @@
       {"id": "#cobblefurnies:plants", "required": false},
       {"id": "#cobblefurnies:armchairs", "required": false},
       {"id": "#cobblefurnies:curtains", "required": false},
+      {"id": "#cobblefurnies:lamps", "required": false},
       {"id": "#cobblefurnies:wall_supports", "required": false},
 
       {"id": "cobblefurnies:bamboo_floor", "required": false},

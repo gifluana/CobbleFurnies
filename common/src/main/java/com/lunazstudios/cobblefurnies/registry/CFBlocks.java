@@ -27,7 +27,8 @@ public class CFBlocks {
         public static BlockBehaviour.Properties WOOL = Block.Properties.of().strength(0.8F).sound(SoundType.WOOL).ignitedByLava().mapColor(MapColor.WOOL).instrument(NoteBlockInstrument.GUITAR);
         public static BlockBehaviour.Properties MARBLE = Block.Properties.of().strength(1.5F, 6.0F).sound(SoundType.CALCITE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
         public static BlockBehaviour.Properties CONCRETE = Block.Properties.of().strength(1.8F).sound(SoundType.STONE).mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM);
-        public static BlockBehaviour.Properties LAMP = WOOD.lightLevel((blockState) -> blockState.hasProperty(BlockStateProperties.LIT) && blockState.getValue(BlockStateProperties.LIT) ? (blockState.getValue(CFBlockStateProperties.LEVEL_1_3) * 5) : 0);
+        public static final BlockBehaviour.Properties LAMP = WOOD
+                .lightLevel(state -> state.hasProperty(BlockStateProperties.LIT) && state.getValue(BlockStateProperties.LIT) ? 15 : 0);
     }
 
     public static final Supplier<Block> POKE_BALL_DESK = registerBlock("poke_ball_desk", () -> new PokeDeskBlock(Properties.CONCRETE));
@@ -121,6 +122,23 @@ public class CFBlocks {
     public static final Supplier<Block> LIGHT_GRAY_CURTAIN = registerBlock("light_gray_curtain", () -> new CurtainBlock(Properties.WOOD));
     public static final Supplier<Block> GRAY_CURTAIN = registerBlock("gray_curtain", () -> new CurtainBlock(Properties.WOOD));
     public static final Supplier<Block> BLACK_CURTAIN = registerBlock("black_curtain", () -> new CurtainBlock(Properties.WOOD));
+
+    public static final Supplier<Block> RED_LAMP = registerBlock("red_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> ORANGE_LAMP = registerBlock("orange_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> YELLOW_LAMP = registerBlock("yellow_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> BROWN_LAMP = registerBlock("brown_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> LIME_LAMP = registerBlock("lime_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> GREEN_LAMP = registerBlock("green_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> CYAN_LAMP = registerBlock("cyan_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> LIGHT_BLUE_LAMP = registerBlock("light_blue_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> BLUE_LAMP = registerBlock("blue_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> MAGENTA_LAMP = registerBlock("magenta_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> PURPLE_LAMP = registerBlock("purple_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> PINK_LAMP = registerBlock("pink_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> WHITE_LAMP = registerBlock("white_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> LIGHT_GRAY_LAMP = registerBlock("light_gray_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> GRAY_LAMP = registerBlock("gray_lamp", () -> new LampBlock(Properties.LAMP));
+    public static final Supplier<Block> BLACK_LAMP = registerBlock("black_lamp", () -> new LampBlock(Properties.LAMP));
 
     public static final Supplier<Block> RED_CHAIR = registerBlock("red_chair", () -> new ChairBlock(Properties.WOOD));
     public static final Supplier<Block> RED_DARK_CHAIR = registerBlock("red_dark_chair", () -> new ChairBlock(Properties.WOOD));
