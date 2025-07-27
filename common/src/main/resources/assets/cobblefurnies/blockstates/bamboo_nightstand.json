@@ -1,0 +1,1664 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "facing": "north"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_bottom",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_closed",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "east"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_bottom",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_closed",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_bottom",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_closed",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_bottom",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/bamboo_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/red_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "orange"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/orange_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/yellow_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "lime"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/lime_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/green_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "cyan"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/cyan_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_blue_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/blue_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "magenta"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/magenta_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "purple"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/purple_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/pink_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/white_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "light_gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/light_gray_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "gray"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/gray_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/black_top_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": false,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_closed",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "open": true,
+                "has_concrete": true,
+                "concrete_color": "brown"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/nightstand/brown_top_open",
+                "y": 270
+            }
+        }
+    ]
+}

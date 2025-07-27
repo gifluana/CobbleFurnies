@@ -1,0 +1,13 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "cobblemon:apricorn_planks"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:apricorn_nightstand",
+        "count": 1
+    }
+}

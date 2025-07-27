@@ -1,7 +1,6 @@
 package com.lunazstudios.cobblefurnies.registry;
 
 import com.lunazstudios.cobblefurnies.block.*;
-import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -186,6 +185,20 @@ public class CFBlocks {
     public static final Supplier<Block> WARPED_CHAIR = registerBlock("warped_chair", () -> new WoodChairBlock(Properties.NETHER_WOOD));
     public static final Supplier<Block> APRICORN_CHAIR = registerBlock("apricorn_chair", () -> new WoodChairBlock(Properties.WOOD));
     public static final Supplier<Block> SACCHARINE_CHAIR = registerBlock("saccharine_chair", () -> new WoodChairBlock(Properties.WOOD));
+
+    public static final Supplier<Block> OAK_NIGHTSTAND = registerBlock("oak_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> SPRUCE_NIGHTSTAND = registerBlock("spruce_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> BIRCH_NIGHTSTAND = registerBlock("birch_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> DARK_OAK_NIGHTSTAND = registerBlock("dark_oak_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> JUNGLE_NIGHTSTAND = registerBlock("jungle_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> ACACIA_NIGHTSTAND = registerBlock("acacia_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> MANGROVE_NIGHTSTAND = registerBlock("mangrove_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> BAMBOO_NIGHTSTAND = registerBlock("bamboo_nightstand", () -> new NightStandBlock(Properties.BAMBOO_WOOD));
+    public static final Supplier<Block> CHERRY_NIGHTSTAND = registerBlock("cherry_nightstand", () -> new NightStandBlock(Properties.CHERRY_WOOD));
+    public static final Supplier<Block> CRIMSON_NIGHTSTAND = registerBlock("crimson_nightstand", () -> new NightStandBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> WARPED_NIGHTSTAND = registerBlock("warped_nightstand", () -> new NightStandBlock(Properties.NETHER_WOOD));
+    public static final Supplier<Block> APRICORN_NIGHTSTAND = registerBlock("apricorn_nightstand", () -> new NightStandBlock(Properties.WOOD));
+    public static final Supplier<Block> SACCHARINE_NIGHTSTAND = registerBlock("saccharine_nightstand", () -> new NightStandBlock(Properties.WOOD));
 
     public static final Supplier<Block> OAK_WALL_SUPPORT = registerBlock("oak_wall_support", () -> new WallSupportBlock(Properties.WOOD));
     public static final Supplier<Block> SPRUCE_WALL_SUPPORT = registerBlock("spruce_wall_support", () -> new WallSupportBlock(Properties.WOOD));
