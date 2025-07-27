@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "cobblefurnies:jungle_nighstand"
+                    "name": "cobblefurnies:birch_nightstand"
                 }
             ],
             "conditions": [

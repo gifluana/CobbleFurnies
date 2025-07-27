@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "cobblefurnies:dark_oak_nighstand"
+                    "name": "cobblefurnies:spruce_nightstand"
                 }
             ],
             "conditions": [
