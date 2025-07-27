@@ -14,6 +14,17 @@ Whether you're building a professor's lab, a bustling Pokécenter, or just a coz
 
 ***
 
+## 🌐 Help Translate CobbleFurnies
+
+CobbleFurnies is translated using [Weblate](https://hosted.weblate.org/engage/cobblefurnies/), a web-based translation tool.
+
+[![Translation status](https://hosted.weblate.org/widgets/cobblefurnies/-/cobblefurnies-master/horizontal-auto.svg)](https://hosted.weblate.org/engage/cobblefurnies/)
+
+You can help us translate the mod into your language!  
+No account needed — just log in with GitHub or GitLab and start contributing.
+
+***
+
 ## Frequently Asked Questions
 
 **Q: Can I use this mod in my modpack or create content with it?**  
