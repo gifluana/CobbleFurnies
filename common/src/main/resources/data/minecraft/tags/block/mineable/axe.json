@@ -10,6 +10,7 @@
       {"id": "#cobblefurnies:curtains", "required": false},
       {"id": "#cobblefurnies:lamps", "required": false},
       {"id": "#cobblefurnies:wall_supports", "required": false},
+      {"id": "#cobblefurnies:night_stands", "required": false},
 
       {"id": "cobblefurnies:bamboo_floor", "required": false},
       {"id": "cobblefurnies:bamboo_planks", "required": false},
