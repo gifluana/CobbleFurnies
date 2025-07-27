@@ -21,6 +21,7 @@ public class CFBlockTags {
     public static final TagKey<Block> SOFAS = blockTag("sofas");
     public static final TagKey<Block> STOOLS = blockTag("stools");
     public static final TagKey<Block> TABLES = blockTag("tables");
+    public static final TagKey<Block> NIGHT_STANDS = blockTag("night_stands");
     public static final TagKey<Block> TALL_STOOLS = blockTag("tall_stools");
 
     public static final TagKey<Block> CHAIRS_TUCKABLE_UNDER = blockTag("chairs_tuckable_under");

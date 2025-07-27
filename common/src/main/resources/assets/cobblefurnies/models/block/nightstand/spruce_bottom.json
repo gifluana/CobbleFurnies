@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/nightstand_bottom",
+    "textures": {
+        "wood": "cobblefurnies:block/nightstand/spruce",
+        "particle": "cobblefurnies:block/particles/table/spruce"
+    }
+}

@@ -160,6 +160,20 @@
     "block.cobblefurnies.apricorn_chair": "Cadeira de Azinheira",
     "block.cobblefurnies.saccharine_chair": "Cadeira de Sacarina",
 
+    "block.cobblefurnies.bamboo_nightstand": "Mesa de Cabeceira de Bambu",
+    "block.cobblefurnies.birch_nightstand": "Mesa de Cabeceira de Bétula",
+    "block.cobblefurnies.cherry_nightstand": "Mesa de Cabeceira de Cerejeira",
+    "block.cobblefurnies.crimson_nightstand": "Mesa de Cabeceira Carmesim",
+    "block.cobblefurnies.dark_oak_nightstand": "Mesa de Cabeceira de Carvalho Escuro",
+    "block.cobblefurnies.jungle_nightstand": "Mesa de Cabeceira da Selva",
+    "block.cobblefurnies.acacia_nightstand": "Mesa de Cabeceira de Acácia",
+    "block.cobblefurnies.mangrove_nightstand": "Mesa de Cabeceira de Mangue",
+    "block.cobblefurnies.oak_nightstand": "Mesa de Cabeceira de Carvalho",
+    "block.cobblefurnies.spruce_nightstand": "Mesa de Cabeceira de Pinheiro",
+    "block.cobblefurnies.warped_nightstand": "Mesa de Cabeceira Distorcida",
+    "block.cobblefurnies.apricorn_nightstand": "Mesa de Cabeceira de Azinheira",
+    "block.cobblefurnies.saccharine_nightstand": "Mesa de Cabeceira de Sacarina",
+
     "block.cobblefurnies.bamboo_wall_support": "Suporte de Parede de Bambu",
     "block.cobblefurnies.birch_wall_support": "Suporte de Parede de Bétula",
     "block.cobblefurnies.cherry_wall_support": "Suporte de Parede de Cerejeira",
@@ -377,5 +391,6 @@
     "container.cobblefurnies.cabinet": "Armário",
     "container.cobblefurnies.drawer": "Cômoda",
     "container.cobblefurnies.freezer": "Freezer",
-    "container.cobblefurnies.fridge": "Geladeira"
+    "container.cobblefurnies.fridge": "Geladeira",
+    "container.cobblefurnies.nightstand": "Mesa de Cabeceira"
 }

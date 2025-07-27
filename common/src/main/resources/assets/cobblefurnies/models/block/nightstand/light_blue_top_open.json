@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/nightstand_top_open_top",
+    "textures": {
+        "top": "cobblefurnies:block/nightstand/light_blue",
+        "particle": "cobblefurnies:block/particles/color/light_blue"
+    }
+}

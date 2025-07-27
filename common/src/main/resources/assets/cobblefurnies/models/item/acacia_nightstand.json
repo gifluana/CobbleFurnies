@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/nightstand_full",
+    "textures": {
+        "wood": "cobblefurnies:block/nightstand/acacia"
+    }
+}

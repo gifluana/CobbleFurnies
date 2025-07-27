@@ -160,6 +160,20 @@
     "block.cobblefurnies.apricorn_chair": "Apricorn Chair",
     "block.cobblefurnies.saccharine_chair": "Saccharine Chair",
 
+    "block.cobblefurnies.bamboo_nightstand": "Bamboo Night Stand",
+    "block.cobblefurnies.birch_nightstand": "Birch Night Stand",
+    "block.cobblefurnies.cherry_nightstand": "Cherry Night Stand",
+    "block.cobblefurnies.crimson_nightstand": "Crimson Night Stand",
+    "block.cobblefurnies.dark_oak_nightstand": "Dark Oak Night Stand",
+    "block.cobblefurnies.jungle_nightstand": "Jungle Night Stand",
+    "block.cobblefurnies.acacia_nightstand": "Acacia Night Stand",
+    "block.cobblefurnies.mangrove_nightstand": "Mangrove Night Stand",
+    "block.cobblefurnies.oak_nightstand": "Oak Night Stand",
+    "block.cobblefurnies.spruce_nightstand": "Spruce Night Stand",
+    "block.cobblefurnies.warped_nightstand": "Warped Night Stand",
+    "block.cobblefurnies.apricorn_nightstand": "Apricorn Night Stand",
+    "block.cobblefurnies.saccharine_nightstand": "Saccharine Night Stand",
+
     "block.cobblefurnies.bamboo_wall_support": "Bamboo Wall Support",
     "block.cobblefurnies.birch_wall_support": "Birch Wall Support",
     "block.cobblefurnies.cherry_wall_support": "Cherry Wall Support",
@@ -377,5 +391,6 @@
     "container.cobblefurnies.cabinet": "Cabinet",
     "container.cobblefurnies.drawer": "Drawer",
     "container.cobblefurnies.freezer": "Freezer",
-    "container.cobblefurnies.fridge": "Fridge"
+    "container.cobblefurnies.fridge": "Fridge",
+    "container.cobblefurnies.nightstand": "Night Stand"
 }

@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/nightstand_top_closed",
+    "textures": {
+        "top": "cobblefurnies:block/nightstand/spruce",
+        "particle": "cobblefurnies:block/particles/table/spruce"
+    }
+}
