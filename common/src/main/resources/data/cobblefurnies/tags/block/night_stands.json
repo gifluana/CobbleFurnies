@@ -1,0 +1,18 @@
+{
+	"replace": false,
+	"values": [
+		{"id": "cobblefurnies:bamboo_nightstand", "required": false},
+		{"id": "cobblefurnies:birch_nightstand", "required": false},
+		{"id": "cobblefurnies:cherry_nightstand", "required": false},
+		{"id": "cobblefurnies:crimson_nightstand", "required": false},
+		{"id": "cobblefurnies:dark_oak_nightstand", "required": false},
+		{"id": "cobblefurnies:jungle_nightstand", "required": false},
+		{"id": "cobblefurnies:acacia_nightstand", "required": false},
+		{"id": "cobblefurnies:mangrove_nightstand", "required": false},
+		{"id": "cobblefurnies:oak_nightstand", "required": false},
+		{"id": "cobblefurnies:spruce_nightstand", "required": false},
+		{"id": "cobblefurnies:warped_nightstand", "required": false},
+		{"id": "cobblefurnies:apricorn_nightstand", "required": false},
+		{"id": "cobblefurnies:saccharine_nightstand", "required": false}
+	]
+}

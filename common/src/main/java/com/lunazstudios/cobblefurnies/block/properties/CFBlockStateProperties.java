@@ -18,7 +18,6 @@ public class CFBlockStateProperties {
     public static final BooleanProperty HAS_POT = BooleanProperty.create("has_pot");
     public static final EnumProperty<PotColor> POT_COLOR = EnumProperty.create("pot_color", PotColor.class);
     public static final EnumProperty<MountType> MOUNT_TYPE = EnumProperty.create("mount_type", MountType.class);
-    public static final EnumProperty<WoodType> WOOD_TYPE = EnumProperty.create("wood_type", WoodType.class);
     public static final BooleanProperty HAS_CONCRETE = BooleanProperty.create("has_concrete");
     public static final EnumProperty<DyeColor> CONCRETE_COLOR = EnumProperty.create("concrete_color", DyeColor.class);
     public static final BooleanProperty TOP_DRAWER_TOP_OPEN = BooleanProperty.create("top_drawer_top_open");
