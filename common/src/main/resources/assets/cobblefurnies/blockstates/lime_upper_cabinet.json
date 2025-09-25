@@ -1,0 +1,468 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "left",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "left",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "left",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "left",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "right",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "right",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "right",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "hinge": "right",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door_open",
+                "y": 0
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "left",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "left",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "left",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "left",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "right",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "right",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "right",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "hinge": "right",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door_open",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "left",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "left",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "left",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "left",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "right",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "right",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "right",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "hinge": "right",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door_open",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "left"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "left",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "left",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_left_door_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "left",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "left",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_left_door_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "right"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "right",
+                "has_glass": false,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "right",
+                "has_glass": false,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/lime_right_door_open",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "right",
+                "has_glass": true,
+                "open": false
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "hinge": "right",
+                "has_glass": true,
+                "open": true
+            },
+            "apply": {
+                "model": "cobblefurnies:block/upper_cabinet/glass_right_door_open",
+                "y": 270
+            }
+        }
+    ]
+}

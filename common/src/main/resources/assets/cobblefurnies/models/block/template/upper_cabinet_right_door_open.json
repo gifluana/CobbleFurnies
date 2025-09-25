@@ -1,0 +1,64 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"door": "#door",
+		"particle": "#door"
+	},
+	"elements": [
+		{
+			"from": [1, 1, 6],
+			"to": [15, 15, 7],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [1, 8, 6.5]},
+			"faces": {
+				"north": {"uv": [7, 0, 0, 7], "texture": "#door"},
+				"east": {"uv": [7.5, 7, 7, 14], "texture": "#door"},
+				"south": {"uv": [7, 7, 0, 14], "texture": "#door"},
+				"west": {"uv": [7.5, 0, 7, 7], "texture": "#door"},
+				"up": {"uv": [7.5, 0.5, 14.5, 0], "texture": "#door"},
+				"down": {"uv": [7.5, 0.5, 14.5, 1], "texture": "#door"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "door",
+			"origin": [8, 8, 9.5],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

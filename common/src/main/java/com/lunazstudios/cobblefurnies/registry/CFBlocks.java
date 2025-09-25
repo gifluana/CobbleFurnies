@@ -396,6 +396,23 @@ public class CFBlocks {
     public static final Supplier<Block> GRAY_DRAWER = registerBlock("gray_drawer", () -> new DrawerBlock(Properties.MARBLE));
     public static final Supplier<Block> BLACK_DRAWER = registerBlock("black_drawer", () -> new DrawerBlock(Properties.MARBLE));
 
+    public static final Supplier<Block> RED_UPPER_CABINET = registerBlock("red_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> ORANGE_UPPER_CABINET = registerBlock("orange_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> YELLOW_UPPER_CABINET = registerBlock("yellow_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> BROWN_UPPER_CABINET = registerBlock("brown_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> LIME_UPPER_CABINET = registerBlock("lime_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> GREEN_UPPER_CABINET = registerBlock("green_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> CYAN_UPPER_CABINET = registerBlock("cyan_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> LIGHT_BLUE_UPPER_CABINET = registerBlock("light_blue_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> BLUE_UPPER_CABINET = registerBlock("blue_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> MAGENTA_UPPER_CABINET = registerBlock("magenta_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> PURPLE_UPPER_CABINET = registerBlock("purple_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> PINK_UPPER_CABINET = registerBlock("pink_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> WHITE_UPPER_CABINET = registerBlock("white_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> LIGHT_GRAY_UPPER_CABINET = registerBlock("light_gray_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> GRAY_UPPER_CABINET = registerBlock("gray_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+    public static final Supplier<Block> BLACK_UPPER_CABINET = registerBlock("black_upper_cabinet", () -> new UpperCabinetBlock(Properties.CONCRETE));
+
     public static final Supplier<Block> OAK_CABINET = registerBlock("oak_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> SPRUCE_CABINET = registerBlock("spruce_cabinet", () -> new CabinetBlock(Properties.WOOD));
     public static final Supplier<Block> BIRCH_CABINET = registerBlock("birch_cabinet", () -> new CabinetBlock(Properties.WOOD));

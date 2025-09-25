@@ -28,6 +28,11 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
                 CFBlocks.MAGENTA_LAMP.get(), CFBlocks.PURPLE_LAMP.get(), CFBlocks.PINK_LAMP.get(), CFBlocks.WHITE_LAMP.get(),
                 CFBlocks.LIGHT_GRAY_LAMP.get(), CFBlocks.GRAY_LAMP.get(), CFBlocks.BLACK_LAMP.get(), CFBlocks.BROWN_LAMP.get(),
 
+                CFBlocks.RED_UPPER_CABINET.get(), CFBlocks.ORANGE_UPPER_CABINET.get(), CFBlocks.YELLOW_UPPER_CABINET.get(), CFBlocks.LIME_UPPER_CABINET.get(),
+                CFBlocks.GREEN_UPPER_CABINET.get(), CFBlocks.CYAN_UPPER_CABINET.get(), CFBlocks.LIGHT_BLUE_UPPER_CABINET.get(), CFBlocks.BLUE_UPPER_CABINET.get(),
+                CFBlocks.MAGENTA_UPPER_CABINET.get(), CFBlocks.PURPLE_UPPER_CABINET.get(), CFBlocks.PINK_UPPER_CABINET.get(), CFBlocks.WHITE_UPPER_CABINET.get(),
+                CFBlocks.LIGHT_GRAY_UPPER_CABINET.get(), CFBlocks.GRAY_UPPER_CABINET.get(), CFBlocks.BLACK_UPPER_CABINET.get(), CFBlocks.BROWN_UPPER_CABINET.get(),
+
                 CFBlocks.RED_CURTAIN.get(), CFBlocks.ORANGE_CURTAIN.get(), CFBlocks.YELLOW_CURTAIN.get(), CFBlocks.LIME_CURTAIN.get(),
                 CFBlocks.GREEN_CURTAIN.get(), CFBlocks.CYAN_CURTAIN.get(), CFBlocks.LIGHT_BLUE_CURTAIN.get(), CFBlocks.BLUE_CURTAIN.get(),
                 CFBlocks.MAGENTA_CURTAIN.get(), CFBlocks.PURPLE_CURTAIN.get(), CFBlocks.PINK_CURTAIN.get(), CFBlocks.WHITE_CURTAIN.get(),

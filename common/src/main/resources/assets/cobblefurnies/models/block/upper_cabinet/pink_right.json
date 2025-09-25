@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/upper_cabinet_right",
+    "textures": {
+        "cabinet": "cobblefurnies:block/upper_cabinet/pink",
+        "particle": "cobblefurnies:block/particles/color/pink"
+    }
+}
