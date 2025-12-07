@@ -7,6 +7,7 @@
         {"id": "#cobblefurnies:fridges", "required": false},
         {"id": "#cobblefurnies:toilets", "required": false},
         {"id": "#cobblefurnies:statues", "required": false},
+        {"id": "#cobblefurnies:upper_cabinets", "required": false},
 
         {"id": "cobblefurnies:kitchen_floor", "required": false},
         {"id": "cobblefurnies:lab_floor", "required": false},

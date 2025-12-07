@@ -2,42 +2,304 @@
     "multipart": [
         {
             "when": {
-                "facing": "west",
-                "connected_left": "false",
-                "connected_right": "false"
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "red"
             },
             "apply": {
-                "model": "cobblefurnies:block/stove/blue_bottom",
+                "model": "cobblefurnies:block/stove/pot_red"
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_red",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_red",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "red"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_red",
                 "y": 270
             }
         },
         {
-            "when": { "has_pot": true, "pot_color": "red" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_red" }
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_yellow"
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "yellow" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_yellow" }
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_yellow",
+                "y": 90
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "white" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_white" }
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_yellow",
+                "y": 180
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "pink" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_pink" }
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "yellow"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_yellow",
+                "y": 270
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "green" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_green" }
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_white"
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "blue" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_blue" }
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_white",
+                "y": 90
+            }
         },
         {
-            "when": { "has_pot": true, "pot_color": "black" },
-            "apply": { "model": "cobblefurnies:block/stove/campfire_pot_black" }
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_white",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "white"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_white",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_pink"
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_pink",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_pink",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "pink"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_pink",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_green"
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_green",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_green",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "green"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_green",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_blue"
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_blue",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_blue",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "blue"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_blue",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "facing": "north",
+                "has_pot": "true",
+                "pot_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_black"
+            }
+        },
+        {
+            "when": {
+                "facing": "east",
+                "has_pot": "true",
+                "pot_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_black",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "facing": "south",
+                "has_pot": "true",
+                "pot_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_black",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "has_pot": "true",
+                "pot_color": "black"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/pot_black",
+                "y": 270
+            }
         },
         {
             "when": {
@@ -233,6 +495,17 @@
             "apply": {
                 "model": "cobblefurnies:block/stove/blue_bottom",
                 "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "west",
+                "connected_left": "false",
+                "connected_right": "false"
+            },
+            "apply": {
+                "model": "cobblefurnies:block/stove/blue_bottom",
+                "y": 270
             }
         }
     ]

@@ -1,0 +1,7 @@
+{
+    "parent": "cobblefurnies:block/template/upper_cabinet_left",
+    "textures": {
+        "cabinet": "cobblefurnies:block/upper_cabinet/black",
+        "particle": "cobblefurnies:block/particles/color/black"
+    }
+}

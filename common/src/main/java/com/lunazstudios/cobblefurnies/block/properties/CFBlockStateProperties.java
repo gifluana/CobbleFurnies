@@ -20,7 +20,7 @@ public class CFBlockStateProperties {
     public static final EnumProperty<MountType> MOUNT_TYPE = EnumProperty.create("mount_type", MountType.class);
     public static final BooleanProperty HAS_CONCRETE = BooleanProperty.create("has_concrete");
     public static final EnumProperty<DyeColor> CONCRETE_COLOR = EnumProperty.create("concrete_color", DyeColor.class);
-    public static final BooleanProperty TOP_DRAWER_TOP_OPEN = BooleanProperty.create("top_drawer_top_open");
-    public static final BooleanProperty TOP_DRAWER_BOTTOM_OPEN = BooleanProperty.create("top_drawer_bottom_open");
-
+    public static final BooleanProperty HAS_GLASS = BooleanProperty.create("has_glass");
+    public static final BooleanProperty LID = BooleanProperty.create("lid");
+    public static final BooleanProperty COOKING = BooleanProperty.create("cooking");
 }

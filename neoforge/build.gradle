@@ -55,7 +55,6 @@ repositories {
 dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
-    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
     modImplementation "earth.terrarium.athena:athena-neoforge-1.21:${athena_version}"
     modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
     modImplementation "com.cobblemon:neoforge:${project.cobblemon_version}"

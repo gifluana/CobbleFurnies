@@ -1,7 +1,5 @@
 package com.lunazstudios.cobblefurnies.block;
 
-import com.cobblemon.mod.common.CobblemonItems;
-import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
 import com.lunazstudios.cobblefurnies.block.entity.StoveBlockEntity;
 import com.lunazstudios.cobblefurnies.block.properties.CFBlockStateProperties;
 import com.lunazstudios.cobblefurnies.registry.CFBlockEntityTypes;
@@ -12,14 +10,11 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -34,7 +29,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -52,7 +46,8 @@ public class StoveBlock extends BaseEntityBlock {
     public static final BooleanProperty CONNECTED_LEFT = CFBlockStateProperties.CONNECTED_LEFT;
     public static final BooleanProperty CONNECTED_RIGHT = CFBlockStateProperties.CONNECTED_RIGHT;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
+    public static final BooleanProperty LID = CFBlockStateProperties.LID;
+    public static final BooleanProperty COOKING = CFBlockStateProperties.COOKING;
 
     protected static final VoxelShape TOP_SHAPE_NORTH = Shapes.or(
             Block.box(0, 11, 0, 16, 16, 16),
@@ -88,7 +83,7 @@ public class StoveBlock extends BaseEntityBlock {
                 .setValue(CONNECTED_LEFT, false)
                 .setValue(CONNECTED_RIGHT, false)
                 .setValue(WATERLOGGED, false)
-                .setValue(OPEN, false)
+                .setValue(LID, false)
                 .setValue(CFBlockStateProperties.HAS_POT, false)
                 .setValue(CFBlockStateProperties.POT_COLOR, PotColor.RED));
     }
@@ -276,12 +271,10 @@ public class StoveBlock extends BaseEntityBlock {
         boolean waterlogged = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
         Direction facing = context.getHorizontalDirection().getOpposite();
 
-        boolean isOpen = false;
-
         return getConnections(this.defaultBlockState()
                 .setValue(FACING, facing)
                 .setValue(WATERLOGGED, waterlogged)
-                .setValue(OPEN, isOpen), context.getLevel(), context.getClickedPos());
+                .setValue(LID, true), context.getLevel(), context.getClickedPos());
     }
 
     @Override
@@ -294,7 +287,7 @@ public class StoveBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, OPEN,
+        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, LID,
                 CFBlockStateProperties.HAS_POT, CFBlockStateProperties.POT_COLOR);
     }
 
@@ -335,19 +328,5 @@ public class StoveBlock extends BaseEntityBlock {
     @Override
     public BlockState mirror(BlockState state, Mirror mirror) {
         return this.rotate(state, mirror.getRotation(state.getValue(FACING)));
-    }
-
-    private PotColor getColorFromItem(ItemStack stack) {
-        Item item = stack.getItem();
-
-        if (item == CobblemonItems.CAMPFIRE_POT_RED) return PotColor.RED;
-        if (item == CobblemonItems.CAMPFIRE_POT_YELLOW) return PotColor.YELLOW;
-        if (item == CobblemonItems.CAMPFIRE_POT_WHITE) return PotColor.WHITE;
-        if (item == CobblemonItems.CAMPFIRE_POT_PINK) return PotColor.PINK;
-        if (item == CobblemonItems.CAMPFIRE_POT_GREEN) return PotColor.GREEN;
-        if (item == CobblemonItems.CAMPFIRE_POT_BLUE) return PotColor.BLUE;
-        if (item == CobblemonItems.CAMPFIRE_POT_BLACK) return PotColor.BLACK;
-
-        return PotColor.RED;
     }
 }

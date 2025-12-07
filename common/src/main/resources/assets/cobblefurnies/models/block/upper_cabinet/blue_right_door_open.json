@@ -1,0 +1,6 @@
+{
+    "parent": "cobblefurnies:block/template/upper_cabinet_right_door_open",
+    "textures": {
+        "door": "cobblefurnies:block/upper_cabinet/blue_door"
+    }
+}

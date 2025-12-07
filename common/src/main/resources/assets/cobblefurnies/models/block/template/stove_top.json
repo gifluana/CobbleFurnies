@@ -1,8 +1,9 @@
 {
+	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"render_type": "minecraft:cutout",
 	"texture_size": [64, 64],
-	"ambientocclusion": false,
 	"textures": {
 		"0": "#0",
 		"particle": "#0"
@@ -22,33 +23,15 @@
 			}
 		},
 		{
-			"from": [5, 16, 5],
-			"to": [11, 17, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 18.5, 8]},
+			"from": [5, 15.75, 5],
+			"to": [11, 16.75, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.25, 8]},
 			"faces": {
 				"north": {"uv": [7.75, 6.75, 9.25, 7], "texture": "#0"},
 				"east": {"uv": [8, 3.25, 9.5, 3.5], "texture": "#0"},
 				"south": {"uv": [9.25, 6.75, 10.75, 7], "texture": "#0"},
 				"west": {"uv": [9.5, 3.25, 11, 3.5], "texture": "#0"},
 				"up": {"uv": [9, 14, 7.5, 12.5], "texture": "#0"}
-			}
-		},
-		{
-			"from": [4, 16.5, 8],
-			"to": [12, 18.5, 8],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 17.5, 8]},
-			"faces": {
-				"north": {"uv": [7.75, 6.25, 9.75, 6.75], "texture": "#0"},
-				"south": {"uv": [8, 2.75, 10, 3.25], "texture": "#0"}
-			}
-		},
-		{
-			"from": [4, 16.5, 8],
-			"to": [12, 18.5, 8],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8, 17.5, 8]},
-			"faces": {
-				"north": {"uv": [7.75, 6.25, 9.75, 6.75], "texture": "#0"},
-				"south": {"uv": [8, 2.75, 10, 3.25], "texture": "#0"}
 			}
 		}
 	],
@@ -76,7 +59,7 @@
 			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
-			"rotation": [30, 225, 0],
+			"rotation": [30, -135, 0],
 			"scale": [0.625, 0.625, 0.625]
 		},
 		"fixed": {
@@ -88,7 +71,7 @@
 			"name": "sink_top",
 			"origin": [8, 18.5, 10],
 			"color": 0,
-			"children": [0, 1, 2, 3]
+			"children": [0, 1]
 		}
 	]
 }

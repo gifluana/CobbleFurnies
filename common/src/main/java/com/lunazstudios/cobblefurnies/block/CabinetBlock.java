@@ -151,7 +151,6 @@ public class CabinetBlock extends BaseEntityBlock {
         }
     }
 
-
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {

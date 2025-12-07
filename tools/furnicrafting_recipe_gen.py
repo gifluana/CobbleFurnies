@@ -32,6 +32,20 @@ def get_poke_wool_recipe(color):
         }
     }
 
+def get_upper_cabinet_recipe(color):
+    return {
+        "type": "cobblefurnies:furni_crafting",
+        "materials": [
+            {
+                "count": 1,
+                "item": f"minecraft:{color}_concrete"
+            }
+        ],
+        "result": {
+            "id": f"cobblefurnies:{color}_upper_cabinet",
+            "count": 2
+        }
+    }
 
 def get_wood_chair_recipe(wood):
     return {
@@ -364,7 +378,10 @@ def generate_recipes():
     base_dir = os.path.join(script_dir, "cobblefurnies", "recipes")
 
     # Generate recipes for each color
-    #for color in colors:
+    for color in colors:
+        upper_cabinet_path = os.path.join(base_dir, f"{color}_upper_cabinet.json")
+        save_json_file(upper_cabinet_path, get_upper_cabinet_recipe(color))
+
         #lamp_path = os.path.join(base_dir, f"{color}_lamp.json")
         #save_json_file(lamp_path, get_lamp_recipe(color))
 
@@ -402,9 +419,9 @@ def generate_recipes():
         #save_json_file(colored_drawer_path, get_drawer_recipe(color))
 
     # Generate recipes for each wood type
-    for wood in woods:
-        nightstand_path = os.path.join(base_dir, f"{wood}_nightstand.json")
-        save_json_file(nightstand_path, get_nightstand_recipe(wood))
+    #for wood in woods:
+        #nightstand_path = os.path.join(base_dir, f"{wood}_nightstand.json")
+        #save_json_file(nightstand_path, get_nightstand_recipe(wood))
 
         #wall_support_path = os.path.join(base_dir, f"{wood}_wall_support.json")
         #save_json_file(wall_support_path, get_wall_support_recipe(wood))

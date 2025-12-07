@@ -46,6 +46,26 @@ public class CFBlockEntityTypes {
                     CFBlocks.BLACK_DRAWER.get()
             ));
 
+    public static final Supplier<BlockEntityType<UpperCabinetBlockEntity>> UPPER_CABINET = CFRegistry.registerBlockEntityType("upper_cabinet",
+            () -> CFRegistry.createBlockEntityType(UpperCabinetBlockEntity::new,
+                    CFBlocks.RED_UPPER_CABINET.get(),
+                    CFBlocks.ORANGE_UPPER_CABINET.get(),
+                    CFBlocks.YELLOW_UPPER_CABINET.get(),
+                    CFBlocks.BROWN_UPPER_CABINET.get(),
+                    CFBlocks.LIME_UPPER_CABINET.get(),
+                    CFBlocks.GREEN_UPPER_CABINET.get(),
+                    CFBlocks.CYAN_UPPER_CABINET.get(),
+                    CFBlocks.LIGHT_BLUE_UPPER_CABINET.get(),
+                    CFBlocks.BLUE_UPPER_CABINET.get(),
+                    CFBlocks.MAGENTA_UPPER_CABINET.get(),
+                    CFBlocks.PURPLE_UPPER_CABINET.get(),
+                    CFBlocks.PINK_UPPER_CABINET.get(),
+                    CFBlocks.WHITE_UPPER_CABINET.get(),
+                    CFBlocks.LIGHT_GRAY_UPPER_CABINET.get(),
+                    CFBlocks.GRAY_UPPER_CABINET.get(),
+                    CFBlocks.BLACK_UPPER_CABINET.get()
+            ));
+
     public static final Supplier<BlockEntityType<NightStandBlockEntity>> NIGHT_STAND = CFRegistry.registerBlockEntityType("night_stand",
             () -> CFRegistry.createBlockEntityType(NightStandBlockEntity::new,
                     CFBlocks.OAK_NIGHTSTAND.get(),
