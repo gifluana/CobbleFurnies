@@ -147,6 +147,14 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
     }
 
     public void craftSelectedRecipe(int recipeIndex) {
+        craftSelectedRecipe(recipeIndex, 1);
+    }
+
+    public void craftSelectedRecipe(int recipeIndex, int requestedAmount) {
+        if (requestedAmount <= 0) {
+            return;
+        }
+
         if (recipeIndex < 0 || recipeIndex >= availableRecipes.size() || blockEntity == null) {
             return;
         }
@@ -154,34 +162,91 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
         RecipeHolder<FurniCraftingRecipe> recipeHolder = availableRecipes.get(recipeIndex);
         FurniCraftingRecipe recipe = recipeHolder.value();
 
-        if (!canCraft(recipe)) {
+        int maxCraftsByIngredients = getMaxCraftsForRecipe(recipe);
+        if (maxCraftsByIngredients <= 0) {
             return;
         }
 
-        ItemStack result = recipe.getResultItem(null);
+        ItemStack singleResult = recipe.getResultItem(null);
+        if (singleResult.isEmpty()) {
+            return;
+        }
+
         ItemStack outputSlot = outputContainer.getItem(OUTPUT_SLOT_INDEX);
 
-        if (!outputSlot.isEmpty()) {
-            if (!outputSlot.is(result.getItem()) ||
-                    outputSlot.getCount() + result.getCount() > outputSlot.getMaxStackSize()) {
-                return;
-            }
+        if (!outputSlot.isEmpty() && !outputSlot.is(singleResult.getItem())) {
+            return;
+        }
+
+        int availableSpace = outputSlot.isEmpty()
+                ? singleResult.getMaxStackSize()
+                : outputSlot.getMaxStackSize() - outputSlot.getCount();
+
+        if (availableSpace <= 0) {
+            return;
+        }
+
+        int maxCraftsByOutput = availableSpace / singleResult.getCount();
+        if (maxCraftsByOutput <= 0) {
+            return;
+        }
+
+        int crafts = Math.min(requestedAmount, Math.min(maxCraftsByIngredients, maxCraftsByOutput));
+        if (crafts <= 0) {
+            return;
         }
 
         for (CountedIngredient ci : recipe.getMaterials()) {
-            removeItemsFromInventory(ci);
+            removeItemsFromInventory(ci, crafts);
         }
+
+        int totalResultCount = singleResult.getCount() * crafts;
 
         if (outputSlot.isEmpty()) {
-            outputContainer.setItem(OUTPUT_SLOT_INDEX, result.copy());
+            ItemStack newStack = singleResult.copy();
+            newStack.setCount(totalResultCount);
+            outputContainer.setItem(OUTPUT_SLOT_INDEX, newStack);
         } else {
-            outputSlot.grow(result.getCount());
+            outputSlot.grow(totalResultCount);
         }
+
+        broadcastChanges();
     }
 
-    private void removeItemsFromInventory(CountedIngredient ci) {
-        int requiredCount = ci.count();
-        int remaining = requiredCount;
+    private int getMaxCraftsForRecipe(FurniCraftingRecipe recipe) {
+        int max = Integer.MAX_VALUE;
+
+        for (CountedIngredient ci : recipe.getMaterials()) {
+            int inInventory = countMatchingInInventory(ci);
+            int perCraft = ci.count();
+
+            if (inInventory < perCraft) {
+                return 0;
+            }
+
+            int craftsForThisIngredient = inInventory / perCraft;
+            if (craftsForThisIngredient < max) {
+                max = craftsForThisIngredient;
+            }
+        }
+
+        return max == Integer.MAX_VALUE ? 0 : max;
+    }
+
+    private int countMatchingInInventory(CountedIngredient ci) {
+        int total = 0;
+        for (ItemStack stack : player.getInventory().items) {
+            if (!stack.isEmpty() && ci.ingredient().test(stack)) {
+                total += stack.getCount();
+            }
+        }
+        return total;
+    }
+
+    private void removeItemsFromInventory(CountedIngredient ci, int crafts) {
+        int requiredTotal = ci.count() * crafts;
+        int remaining = requiredTotal;
+
         for (int i = 0; i < player.getInventory().items.size(); i++) {
             ItemStack stack = player.getInventory().items.get(i);
             if (!stack.isEmpty() && ci.ingredient().test(stack)) {
