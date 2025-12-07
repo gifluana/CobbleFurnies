@@ -84,6 +84,7 @@ public class StoveBlock extends BaseEntityBlock {
                 .setValue(CONNECTED_RIGHT, false)
                 .setValue(WATERLOGGED, false)
                 .setValue(LID, false)
+                .setValue(COOKING, false)
                 .setValue(CFBlockStateProperties.HAS_POT, false)
                 .setValue(CFBlockStateProperties.POT_COLOR, PotColor.RED));
     }
@@ -151,11 +152,9 @@ public class StoveBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide ? null : BaseEntityBlock.createTickerHelper(
-                type,
-                CFBlockEntityTypes.STOVE.get(),
-                StoveBlockEntity::serverTick
-        );
+        return level.isClientSide
+                ? BaseEntityBlock.createTickerHelper(type, CFBlockEntityTypes.STOVE.get(), StoveBlockEntity::clientTick)
+                : BaseEntityBlock.createTickerHelper(type, CFBlockEntityTypes.STOVE.get(), StoveBlockEntity::serverTick);
     }
 
     @Override
@@ -274,6 +273,7 @@ public class StoveBlock extends BaseEntityBlock {
         return getConnections(this.defaultBlockState()
                 .setValue(FACING, facing)
                 .setValue(WATERLOGGED, waterlogged)
+                .setValue(COOKING, false)
                 .setValue(LID, true), context.getLevel(), context.getClickedPos());
     }
 
@@ -287,7 +287,7 @@ public class StoveBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, LID,
+        builder.add(FACING, CONNECTED_LEFT, CONNECTED_RIGHT, WATERLOGGED, LID, COOKING,
                 CFBlockStateProperties.HAS_POT, CFBlockStateProperties.POT_COLOR);
     }
 

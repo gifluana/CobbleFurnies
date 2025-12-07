@@ -2,67 +2,67 @@ import os
 import json
 
 def get_blockstate(color):
-    """Generate blockstate JSON for a stove color with proper pot rotation"""
+    """Generate blockstate JSON for a stove color with proper pot rotation, lid and cooking"""
 
     multipart = []
 
-    # Pot colors available
     pot_colors = ["red", "yellow", "white", "pink", "green", "blue", "black"]
 
-    # Add pot models with rotation for each facing direction
+    # Pot + lid + broth
     for pot_color in pot_colors:
-        # North facing (no rotation)
-        multipart.append({
-            "when": {
-                "facing": "north",
-                "has_pot": "true",
-                "pot_color": pot_color
-            },
-            "apply": {
+        for facing, rotation in [("north", None), ("east", 90), ("south", 180), ("west", 270)]:
+            apply_base = {
                 "model": f"cobblefurnies:block/stove/pot_{pot_color}"
             }
-        })
+            if rotation is not None:
+                apply_base["y"] = rotation
 
-        # East facing (90° rotation)
-        multipart.append({
-            "when": {
-                "facing": "east",
-                "has_pot": "true",
-                "pot_color": pot_color
-            },
-            "apply": {
-                "model": f"cobblefurnies:block/stove/pot_{pot_color}",
-                "y": 90
+            apply_open = {
+                "model": f"cobblefurnies:block/stove/pot_open_{pot_color}"
             }
-        })
+            if rotation is not None:
+                apply_open["y"] = rotation
 
-        # South facing (180° rotation)
-        multipart.append({
-            "when": {
-                "facing": "south",
-                "has_pot": "true",
-                "pot_color": pot_color
-            },
-            "apply": {
-                "model": f"cobblefurnies:block/stove/pot_{pot_color}",
-                "y": 180
+            apply_broth = {
+                "model": f"cobblefurnies:block/stove/pot_broth_{pot_color}"
             }
-        })
+            if rotation is not None:
+                apply_broth["y"] = rotation
 
-        # West facing (270° rotation)
-        multipart.append({
-            "when": {
-                "facing": "west",
-                "has_pot": "true",
-                "pot_color": pot_color
-            },
-            "apply": {
-                "model": f"cobblefurnies:block/stove/pot_{pot_color}",
-                "y": 270
-            }
-        })
+            # Tampa FECHADA → pot_<color>
+            multipart.append({
+                "when": {
+                    "facing": facing,
+                    "has_pot": "true",
+                    "pot_color": pot_color,
+                    "lid": "true"
+                },
+                "apply": apply_base
+            })
 
-    # Add top models (facing only)
+            # Tampa ABERTA → pot_open_<color>
+            multipart.append({
+                "when": {
+                    "facing": facing,
+                    "has_pot": "true",
+                    "pot_color": pot_color,
+                    "lid": "false"
+                },
+                "apply": apply_open
+            })
+
+            # Cozinhando → overlay do caldo
+            multipart.append({
+                "when": {
+                    "facing": facing,
+                    "has_pot": "true",
+                    "pot_color": pot_color,
+                    "cooking": "true"
+                },
+                "apply": apply_broth
+            })
+
+    # Top models (facing only)
     for facing, rotation in [("north", None), ("east", 90), ("south", 180), ("west", 270)]:
         apply_dict = {"model": f"cobblefurnies:block/stove/{color}_top"}
         if rotation is not None:
@@ -73,12 +73,12 @@ def get_blockstate(color):
             "apply": apply_dict
         })
 
-    # Add bottom models (facing + connected states)
+    # Bottom models (facing + connected states)
     bottom_types = [
         ("middle", "true", "true"),
         ("left", "true", "false"),
         ("right", "false", "true"),
-        ("", "false", "false")  # No suffix for standalone
+        ("", "false", "false")  # standalone
     ]
 
     for bottom_suffix, connected_left, connected_right in bottom_types:
