@@ -1,0 +1,13 @@
+{
+    "type": "cobblefurnies:furni_crafting",
+    "materials": [
+        {
+            "count": 1,
+            "item": "minecraft:white_concrete"
+        }
+    ],
+    "result": {
+        "id": "cobblefurnies:white_upper_cabinet",
+        "count": 2
+    }
+}

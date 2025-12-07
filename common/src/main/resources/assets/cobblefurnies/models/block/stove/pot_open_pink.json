@@ -1,0 +1,6 @@
+{
+  "parent": "cobblefurnies:block/stove/pot_open",
+  "textures": {
+    "pot": "cobblemon:block/campfire_pot/campfire_pot_pink"
+  }
+}

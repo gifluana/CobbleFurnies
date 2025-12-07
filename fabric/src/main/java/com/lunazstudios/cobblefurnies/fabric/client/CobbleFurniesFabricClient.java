@@ -1,7 +1,9 @@
 package com.lunazstudios.cobblefurnies.fabric.client;
 
+import com.cobblemon.mod.common.CobblemonMenuType;
 import com.lunazstudios.cobblefurnies.client.CobbleFurniesClient;
 import com.lunazstudios.cobblefurnies.client.screen.FurniCrafterScreen;
+import com.lunazstudios.cobblefurnies.client.screen.StoveScreen;
 import com.lunazstudios.cobblefurnies.registry.CFBlocks;
 import com.lunazstudios.cobblefurnies.registry.CFMenus;
 import net.fabricmc.api.ClientModInitializer;
@@ -15,6 +17,7 @@ public final class CobbleFurniesFabricClient implements ClientModInitializer {
         CobbleFurniesClient.init();
 
         MenuScreens.register(CFMenus.FURNI_CRAFTER_MENU.get(), FurniCrafterScreen::new);
+        MenuScreens.register(CFMenus.STOVE_MENU.get(), StoveScreen::new);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.translucent(),
                 CFBlocks.LIGHT_TOILET.get(), CFBlocks.DARK_TOILET.get()

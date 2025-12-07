@@ -21,5 +21,6 @@ public class CFBlockStateProperties {
     public static final BooleanProperty HAS_CONCRETE = BooleanProperty.create("has_concrete");
     public static final EnumProperty<DyeColor> CONCRETE_COLOR = EnumProperty.create("concrete_color", DyeColor.class);
     public static final BooleanProperty HAS_GLASS = BooleanProperty.create("has_glass");
-
+    public static final BooleanProperty LID = BooleanProperty.create("lid");
+    public static final BooleanProperty COOKING = BooleanProperty.create("cooking");
 }

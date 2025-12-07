@@ -28,9 +28,16 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.cobblefurnies]]
-modId = "geckolib"
+modId = "cobblemon"
 type = "required"
-versionRange = "[1.21.1,)"
+versionRange = "[1.7.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobblefurnies]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.8,)"
 ordering = "NONE"
 side = "BOTH"
 

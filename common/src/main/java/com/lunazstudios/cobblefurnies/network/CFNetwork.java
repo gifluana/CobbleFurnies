@@ -2,6 +2,7 @@ package com.lunazstudios.cobblefurnies.network;
 
 import com.lunazstudios.cobblefurnies.network.message.CraftRecipeMessage;
 import com.lunazstudios.cobblefurnies.network.message.SyncCraftableRecipesMessage;
+import com.lunazstudios.cobblefurnies.network.message.ToggleStoveLidMessage;
 import dev.architectury.platform.Platform;
 import dev.architectury.networking.NetworkManager;
 import net.fabricmc.api.EnvType;
@@ -13,6 +14,8 @@ public class CFNetwork {
             new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath("cobblefurnies", "craft_recipe"));
     public static final CustomPacketPayload.Type<SyncCraftableRecipesMessage> CRAFTABLE_RECIPES_SYNC_TYPE =
             new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath("cobblefurnies", "craftable_recipes_sync"));
+    public static final CustomPacketPayload.Type<ToggleStoveLidMessage> TOGGLE_STOVE_LID_TYPE =
+            new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath("cobblefurnies", "toggle_stove_lid"));
 
     public static void registerPackets() {
         NetworkManager.registerReceiver(
@@ -20,6 +23,13 @@ public class CFNetwork {
                 CRAFT_RECIPE_TYPE,
                 CraftRecipeMessage.CODEC,
                 CraftRecipeMessage::handle
+        );
+
+        NetworkManager.registerReceiver(
+                NetworkManager.Side.C2S,
+                TOGGLE_STOVE_LID_TYPE,
+                ToggleStoveLidMessage.CODEC,
+                ToggleStoveLidMessage::handle
         );
 
         if (Platform.getEnv() == EnvType.CLIENT) {
