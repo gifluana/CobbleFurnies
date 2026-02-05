@@ -10,6 +10,6 @@ public enum CurtainHorizontalPart implements StringRepresentable {
 
     @Override
     public String getSerializedName() {
-        return name().toLowerCase();
+        return name().toLowerCase(Locale.ROOT)
     }
 }
