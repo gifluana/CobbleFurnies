@@ -2,6 +2,8 @@ package com.lunazstudios.cobblefurnies.block.properties;
 
 import net.minecraft.util.StringRepresentable;
 
+import java.util.Locale;
+
 public enum CurtainHorizontalPart implements StringRepresentable {
     LEFT,
     MIDDLE,
@@ -10,6 +12,7 @@ public enum CurtainHorizontalPart implements StringRepresentable {
 
     @Override
     public String getSerializedName() {
-        return name().toLowerCase();
+        // Thanks to TARIKTR1099
+        return name().toLowerCase(Locale.ROOT);
     }
 }
