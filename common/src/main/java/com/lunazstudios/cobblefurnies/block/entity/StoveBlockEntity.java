@@ -140,12 +140,16 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     public @NotNull NonNullList<ItemStack> getItems() {
         return items;
     }
-
-    @Override
-    protected void setItems(NonNullList<ItemStack> newItems) {
-        items.clear();
-        items.addAll(newItems);
-    }
+	
+   @Override
+   protected void setItems(NonNullList<ItemStack> newItems) {
+   // Manually overwrite indices to avoid structural changes to the list object itself
+      this.items.clear(); // Ensure we are clearing OUR local list, not the passed one
+      for (int i = 0; i < TOTAL_SLOTS; i++) {
+            // Safely copy elements one by one
+            this.items.set(i, i < newItems.size() ? newItems.get(i) : ItemStack.EMPTY);
+      }
+   }
 
     @Override
     public int getContainerSize() {
@@ -383,14 +387,14 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         cookingProgress = tag.getInt("CookingProgress");
         isLidOpen = tag.getBoolean("IsLidOpen");
 
-        items.clear();
-        for (int i = 0; i < TOTAL_SLOTS; i++) {
-            items.add(ItemStack.EMPTY);
+        // Instead of clearing/adding, just reset the existing slots
+        for (int i = 0; i < this.items.size(); i++) {
+           this.items.set(i, ItemStack.EMPTY); 
         }
         ContainerHelper.loadAllItems(tag, items, registries);
 
         if (tag.contains("PotComponent")) {
-            PotComponent.Companion.getCODEC().parse(NbtOps.INSTANCE, tag.get("PotComponent"))
+           PotComponent.Companion.getCODEC().parse(NbtOps.INSTANCE, tag.get("PotComponent"))
                     .result()
                     .ifPresent(component -> this.potComponent = component);
         }
