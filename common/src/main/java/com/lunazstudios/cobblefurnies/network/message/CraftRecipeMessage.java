@@ -8,14 +8,15 @@ import net.minecraft.server.level.ServerPlayer;
 import com.lunazstudios.cobblefurnies.menu.FurniCrafterMenu;
 import net.minecraft.network.codec.StreamCodec;
 
-public record CraftRecipeMessage(int containerId, int recipeIndex) implements CustomPacketPayload {
+public record CraftRecipeMessage(int containerId, int recipeIndex, int amount) implements CustomPacketPayload {
     public static final StreamCodec<RegistryFriendlyByteBuf, CraftRecipeMessage> CODEC =
             StreamCodec.of(
                     (buf, msg) -> {
                         buf.writeInt(msg.containerId);
                         buf.writeInt(msg.recipeIndex);
+                        buf.writeInt(msg.amount);
                     },
-                    buf -> new CraftRecipeMessage(buf.readInt(), buf.readInt())
+                    buf -> new CraftRecipeMessage(buf.readInt(), buf.readInt(), buf.readInt())
             );
 
     public static void handle(CraftRecipeMessage message, NetworkManager.PacketContext context) {
@@ -23,7 +24,7 @@ public record CraftRecipeMessage(int containerId, int recipeIndex) implements Cu
             if (context.getPlayer() instanceof ServerPlayer serverPlayer &&
                     serverPlayer.containerMenu instanceof FurniCrafterMenu menu &&
                     menu.containerId == message.containerId) {
-                menu.craftSelectedRecipe(message.recipeIndex);
+                menu.craftSelectedRecipe(message.recipeIndex, message.amount);
             }
         });
     }

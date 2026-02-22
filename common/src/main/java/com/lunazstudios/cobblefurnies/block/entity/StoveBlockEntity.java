@@ -1,9 +1,12 @@
 package com.lunazstudios.cobblefurnies.block.entity;
 
 import com.cobblemon.mod.common.CobblemonRecipeTypes;
+import com.cobblemon.mod.common.CobblemonSounds;
+import com.cobblemon.mod.common.client.sound.instances.CancellableSoundInstance;
 import com.cobblemon.mod.common.item.components.PotComponent;
 import com.cobblemon.mod.common.item.crafting.CookingPotRecipeBase;
 import com.lunazstudios.cobblefurnies.block.StoveBlock;
+import com.lunazstudios.cobblefurnies.client.sound.BlockEntitySoundTracker;
 import com.lunazstudios.cobblefurnies.menu.StoveMenu;
 import com.lunazstudios.cobblefurnies.registry.CFBlockEntityTypes;
 import net.minecraft.core.BlockPos;
@@ -12,6 +15,8 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.StackedContents;
@@ -29,6 +34,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -50,6 +56,9 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     private int cookingProgress = 0;
     private int cookingTotalTime = 200;
     private boolean isLidOpen = true;
+
+    private final SoundEvent runningSound = CobblemonSounds.CAMPFIRE_POT_ACTIVE;
+    private final SoundEvent ambientSound = CobblemonSounds.CAMPFIRE_POT_AMBIENT;
 
     private final ContainerData dataAccess = new ContainerData() {
         @Override
@@ -84,6 +93,22 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         BlockState state = getBlockState();
         BlockState newState = state.setValue(StoveBlock.LID, !isOpen);
         level.setBlock(worldPosition, newState, Block.UPDATE_ALL);
+
+        level.playSound(
+                null,
+                worldPosition,
+                isOpen ? CobblemonSounds.CAMPFIRE_POT_OPEN : CobblemonSounds.CAMPFIRE_POT_CLOSE,
+                SoundSource.BLOCKS,
+                1.0F,
+                1.0F
+        );
+
+        level.gameEvent(
+                null,
+                isOpen ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE,
+                worldPosition
+        );
+
         setChanged();
     }
 
@@ -157,6 +182,8 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     public static void serverTick(Level level, BlockPos pos, BlockState state, StoveBlockEntity stove) {
         if (level.isClientSide) return;
 
+        boolean wasCooking = stove.cookingProgress > 0;
+
         CraftingInput input = CraftingInput.of(3, 3, stove.items.subList(1, 10));
         Optional<RecipeHolder<CookingPotRecipeBase>> recipeOpt =
                 fetchRecipe(level, input, CobblemonRecipeTypes.INSTANCE.getCOOKING_POT_COOKING());
@@ -167,47 +194,95 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         if (recipeOpt.isEmpty()) {
             stove.cookingProgress = 0;
             stove.setItem(PREVIEW_SLOT, ItemStack.EMPTY);
-            return;
-        }
+        } else {
+            RecipeHolder<CookingPotRecipeBase> recipeHolder = recipeOpt.get();
+            CookingPotRecipeBase recipe = recipeHolder.value();
+            ItemStack result = recipe.assemble(input, level.registryAccess());
 
-        RecipeHolder<CookingPotRecipeBase> recipeHolder = recipeOpt.get();
-        CookingPotRecipeBase recipe = recipeHolder.value();
-        ItemStack result = recipe.assemble(input, level.registryAccess());
+            List<ItemStack> validSeasonings = stove.getSeasonings().stream()
+                    .filter(stack -> stack.is(recipe.getSeasoningTag()))
+                    .toList();
+            recipe.applySeasoning(result, validSeasonings);
 
-        List<ItemStack> validSeasonings = stove.getSeasonings().stream()
-                .filter(stack -> stack.is(recipe.getSeasoningTag()))
-                .toList();
-        recipe.applySeasoning(result, validSeasonings);
+            stove.setItem(PREVIEW_SLOT, result);
 
-        stove.setItem(PREVIEW_SLOT, result);
+            ItemStack resultSlot = stove.getItem(RESULT_SLOT);
+            boolean lidClosed = state.getValue(StoveBlock.LID);
 
-        ItemStack resultSlot = stove.getItem(RESULT_SLOT);
+            if (!lidClosed || (!resultSlot.isEmpty()
+                    && (!ItemStack.isSameItemSameComponents(resultSlot, result)
+                    || resultSlot.getCount() >= resultSlot.getMaxStackSize()))) {
 
-        boolean lidClosed = state.getValue(StoveBlock.LID);
-
-        if (!lidClosed || (!resultSlot.isEmpty()
-                && (!ItemStack.isSameItemSameComponents(resultSlot, result)
-                || resultSlot.getCount() >= resultSlot.getMaxStackSize()))) {
-            stove.cookingProgress = 0;
-            return;
-        }
-
-        stove.cookingProgress += 2;
-        if (stove.cookingProgress >= stove.cookingTotalTime) {
-            stove.cookingProgress = 0;
-
-            stove.setRecipeUsed(recipeHolder);
-
-            if (resultSlot.isEmpty()) {
-                stove.setItem(RESULT_SLOT, result.copy());
+                stove.cookingProgress = 0;
             } else {
-                resultSlot.grow(result.getCount());
+                stove.cookingProgress += 2;
+                if (stove.cookingProgress >= stove.cookingTotalTime) {
+                    stove.cookingProgress = 0;
+
+                    stove.setRecipeUsed(recipeHolder);
+
+                    if (resultSlot.isEmpty()) {
+                        stove.setItem(RESULT_SLOT, result.copy());
+                    } else {
+                        resultSlot.grow(result.getCount());
+                    }
+                    stove.consumeIngredients(recipe);
+
+                    level.playSound(
+                            null,
+                            pos,
+                            CobblemonSounds.CAMPFIRE_POT_COOK,
+                            SoundSource.BLOCKS,
+                            1.0F,
+                            1.0F
+                    );
+
+                    level.gameEvent(null, GameEvent.BLOCK_CHANGE, pos);
+                    setChanged(level, pos, state);
+                }
             }
-            stove.consumeIngredients(recipe);
-            setChanged(level, pos, state);
+        }
+
+        boolean isCooking = stove.cookingProgress > 0;
+        if (wasCooking != isCooking) {
+            BlockState newState = state.setValue(StoveBlock.COOKING, isCooking);
+            level.setBlock(pos, newState, Block.UPDATE_ALL);
+            setChanged(level, pos, newState);
         }
     }
 
+    public static void clientTick(Level level, BlockPos pos, BlockState state, StoveBlockEntity stove) {
+        if (!level.isClientSide) return;
+
+        boolean isCooking = state.getValue(StoveBlock.COOKING);
+        boolean containsItems = !stove.getSeasonings().isEmpty() || !stove.getIngredients().isEmpty();
+
+        boolean runningActive = BlockEntitySoundTracker.isActive(pos, stove.runningSound.getLocation());
+        boolean ambientActive = BlockEntitySoundTracker.isActive(pos, stove.ambientSound.getLocation());
+
+        if (containsItems) {
+            if (isCooking) {
+                BlockEntitySoundTracker.stop(pos, stove.ambientSound.getLocation());
+                if (!runningActive) {
+                    BlockEntitySoundTracker.play(
+                            pos,
+                            new CancellableSoundInstance(stove.runningSound, pos, true, 1.0F, 1.0F)
+                    );
+                }
+            } else {
+                BlockEntitySoundTracker.stop(pos, stove.runningSound.getLocation());
+                if (!ambientActive) {
+                    BlockEntitySoundTracker.play(
+                            pos,
+                            new CancellableSoundInstance(stove.ambientSound, pos, true, 1.0F, 1.0F)
+                    );
+                }
+            }
+        } else {
+            BlockEntitySoundTracker.stop(pos, stove.runningSound.getLocation());
+            BlockEntitySoundTracker.stop(pos, stove.ambientSound.getLocation());
+        }
+    }
 
     public void handleSafeDrop() {
         if (this.cookingProgress > 0) {
@@ -259,8 +334,25 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         }
     }
 
+    @Override
+    public void setRemoved() {
+        this.cookingProgress = 0;
+        super.setRemoved();
+
+        if (level != null && level.isClientSide) {
+            BlockEntitySoundTracker.stop(worldPosition, runningSound.getLocation());
+            BlockEntitySoundTracker.stop(worldPosition, ambientSound.getLocation());
+        }
+    }
+
     public List<ItemStack> getSeasonings() {
         return items.subList(10, 13).stream().filter(stack -> !stack.isEmpty()).toList();
+    }
+
+    public List<ItemStack> getIngredients() {
+        return items.subList(1, 10).stream()
+                .filter(stack -> !stack.isEmpty())
+                .toList();
     }
 
     public void setPotItem(@Nullable ItemStack stack) {
