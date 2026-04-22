@@ -67,6 +67,12 @@ public abstract class SoundTracker<T> {
         tracks.clear();
     }
 
+    public SoundInstance get(T id, ResourceLocation location) {
+        Map<ResourceLocation, SoundInstance> emitter = trackedSounds.get(id);
+        if (emitter == null) return null;
+        return emitter.get(location);
+    }
+
     public void clear() {
         stopAll();
         trackedSounds.clear();
