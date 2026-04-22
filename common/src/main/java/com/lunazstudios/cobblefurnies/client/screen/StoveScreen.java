@@ -144,7 +144,7 @@ public class StoveScreen extends AbstractContainerScreen<StoveMenu> implements R
 
     @Override
     protected void renderBg(@NotNull GuiGraphics context, float partialTick, int mouseX, int mouseY) {
-        // Fundo padrão, igual ao do Cobblemon visualmente
+        
         int x = this.leftPos;
         int y = (this.height - BACKGROUND_HEIGHT) / 2;
 
@@ -241,7 +241,6 @@ public class StoveScreen extends AbstractContainerScreen<StoveMenu> implements R
 
         super.renderSlot(guiGraphics, slot);
     }
-
 
     @Override
     public void recipesUpdated() {

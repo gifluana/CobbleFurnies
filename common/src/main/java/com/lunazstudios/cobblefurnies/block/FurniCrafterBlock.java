@@ -48,7 +48,7 @@ public class FurniCrafterBlock extends BaseEntityBlock {
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!state.is(newState.getBlock())) { // Ensure block is actually removed and not just updated
+        if (!state.is(newState.getBlock())) { 
             BlockEntity blockEntity = level.getBlockEntity(pos);
             if (blockEntity instanceof FurniCrafterBlockEntity furniCrafterBE) {
                 SimpleContainer container = furniCrafterBE.getOutputContainer();

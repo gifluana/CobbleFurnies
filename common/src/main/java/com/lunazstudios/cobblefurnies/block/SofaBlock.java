@@ -122,7 +122,6 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock {
     protected static final VoxelShape SOFA_OUTER_SOUTH_RIGHT = ShapeUtil.rotateShape(SOFA_OUTER_NORTH_RIGHT, Direction.SOUTH);
     protected static final VoxelShape SOFA_OUTER_WEST_RIGHT = ShapeUtil.rotateShape(SOFA_OUTER_NORTH_RIGHT, Direction.WEST);
 
-
     public SofaBlock(Properties properties) {
         super(properties);
         registerDefaultState(this.stateDefinition.any()
@@ -246,7 +245,6 @@ public class SofaBlock extends SeatBlock implements SimpleWaterloggedBlock {
             };
         };
     }
-
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

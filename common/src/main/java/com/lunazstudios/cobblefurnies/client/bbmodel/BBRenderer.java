@@ -20,8 +20,6 @@ import java.util.Map;
 public class BBRenderer {
     private static final float PX = 1f / 16f;
 
-    // CORRIGIDO 2.0: Matemática original estava invertendo X e Z e quebrando o winding (faces ao avesso).
-    // O modelo deve ser renderizado 1:1 sem inverões, e a rotação Y controlada pelas BlockEntities.
     private static float convX(float x){ return x; }
     private static float convY(float y){ return y; }
     private static float convZ(float z){ return z; }
@@ -131,10 +129,8 @@ public class BBRenderer {
 
         ps.pushPose();
 
-        // Translada para o pivot/origin do grupo
         ps.translate(convTX(g.origin.x) * PX, convTY(g.origin.y) * PX, convTZ(g.origin.z) * PX);
 
-        // Pega valores de animação se existirem
         Vector3f rotAnim = null, transAnim = null;
         if (clip != null) {
             var track = clip.tracks.get(g.name);
@@ -146,42 +142,33 @@ public class BBRenderer {
             }
         }
 
-        // Aplica rotações
         float rx, ry, rz;
         if (rotAnim != null) {
-            // Usa valores da animação
             rx = convX(rotAnim.x);
             ry = convY(rotAnim.y);
             rz = convZ(rotAnim.z);
         } else {
-            // Usa rotação estática do grupo
             rx = convX(g.rotateDeg.x);
             ry = convY(g.rotateDeg.y);
             rz = convZ(g.rotateDeg.z);
         }
 
-        // CORRIGIDO: Ordem de rotação para corresponder ao Blockbench
-        // Blockbench aplica rotações na ordem ZYX
         ps.mulPose(Axis.ZP.rotationDegrees(rz));
         ps.mulPose(Axis.YP.rotationDegrees(ry));
         ps.mulPose(Axis.XP.rotationDegrees(rx));
 
-        // Aplica translação de animação se existir
         if (transAnim != null) {
             ps.translate(convTX(transAnim.x) * PX,
                     convTY(transAnim.y) * PX,
                     convTZ(transAnim.z) * PX);
         }
 
-        // Volta para a posição local
         ps.translate(-convTX(g.origin.x) * PX, -convTY(g.origin.y) * PX, -convTZ(g.origin.z) * PX);
 
-        // Renderiza cubos deste grupo
         for (BBModel.Cube c : g.cubes) {
             renderCubeLocal(c, ps, vc, light, overlay, texW, texH);
         }
 
-        // Renderiza grupos filhos recursivamente
         for (BBModel.Group child : g.children) {
             renderGroupRecursive(model, clip, tSec, rot0, pos0, child, ps, vc, light, overlay, texW, texH);
         }
@@ -195,17 +182,14 @@ public class BBRenderer {
                                         int texW, int texH) {
         ps.pushPose();
 
-        // Translada para o origin do cubo
         ps.translate(convTX(c.origin.x) * PX, convTY(c.origin.y) * PX, convTZ(c.origin.z) * PX);
 
-        // Rotaciona o cubo sobre o próprio eixo
         if (c.rotateDeg.x != 0f || c.rotateDeg.y != 0f || c.rotateDeg.z != 0f) {
             ps.mulPose(Axis.ZP.rotationDegrees(convZ(c.rotateDeg.z)));
             ps.mulPose(Axis.YP.rotationDegrees(convY(c.rotateDeg.y)));
             ps.mulPose(Axis.XP.rotationDegrees(convX(c.rotateDeg.x)));
         }
 
-        // Calcula as posições dos vértices do cubo em coordenadas locais
         float x1 = convTX(c.from.x - c.origin.x) * PX;
         float y1 = convTY(c.from.y - c.origin.y) * PX;
         float z1 = convTZ(c.from.z - c.origin.z) * PX;
@@ -213,32 +197,29 @@ public class BBRenderer {
         float y2 = convTY(c.from.y + c.size.y - c.origin.y) * PX;
         float z2 = convTZ(c.from.z + c.size.z - c.origin.z) * PX;
 
-        // Aplica offset (inflate) se existir
         if (c.offset != 0f) {
             float off = c.offset * PX;
             x1 -= off; y1 -= off; z1 -= off;
             x2 += off; y2 += off; z2 += off;
         }
 
-        // Renderiza as 6 faces do cubo
-        // NOTA: As faces podem precisar de ajuste dependendo da convenção do Blockbench
         drawFace(ps, vc, light, overlay, texW, texH,
-                x2, y1, z1,  x1, y1, z1,  x1, y2, z1,  x2, y2, z1, c.faceUV.get("front"));
+                x2, y1, z1,  x1, y1, z1,  x1, y2, z1,  x2, y2, z1, c.faceUV.get("front"), false);
 
         drawFace(ps, vc, light, overlay, texW, texH,
-                x1, y1, z2,  x2, y1, z2,  x2, y2, z2,  x1, y2, z2, c.faceUV.get("back"));
+                x1, y1, z2,  x2, y1, z2,  x2, y2, z2,  x1, y2, z2, c.faceUV.get("back"), false);
 
         drawFace(ps, vc, light, overlay, texW, texH,
-                x2, y1, z1,  x2, y1, z2,  x2, y2, z2,  x2, y2, z1, c.faceUV.get("right"));
+                x2, y1, z1,  x2, y1, z2,  x2, y2, z2,  x2, y2, z1, c.faceUV.get("right"), true);
 
         drawFace(ps, vc, light, overlay, texW, texH,
-                x1, y1, z2,  x1, y1, z1,  x1, y2, z1,  x1, y2, z2, c.faceUV.get("left"));
+                x1, y1, z2,  x1, y1, z1,  x1, y2, z1,  x1, y2, z2, c.faceUV.get("left"), true);
 
         drawFace(ps, vc, light, overlay, texW, texH,
-                x1, y2, z1,  x2, y2, z1,  x2, y2, z2,  x1, y2, z2, c.faceUV.get("top"));
+                x1, y2, z1,  x2, y2, z1,  x2, y2, z2,  x1, y2, z2, c.faceUV.get("top"), false);
 
         drawFace(ps, vc, light, overlay, texW, texH,
-                x1, y1, z2,  x2, y1, z2,  x2, y1, z1,  x1, y1, z1, c.faceUV.get("bottom"));
+                x1, y1, z2,  x2, y1, z2,  x2, y1, z1,  x1, y1, z1, c.faceUV.get("bottom"), false);
 
         ps.popPose();
     }
@@ -249,7 +230,7 @@ public class BBRenderer {
                                  float x2, float y2, float z2,
                                  float x3, float y3, float z3,
                                  float x4, float y4, float z4,
-                                 BBModel.UVRect uv) {
+                                 BBModel.UVRect uv, boolean flipU) {
         if (uv == null) return;
 
         float u1 = uv.u1 / (float) texW;
@@ -257,9 +238,10 @@ public class BBRenderer {
         float u2 = uv.u2 / (float) texW;
         float v2 = uv.v2 / (float) texH;
 
+        if (flipU) { float tmp = u1; u1 = u2; u2 = tmp; }
+
         PoseStack.Pose pose = ps.last();
 
-        // Calcula a normal da face usando produto vetorial
         float ax = x2 - x1, ay = y2 - y1, az = z2 - z1;
         float bx = x4 - x1, by = y4 - y1, bz = z4 - z1;
         float nx = ay * bz - az * by;
@@ -268,7 +250,6 @@ public class BBRenderer {
         float len = (float)Math.sqrt(nx*nx + ny*ny + nz*nz);
         if (len > 1e-6f) { nx /= len; ny /= len; nz /= len; } else { nx = ny = 0f; nz = 1f; }
 
-        // Emite os 4 vértices da face
         emit(vc, pose, x1, y1, z1, u1, v2, packedOverlay, packedLight, nx, ny, nz);
         emit(vc, pose, x2, y2, z2, u2, v2, packedOverlay, packedLight, nx, ny, nz);
         emit(vc, pose, x3, y3, z3, u2, v1, packedOverlay, packedLight, nx, ny, nz);

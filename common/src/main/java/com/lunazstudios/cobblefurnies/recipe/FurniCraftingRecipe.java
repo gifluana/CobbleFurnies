@@ -14,9 +14,6 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Credits: MrCrayfish
- */
 public class FurniCraftingRecipe implements Recipe<SingleRecipeInput> {
     private final NonNullList<CountedIngredient> materials;
     private final ItemStack result;
@@ -70,7 +67,7 @@ public class FurniCraftingRecipe implements Recipe<SingleRecipeInput> {
         return this.materials;
     }
 
-    // Returns an array of ItemStacks that include the proper count from each CountedIngredient.
+    
     public ItemStack[] getMaterialStacks() {
         return this.materials.stream()
                 .map(ci -> {
@@ -89,9 +86,7 @@ public class FurniCraftingRecipe implements Recipe<SingleRecipeInput> {
         return this.result;
     }
 
-    /**
-     * Serializer for the recipe.
-     */
+    
     public static class Serializer implements RecipeSerializer<FurniCraftingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
 
@@ -112,7 +107,7 @@ public class FurniCraftingRecipe implements Recipe<SingleRecipeInput> {
                     buf.writeVarInt(recipe.materials.size());
                     for (CountedIngredient ci : recipe.materials) {
                         buf.writeVarInt(ci.count());
-                        // Use the built-in Ingredient stream codec to write the ingredient.
+                        
                         Ingredient.CONTENTS_STREAM_CODEC.encode(buf, ci.ingredient());
                     }
                     ItemStack.STREAM_CODEC.encode(buf, recipe.result);
@@ -143,9 +138,7 @@ public class FurniCraftingRecipe implements Recipe<SingleRecipeInput> {
         }
     }
 
-    /**
-     * Recipe Type for the crafting system.
-     */
+    
     public static class Type implements RecipeType<FurniCraftingRecipe> {
         public static final Type INSTANCE = new Type();
     }

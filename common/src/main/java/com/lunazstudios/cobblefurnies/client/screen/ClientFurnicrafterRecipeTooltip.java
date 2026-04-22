@@ -31,7 +31,7 @@ public class ClientFurnicrafterRecipeTooltip implements ClientTooltipComponent {
 
     @Override
     public int getWidth(Font font) {
-        // Each ingredient occupies 18 pixels in width.
+        
         return this.recipe.getMaterials().size() * 18;
     }
 
@@ -43,14 +43,14 @@ public class ClientFurnicrafterRecipeTooltip implements ClientTooltipComponent {
             CountedIngredient material = materials.get(i);
             ItemStack copy = getStack(material).copy();
             copy.setCount(material.count());
-            // Render the ingredient icon
+            
             graphics.renderFakeItem(copy, start + i * 18, top);
             graphics.renderItemDecorations(font, copy, start + i * 18, top);
 
-            // Draw a check or a cross depending on whether the player has enough material.
+            
             PoseStack pose = graphics.pose();
             pose.pushPose();
-            // Translate Z so the overlay is drawn on top.
+            
             pose.translate(0, 0, 200);
             boolean hasEnough = this.menu.hasMaterials(material, counted);
             graphics.blit(FurniCrafterScreen.TEXTURE, start + i * 18, top, hasEnough ? 246 : 240, 40, 6, 5, 256, 256);

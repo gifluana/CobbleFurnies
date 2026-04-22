@@ -7,10 +7,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public final class ShapeUtil {
 
     public static VoxelShape rotateShape(VoxelShape source, Direction direction) {

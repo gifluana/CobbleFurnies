@@ -24,11 +24,11 @@ public class FurniCrafterDisplay extends BasicDisplay {
 
     private static List<EntryIngredient> createInputs(FurniCraftingRecipe recipe) {
         List<EntryIngredient> inputs = new ArrayList<>();
-        // Iterate over each counted ingredient in the recipe.
+        
         for (CountedIngredient ci : recipe.getMaterials()) {
-            // Get all valid ItemStack alternatives for this ingredient.
+            
             ItemStack[] alternatives = ci.ingredient().getItems();
-            // Convert each ItemStack to an EntryStack (using EntryStacks.of(...)) and adjust the count.
+            
             List<EntryStack<?>> stacks = Arrays.stream(alternatives)
                     .map(stack -> {
                         ItemStack copy = stack.copy();
@@ -36,7 +36,7 @@ public class FurniCrafterDisplay extends BasicDisplay {
                         return EntryStacks.of(copy);
                     })
                     .collect(Collectors.toList());
-            // Create an EntryIngredient from the list of alternative stacks.
+            
             inputs.add(EntryIngredient.of(stacks));
         }
         return inputs;

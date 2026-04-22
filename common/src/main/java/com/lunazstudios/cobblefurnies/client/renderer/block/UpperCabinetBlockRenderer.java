@@ -27,10 +27,10 @@ public class UpperCabinetBlockRenderer implements BlockEntityRenderer<UpperCabin
         Direction direction = state.getValue(UpperCabinetBlock.FACING);
         float rotation = -direction.toYRot() + 180f;
 
-        NonNullList<ItemStack> items = blockEntity.getItems(); // assume um NonNullList<ItemStack>
+        NonNullList<ItemStack> items = blockEntity.getItems(); 
 
         poseStack.pushPose();
-        poseStack.translate(0.5, 1.18, 0.5); // altura levemente acima do centro
+        poseStack.translate(0.5, 1.18, 0.5); 
         poseStack.mulPose(Axis.YP.rotationDegrees(rotation));
 
         for (int j = 0; j < Math.min(4, items.size()); j++) {
@@ -45,7 +45,7 @@ public class UpperCabinetBlockRenderer implements BlockEntityRenderer<UpperCabin
 
                 poseStack.pushPose();
 
-                // 2x2 layout: slot 0,1 na frente; 2,3 atrás
+                
                 float xOffset = 0.15f - 0.4f * (j % 2);
                 float zOffset = -0.225f + 0.4f * (j / 2);
                 poseStack.translate(xOffset + fx, fy, zOffset + fz);
@@ -69,7 +69,7 @@ public class UpperCabinetBlockRenderer implements BlockEntityRenderer<UpperCabin
         poseStack.popPose();
     }
 
-    // Simula empilhamento visual leve
+    
     private int getAmount(int count) {
         if (count > 48) return 5;
         if (count > 32) return 4;

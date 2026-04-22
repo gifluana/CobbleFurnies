@@ -65,7 +65,6 @@ public class CabinetBlock extends BaseEntityBlock {
     protected static final VoxelShape SHAPE_OPEN_RIGHT_SOUTH = ShapeUtil.rotateShape(SHAPE_OPEN_RIGHT_NORTH, Direction.SOUTH);
     protected static final VoxelShape SHAPE_OPEN_RIGHT_WEST = ShapeUtil.rotateShape(SHAPE_OPEN_RIGHT_NORTH, Direction.WEST);
 
-
     public CabinetBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any()
@@ -159,7 +158,7 @@ public class CabinetBlock extends BaseEntityBlock {
         BlockPos pos = context.getClickedPos();
         Vec3 clickVec = context.getClickLocation().subtract(Vec3.atLowerCornerOf(pos));
 
-        // Determine hinge based on click position
+        
         Direction right = facing.getClockWise();
         double side = right.getAxis().choose(clickVec.x, 0, clickVec.z);
         side = Math.abs(Math.min(right.getAxisDirection().getStep(), 0) + side);

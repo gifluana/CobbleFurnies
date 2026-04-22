@@ -30,10 +30,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Collection;
 import java.util.function.Supplier;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public class CFRegistry {
 
     @ExpectPlatform

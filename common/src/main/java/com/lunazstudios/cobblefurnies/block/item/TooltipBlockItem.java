@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
-
 public class TooltipBlockItem extends BlockItem {
 
     private final String tooltipKey;

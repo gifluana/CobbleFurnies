@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 import java.util.List;
 
-
 @Mixin(GuiGraphics.class)
 public interface GuiGraphicsInvoker {
     @Invoker("renderTooltipInternal")

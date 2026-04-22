@@ -26,10 +26,6 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public class SeatEntity extends Entity {
     public SeatEntity(Level level) {
         super(CFEntityTypes.SEAT.get(), level);
@@ -49,7 +45,6 @@ public class SeatEntity extends Entity {
         if (state.getBlock() instanceof SeatBlock seatBlock) canSit = seatBlock.isSittable(state);
         else canSit = false;
         if (isVehicle() && canSit) return;
-
 
         this.discard();
         this.level().updateNeighbourForOutputSignal(this.blockPosition(), this.level().getBlockState(this.blockPosition()).getBlock());

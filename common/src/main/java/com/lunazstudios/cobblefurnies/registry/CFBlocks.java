@@ -13,10 +13,6 @@ import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public class CFBlocks {
 
     public static class Properties {
@@ -48,8 +44,6 @@ public class CFBlocks {
     public static final Supplier<Block> TV = registerBlock("tv", () -> new TVBlock(Properties.CONCRETE));
     public static final Supplier<Block> CES = registerBlock("ces", () -> new CESBlock(Properties.CONCRETE));
 
-//    public static final Supplier<Block> GRASS_BLOCK = registerBlock("grass_block", () -> new GrassBlock(Properties.GRASS));
-//    public static final Supplier<Block> CLEARER_GRASS_BLOCK = registerBlock("clearer_grass_block", () -> new GrassBlock(Properties.GRASS));
     public static final Supplier<Block> KITCHEN_FLOOR = registerBlock("kitchen_floor", () -> new Block(Properties.CONCRETE));
     public static final Supplier<Block> BAMBOO_FLOOR = registerBlock("bamboo_floor", () -> new Block(Properties.BAMBOO_WOOD));
     public static final Supplier<Block> BAMBOO_PLANKS = registerBlock("bamboo_planks", () -> new Block(Properties.BAMBOO_WOOD));

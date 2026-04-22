@@ -59,7 +59,6 @@ public class CabinetryBlock extends Block implements SimpleWaterloggedBlock {
     protected static final VoxelShape BOTTOM_OUTER_CORNER_RIGHT_SOUTH = ShapeUtil.rotateShape(BOTTOM_OUTER_CORNER_RIGHT_NORTH, Direction.SOUTH);
     protected static final VoxelShape BOTTOM_OUTER_CORNER_RIGHT_WEST = ShapeUtil.rotateShape(BOTTOM_OUTER_CORNER_RIGHT_NORTH, Direction.WEST);
 
-
     public CabinetryBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any()

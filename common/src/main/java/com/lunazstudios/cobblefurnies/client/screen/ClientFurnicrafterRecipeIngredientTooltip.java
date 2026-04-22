@@ -31,7 +31,7 @@ public class ClientFurnicrafterRecipeIngredientTooltip implements ClientTooltipC
 
     @Override
     public int getWidth(Font font) {
-        // 18 pixels for the icon plus the width of the item's name.
+        
         return 18 + font.width(getStack().getDisplayName());
     }
 
@@ -39,14 +39,14 @@ public class ClientFurnicrafterRecipeIngredientTooltip implements ClientTooltipC
     public void renderImage(Font font, int start, int top, GuiGraphics graphics) {
         ItemStack stack = getStack().copy();
         stack.setCount(this.material.count());
-        // Render the ingredient icon.
+        
         graphics.renderFakeItem(stack, start, top);
         graphics.renderItemDecorations(font, stack, start, top);
-        // Draw the item name in gray next to the icon.
+        
         MutableComponent name = stack.getHoverName().copy().withStyle(ChatFormatting.GRAY);
         graphics.drawString(font, name, start + 18 + 5, top + 4, 0xFFFFFFFF);
 
-        // Draw the check or cross overlay.
+        
         PoseStack pose = graphics.pose();
         pose.pushPose();
         pose.translate(0, 0, 200);

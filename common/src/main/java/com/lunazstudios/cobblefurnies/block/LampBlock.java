@@ -30,7 +30,6 @@ public class LampBlock extends FurnitureHorizontalBlock {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final EnumProperty<MountType> MOUNT_TYPE = CFBlockStateProperties.MOUNT_TYPE;
 
-
     protected static final VoxelShape SHAPE_FLOOR = Shapes.or(
             Block.box(5, 0, 5, 11, 6, 11),
             Block.box(3, 6, 3, 13, 16, 13));

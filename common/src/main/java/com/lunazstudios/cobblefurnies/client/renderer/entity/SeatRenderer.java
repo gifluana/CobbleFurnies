@@ -10,10 +10,6 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 @Environment(value= EnvType.CLIENT)
 public class SeatRenderer extends EntityRenderer<SeatEntity> {
     public SeatRenderer(EntityRendererProvider.Context context)

@@ -67,7 +67,6 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
         this(id, inventory, inventory.player.level(), BlockPos.ZERO, new SimpleContainer(1));
     }
 
-
     @Override
     public void broadcastChanges() {
         super.broadcastChanges();
@@ -93,7 +92,6 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
 
         NetworkManager.sendToPlayer(serverPlayer, message);
     }
-
 
     private void fetchAvailableRecipes() {
         this.availableRecipes = level.getRecipeManager()
@@ -135,7 +133,6 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(inventory, col, 8 + col * 18, 142 + yOffset));
         }
     }
-
 
     private void addOutputSlot() {
         this.addSlot(new Slot(outputContainer, OUTPUT_SLOT_INDEX, 149, 86) {
@@ -278,25 +275,25 @@ public class FurniCrafterMenu extends AbstractContainerMenu {
 
     public boolean hasMaterials(CountedIngredient material, Map<Integer, Integer> counted) {
         int required = material.count();
-        // Loop over every item in the player's inventory.
+        
         for (ItemStack stack : player.getInventory().items) {
             if (!stack.isEmpty() && material.ingredient().test(stack)) {
-                // Use the item's hashCode as a key.
+                
                 int key = stack.getItem().hashCode();
                 int alreadyUsed = counted.getOrDefault(key, 0);
-                // Determine how many of this item are still available.
+                
                 int available = stack.getCount() - alreadyUsed;
                 if (available > 0) {
-                    // Use up as many items as needed from this stack.
+                    
                     int used = Math.min(required, available);
                     required -= used;
                     counted.put(key, alreadyUsed + used);
                     if (required <= 0) {
-                        return true; // Requirement satisfied.
+                        return true; 
                     }
                 }
             }
         }
-        return false; // Not enough items found.
+        return false; 
     }
 }

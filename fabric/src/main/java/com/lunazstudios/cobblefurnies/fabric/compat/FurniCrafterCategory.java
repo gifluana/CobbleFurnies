@@ -79,7 +79,6 @@ public class FurniCrafterCategory implements DisplayCategory<BasicDisplay> {
         return widgets;
     }
 
-
     @Override
     public int getDisplayHeight() {
         return 50;

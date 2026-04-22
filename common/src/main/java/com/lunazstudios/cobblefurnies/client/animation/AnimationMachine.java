@@ -95,7 +95,7 @@ public class AnimationMachine {
         if (!clipLoop && duration > 0f && elapsed >= duration) {
             if (dirtyTarget && targetState != null) {
                 goToLoopState(targetState, nowGT);
-                // recomputa o time do clip final
+                
                 var finalDef = model.clips.get(activeClip);
                 float finDur = (finalDef != null) ? finalDef.durationSec : 0f;
                 float finElapsed = ((nowGT - clipStartGT) + partialTicks) / 20f;

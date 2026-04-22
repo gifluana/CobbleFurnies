@@ -140,7 +140,7 @@ public class UpperCabinetBlock extends BaseEntityBlock {
         BlockPos pos = context.getClickedPos();
         Vec3 clickVec = context.getClickLocation().subtract(Vec3.atLowerCornerOf(pos));
 
-        // Determine hinge based on click position
+        
         Direction right = facing.getClockWise();
         double side = right.getAxis().choose(clickVec.x, 0, clickVec.z);
         side = Math.abs(Math.min(right.getAxisDirection().getStep(), 0) + side);

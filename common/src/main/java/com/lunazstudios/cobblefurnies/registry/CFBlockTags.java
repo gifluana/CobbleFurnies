@@ -5,10 +5,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public class CFBlockTags {
     public static final TagKey<Block> BENCHES = blockTag("benches");
     public static final TagKey<Block> CHAIRS = blockTag("chairs");

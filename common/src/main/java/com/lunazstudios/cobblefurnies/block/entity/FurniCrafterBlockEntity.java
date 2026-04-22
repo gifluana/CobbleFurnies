@@ -36,7 +36,6 @@ public class FurniCrafterBlockEntity extends BlockEntity implements MenuProvider
         return new FurniCrafterMenu(id, inventory, level, this.worldPosition, this.getOutputContainer());
     }
 
-
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);

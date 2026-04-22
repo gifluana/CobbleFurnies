@@ -21,11 +21,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
-
 public class SeatBlock extends Block {
     public SeatBlock(Properties properties) {
         super(properties);
@@ -59,7 +54,6 @@ public class SeatBlock extends Block {
             if (ejectSeatedExceptPlayer(level, seats.get(0))) return InteractionResult.SUCCESS;
             return InteractionResult.PASS;
         }
-
 
         if (level.isClientSide) return InteractionResult.SUCCESS;
         sitDown(level, pos, getLeashed(player).orElse(player));

@@ -27,7 +27,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-// Import FridgeBlock to check its type.
 import com.lunazstudios.cobblefurnies.block.FridgeBlock;
 
 public class FreezerBlock extends BaseEntityBlock {

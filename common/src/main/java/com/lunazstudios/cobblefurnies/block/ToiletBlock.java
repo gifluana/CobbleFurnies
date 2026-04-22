@@ -31,16 +31,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-/**
- * Original Author: StarfishStudios
- * Project: Another Furniture
- */
 public class ToiletBlock extends SeatBlock implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
-    // Closed state voxel shapes
+    
     protected static final VoxelShape SHAPE_NORTH = Shapes.or(
             Block.box(2, 9, 10, 14, 18, 16),
             Block.box(11, 6, 0, 13, 9, 11),
@@ -57,7 +53,7 @@ public class ToiletBlock extends SeatBlock implements SimpleWaterloggedBlock {
     protected static final VoxelShape SHAPE_SOUTH = ShapeUtil.rotateShape(SHAPE_NORTH, Direction.SOUTH);
     protected static final VoxelShape SHAPE_WEST = ShapeUtil.rotateShape(SHAPE_NORTH, Direction.WEST);
 
-    // Open state voxel shapes (you can adjust the boxes as desired)
+    
     protected static final VoxelShape SHAPE_OPEN_NORTH = Shapes.or(
             Block.box(2, 9, 10, 14, 18, 16),
             Block.box(11, 6, 0, 13, 9, 11),
@@ -67,7 +63,7 @@ public class ToiletBlock extends SeatBlock implements SimpleWaterloggedBlock {
             Block.box(4, 0, 2, 12, 6, 10),
             Block.box(5, 0, 10, 11, 9, 15),
             Block.box(5, 6.5, 2, 11, 6.5, 8),
-            // Note: The difference in the open state is that one of the boxes has changed:
+            
             Block.box(3, 9, 0, 13, 10, 10),
             Block.box(14, 16, 11, 15, 17, 14)
     );
