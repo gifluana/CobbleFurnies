@@ -58,9 +58,9 @@ public class StatueBlockRenderer implements BlockEntityRenderer<StatueBlockEntit
             } catch (Exception ignored) { }
         }
 
-        // CORRIGIDO: Remove o 180f - para que o modelo fique virado na direção correta
+        // CORRIGIDO: 180f - yawDeg rotaciona o modelo corretamente para frente (North = -Z)
         ps.translate(0.5, 0, 0.5);
-        ps.mulPose(com.mojang.math.Axis.YP.rotationDegrees(-yawDeg));
+        ps.mulPose(com.mojang.math.Axis.YP.rotationDegrees(180f - yawDeg));
         ps.translate(-0.5, 0, -0.5);
 
         var opts = BBRenderer.Opts.defaults()

@@ -20,17 +20,15 @@ import java.util.Map;
 public class BBRenderer {
     private static final float PX = 1f / 16f;
 
-    // CORRIGIDO: Conversões de coordenadas do Blockbench para Minecraft
-    // Blockbench: X=direita, Y=cima, Z=frente
-    // Minecraft: X=leste, Y=cima, Z=sul
-    private static float convX(float x){ return -x; }  // Inverte X
-    private static float convY(float y){ return y; }   // Y permanece igual (ambos são "up")
-    private static float convZ(float z){ return -z; }  // Inverte Z
+    // CORRIGIDO 2.0: Matemática original estava invertendo X e Z e quebrando o winding (faces ao avesso).
+    // O modelo deve ser renderizado 1:1 sem inverões, e a rotação Y controlada pelas BlockEntities.
+    private static float convX(float x){ return x; }
+    private static float convY(float y){ return y; }
+    private static float convZ(float z){ return z; }
 
-    // Conversões de translação (mesma lógica)
-    private static float convTX(float x){ return -x; }
+    private static float convTX(float x){ return x; }
     private static float convTY(float y){ return y; }
-    private static float convTZ(float z){ return -z; }
+    private static float convTZ(float z){ return z; }
 
     public static final class Opts {
         public String clip = "idle";
@@ -199,6 +197,13 @@ public class BBRenderer {
 
         // Translada para o origin do cubo
         ps.translate(convTX(c.origin.x) * PX, convTY(c.origin.y) * PX, convTZ(c.origin.z) * PX);
+
+        // Rotaciona o cubo sobre o próprio eixo
+        if (c.rotateDeg.x != 0f || c.rotateDeg.y != 0f || c.rotateDeg.z != 0f) {
+            ps.mulPose(Axis.ZP.rotationDegrees(convZ(c.rotateDeg.z)));
+            ps.mulPose(Axis.YP.rotationDegrees(convY(c.rotateDeg.y)));
+            ps.mulPose(Axis.XP.rotationDegrees(convX(c.rotateDeg.x)));
+        }
 
         // Calcula as posições dos vértices do cubo em coordenadas locais
         float x1 = convTX(c.from.x - c.origin.x) * PX;

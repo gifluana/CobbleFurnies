@@ -2,11 +2,10 @@ package com.lunazstudios.cobblefurnies.block.entity;
 
 import com.cobblemon.mod.common.CobblemonRecipeTypes;
 import com.cobblemon.mod.common.CobblemonSounds;
-import com.cobblemon.mod.common.client.sound.instances.CancellableSoundInstance;
 import com.cobblemon.mod.common.item.components.PotComponent;
 import com.cobblemon.mod.common.item.crafting.CookingPotRecipeBase;
 import com.lunazstudios.cobblefurnies.block.StoveBlock;
-import com.lunazstudios.cobblefurnies.client.sound.BlockEntitySoundTracker;
+import com.lunazstudios.cobblefurnies.client.StoveClientHooks;
 import com.lunazstudios.cobblefurnies.menu.StoveMenu;
 import com.lunazstudios.cobblefurnies.registry.CFBlockEntityTypes;
 import net.minecraft.core.BlockPos;
@@ -15,9 +14,13 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -34,15 +37,19 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class StoveBlockEntity extends BaseContainerBlockEntity
-        implements CraftingContainer, RecipeCraftingHolder, StackedContentsCompatible {
+        implements CraftingContainer, RecipeCraftingHolder, StackedContentsCompatible, WorldlyContainer {
 
     public static final int RESULT_SLOT = 0;
     public static final int[] CRAFTING_SLOTS = {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -55,7 +62,9 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
 
     private int cookingProgress = 0;
     private int cookingTotalTime = 200;
-    private boolean isLidOpen = true;
+
+    public SoundEvent getRunningSound() { return runningSound; }
+    public SoundEvent getAmbientSound() { return ambientSound; }
 
     private final SoundEvent runningSound = CobblemonSounds.CAMPFIRE_POT_ACTIVE;
     private final SoundEvent ambientSound = CobblemonSounds.CAMPFIRE_POT_AMBIENT;
@@ -141,15 +150,12 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         return items;
     }
 	
-   @Override
-   protected void setItems(NonNullList<ItemStack> newItems) {
-   // Manually overwrite indices to avoid structural changes to the list object itself
-      this.items.clear(); // Ensure we are clearing OUR local list, not the passed one
-      for (int i = 0; i < TOTAL_SLOTS; i++) {
-            // Safely copy elements one by one
+    @Override
+    protected void setItems(NonNullList<ItemStack> newItems) {
+        for (int i = 0; i < TOTAL_SLOTS; i++) {
             this.items.set(i, i < newItems.size() ? newItems.get(i) : ItemStack.EMPTY);
-      }
-   }
+        }
+    }
 
     @Override
     public int getContainerSize() {
@@ -159,6 +165,32 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     @Override
     protected @NotNull AbstractContainerMenu createMenu(int containerId, Inventory inventory) {
         return new StoveMenu(containerId, inventory, this, dataAccess);
+    }
+
+    @Override
+    public boolean canPlaceItem(int index, ItemStack stack) {
+        return index != RESULT_SLOT && index != PREVIEW_SLOT;
+    }
+
+    @Override
+    public int[] getSlotsForFace(Direction side) {
+        if (side == Direction.DOWN) {
+            return new int[]{RESULT_SLOT};
+        } else if (side == Direction.UP) {
+            return CRAFTING_SLOTS;
+        } else {
+            return SEASONING_SLOTS;
+        }
+    }
+
+    @Override
+    public boolean canPlaceItemThroughFace(int index, ItemStack itemStack, @Nullable Direction direction) {
+        return this.canPlaceItem(index, itemStack);
+    }
+
+    @Override
+    public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
+        return direction == Direction.DOWN && index == RESULT_SLOT;
     }
 
     @Override
@@ -226,7 +258,7 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
                     } else {
                         resultSlot.grow(result.getCount());
                     }
-                    stove.consumeIngredients(recipe);
+                    stove.consumeIngredients(recipe, level, pos);
 
                     level.playSound(
                             null,
@@ -257,31 +289,7 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         boolean isCooking = state.getValue(StoveBlock.COOKING);
         boolean containsItems = !stove.getSeasonings().isEmpty() || !stove.getIngredients().isEmpty();
 
-        boolean runningActive = BlockEntitySoundTracker.isActive(pos, stove.runningSound.getLocation());
-        boolean ambientActive = BlockEntitySoundTracker.isActive(pos, stove.ambientSound.getLocation());
-
-        if (containsItems) {
-            if (isCooking) {
-                BlockEntitySoundTracker.stop(pos, stove.ambientSound.getLocation());
-                if (!runningActive) {
-                    BlockEntitySoundTracker.play(
-                            pos,
-                            new CancellableSoundInstance(stove.runningSound, pos, true, 1.0F, 1.0F)
-                    );
-                }
-            } else {
-                BlockEntitySoundTracker.stop(pos, stove.runningSound.getLocation());
-                if (!ambientActive) {
-                    BlockEntitySoundTracker.play(
-                            pos,
-                            new CancellableSoundInstance(stove.ambientSound, pos, true, 1.0F, 1.0F)
-                    );
-                }
-            }
-        } else {
-            BlockEntitySoundTracker.stop(pos, stove.runningSound.getLocation());
-            BlockEntitySoundTracker.stop(pos, stove.ambientSound.getLocation());
-        }
+        StoveClientHooks.clientTick(stove, isCooking, containsItems, pos);
     }
 
     public void handleSafeDrop() {
@@ -301,37 +309,58 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
                 .map(r -> (RecipeHolder<CookingPotRecipeBase>) r);
     }
 
-    private void consumeIngredients(CookingPotRecipeBase recipe) {
+    private void consumeIngredients(CookingPotRecipeBase recipe, Level level, BlockPos pos) {
+        Map<Item, Integer> remainderItems = new HashMap<>();
+
         for (int slot : CRAFTING_SLOTS) {
-            consumeItem(slot);
+            accumulateAndConsume(slot, remainderItems);
         }
 
         for (int slot : SEASONING_SLOTS) {
             ItemStack seasoningStack = getItem(slot);
-            if (!seasoningStack.isEmpty() && seasoningStack.is(recipe.getSeasoningTag())) {
-                if (recipe.getSeasoningProcessors().stream().anyMatch(p -> p.consumesItem(seasoningStack))) {
-                    consumeItem(slot);
-                }
+            if (!seasoningStack.isEmpty() && seasoningStack.is(recipe.getSeasoningTag())
+                    && recipe.getSeasoningProcessors().stream().anyMatch(p -> p.consumesItem(seasoningStack))) {
+                accumulateAndConsume(slot, remainderItems);
             }
+        }
+
+        for (Map.Entry<Item, Integer> entry : remainderItems.entrySet()) {
+            ItemStack remainderStack = new ItemStack(entry.getKey(), entry.getValue());
+            ItemEntity itemEntity = new ItemEntity(
+                    level,
+                    pos.getX() + 0.5,
+                    pos.getY() + 1.0,
+                    pos.getZ() + 0.5,
+                    remainderStack
+            );
+            level.addFreshEntity(itemEntity);
         }
     }
 
-    private void consumeItem(int slot) {
+    private void accumulateAndConsume(int slot, Map<Item, Integer> remainderItems) {
         ItemStack stack = getItem(slot);
         if (!stack.isEmpty()) {
             if (stack.getItem().hasCraftingRemainingItem()) {
                 Item remainderItem = stack.getItem().getCraftingRemainingItem();
-                stack.shrink(1);
-                if (stack.isEmpty() && remainderItem != null) {
-                    setItem(slot, new ItemStack(remainderItem));
-                }
-            } else {
-                stack.shrink(1);
-                if (stack.isEmpty()) {
-                    setItem(slot, ItemStack.EMPTY);
+                if (remainderItem != null) {
+                    remainderItems.merge(remainderItem, 1, Integer::sum);
                 }
             }
+            stack.shrink(1);
+            if (stack.isEmpty()) setItem(slot, ItemStack.EMPTY);
         }
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag, registries);
+        return tag;
     }
 
     @Override
@@ -340,8 +369,7 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
         super.setRemoved();
 
         if (level != null && level.isClientSide) {
-            BlockEntitySoundTracker.stop(worldPosition, runningSound.getLocation());
-            BlockEntitySoundTracker.stop(worldPosition, ambientSound.getLocation());
+            StoveClientHooks.stopSounds(worldPosition, this);
         }
     }
 
@@ -371,7 +399,6 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.putInt("CookingProgress", cookingProgress);
-        tag.putBoolean("IsLidOpen", isLidOpen);
         ContainerHelper.saveAllItems(tag, items, registries);
 
         if (potComponent != null) {
@@ -384,17 +411,16 @@ public class StoveBlockEntity extends BaseContainerBlockEntity
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        cookingProgress = tag.getInt("CookingProgress");
-        isLidOpen = tag.getBoolean("IsLidOpen");
-
-        // Instead of clearing/adding, just reset the existing slots
+        
         for (int i = 0; i < this.items.size(); i++) {
-           this.items.set(i, ItemStack.EMPTY); 
+            this.items.set(i, ItemStack.EMPTY);
         }
-        ContainerHelper.loadAllItems(tag, items, registries);
+        ContainerHelper.loadAllItems(tag, this.items, registries);
+        
+        cookingProgress = tag.getInt("CookingProgress");
 
         if (tag.contains("PotComponent")) {
-           PotComponent.Companion.getCODEC().parse(NbtOps.INSTANCE, tag.get("PotComponent"))
+            PotComponent.Companion.getCODEC().parse(NbtOps.INSTANCE, tag.get("PotComponent"))
                     .result()
                     .ifPresent(component -> this.potComponent = component);
         }

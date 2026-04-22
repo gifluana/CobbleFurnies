@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WallSupportBlock extends FurnitureHorizontalBlock {
 
-    protected static final VoxelShape SINGLE_SHAPE = Shapes.or(
+    protected static final VoxelShape SINGLE_SHAPE_NORTH = Shapes.or(
             Block.box(1, 8, 14, 3, 11, 15),
             Block.box(1, 9, 13, 3, 12, 14),
             Block.box(1, 10, 12, 3, 13, 13),
@@ -35,8 +35,11 @@ public class WallSupportBlock extends FurnitureHorizontalBlock {
             Block.box(13, 9, 13, 15, 12, 14),
             Block.box(13, 8, 14, 15, 11, 15)
     );
+    protected static final VoxelShape SINGLE_SHAPE_EAST = ShapeUtil.rotateShape(SINGLE_SHAPE_NORTH, Direction.EAST);
+    protected static final VoxelShape SINGLE_SHAPE_SOUTH = ShapeUtil.rotateShape(SINGLE_SHAPE_NORTH, Direction.SOUTH);
+    protected static final VoxelShape SINGLE_SHAPE_WEST = ShapeUtil.rotateShape(SINGLE_SHAPE_NORTH, Direction.WEST);
 
-    protected static final VoxelShape LEFT_SHAPE = Shapes.or(
+    protected static final VoxelShape LEFT_SHAPE_NORTH = Shapes.or(
             Block.box(1, 8, 14, 3, 11, 15),
             Block.box(1, 9, 13, 3, 12, 14),
             Block.box(1, 10, 12, 3, 13, 13),
@@ -45,8 +48,11 @@ public class WallSupportBlock extends FurnitureHorizontalBlock {
             Block.box(0, 7, 15, 4, 12, 16),
             Block.box(0, 13, 0, 16, 16, 16)
     );
+    protected static final VoxelShape LEFT_SHAPE_EAST = ShapeUtil.rotateShape(LEFT_SHAPE_NORTH, Direction.EAST);
+    protected static final VoxelShape LEFT_SHAPE_SOUTH = ShapeUtil.rotateShape(LEFT_SHAPE_NORTH, Direction.SOUTH);
+    protected static final VoxelShape LEFT_SHAPE_WEST = ShapeUtil.rotateShape(LEFT_SHAPE_NORTH, Direction.WEST);
 
-    protected static final VoxelShape RIGHT_SHAPE = Shapes.or(
+    protected static final VoxelShape RIGHT_SHAPE_NORTH = Shapes.or(
             Block.box(13, 8, 14, 15, 11, 15),
             Block.box(13, 9, 13, 15, 12, 14),
             Block.box(13, 10, 12, 15, 13, 13),
@@ -55,8 +61,14 @@ public class WallSupportBlock extends FurnitureHorizontalBlock {
             Block.box(12, 7, 15, 16, 12, 16),
             Block.box(0, 13, 0, 16, 16, 16)
     );
+    protected static final VoxelShape RIGHT_SHAPE_EAST = ShapeUtil.rotateShape(RIGHT_SHAPE_NORTH, Direction.EAST);
+    protected static final VoxelShape RIGHT_SHAPE_SOUTH = ShapeUtil.rotateShape(RIGHT_SHAPE_NORTH, Direction.SOUTH);
+    protected static final VoxelShape RIGHT_SHAPE_WEST = ShapeUtil.rotateShape(RIGHT_SHAPE_NORTH, Direction.WEST);
 
-    protected static final VoxelShape MIDDLE_SHAPE = Block.box(0, 13, 0, 16, 16, 16);
+    protected static final VoxelShape MIDDLE_SHAPE_NORTH = Block.box(0, 13, 0, 16, 16, 16);
+    protected static final VoxelShape MIDDLE_SHAPE_EAST = ShapeUtil.rotateShape(MIDDLE_SHAPE_NORTH, Direction.EAST);
+    protected static final VoxelShape MIDDLE_SHAPE_SOUTH = ShapeUtil.rotateShape(MIDDLE_SHAPE_NORTH, Direction.SOUTH);
+    protected static final VoxelShape MIDDLE_SHAPE_WEST = ShapeUtil.rotateShape(MIDDLE_SHAPE_NORTH, Direction.WEST);
 
     public WallSupportBlock(Properties properties) {
         super(properties);
@@ -110,19 +122,30 @@ public class WallSupportBlock extends FurnitureHorizontalBlock {
         WallSupportShape shape = state.getValue(CFBlockStateProperties.WALL_SUPPORT_SHAPE);
 
         return switch (shape) {
-            case SINGLE -> getRotatedShape(SINGLE_SHAPE, facing);
-            case LEFT -> getRotatedShape(LEFT_SHAPE, facing);
-            case RIGHT -> getRotatedShape(RIGHT_SHAPE, facing);
-            case MIDDLE -> getRotatedShape(MIDDLE_SHAPE, facing);
-        };
-    }
-
-    private VoxelShape getRotatedShape(VoxelShape shape, Direction facing) {
-        return switch (facing) {
-            case EAST -> ShapeUtil.rotateShape(shape, Direction.EAST);
-            case SOUTH -> ShapeUtil.rotateShape(shape, Direction.SOUTH);
-            case WEST -> ShapeUtil.rotateShape(shape, Direction.WEST);
-            default -> shape;
+            case SINGLE -> switch (facing) {
+                case EAST -> SINGLE_SHAPE_EAST;
+                case SOUTH -> SINGLE_SHAPE_SOUTH;
+                case WEST -> SINGLE_SHAPE_WEST;
+                default -> SINGLE_SHAPE_NORTH;
+            };
+            case LEFT -> switch (facing) {
+                case EAST -> LEFT_SHAPE_EAST;
+                case SOUTH -> LEFT_SHAPE_SOUTH;
+                case WEST -> LEFT_SHAPE_WEST;
+                default -> LEFT_SHAPE_NORTH;
+            };
+            case RIGHT -> switch (facing) {
+                case EAST -> RIGHT_SHAPE_EAST;
+                case SOUTH -> RIGHT_SHAPE_SOUTH;
+                case WEST -> RIGHT_SHAPE_WEST;
+                default -> RIGHT_SHAPE_NORTH;
+            };
+            case MIDDLE -> switch (facing) {
+                case EAST -> MIDDLE_SHAPE_EAST;
+                case SOUTH -> MIDDLE_SHAPE_SOUTH;
+                case WEST -> MIDDLE_SHAPE_WEST;
+                default -> MIDDLE_SHAPE_NORTH;
+            };
         };
     }
 
